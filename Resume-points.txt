@@ -1,0 +1,58 @@
+professional summary
+====================
+• Overall 4 years of IT experience which includes 3.9 years of experience in API management technology like APIGEE Edge and Hybrid platforms.
+• Good Experience in full life cycle(SDLC) of the software development process which incorporates Requirements gathering, Designing, Documenting, Development, Testing and Deployment of API proxies using Agile Methodologies.
+• Hands on Experience of working with Security Authentication Mechanisms like OAuth, JWT & JWS, API key, Basic Authentication, SSL, Encryption & Decryption, Hashing.
+• Worked on multiple Banking domain projects.
+• Created and Developed API proxies using JS & JAVA policies for custom requirements and XSLT for Message Content Transformations.
+• Updation of OPENAPI2APIGEE nodejs utility in order to generate template based API proxies.
+• Extensively used GITHUB for source code management.
+• Better understanding of APIGEE architecture.
+• Experience in interacting with clients and third party vendors to understand the requirements, CR changes and also demonstrating the API proxies.
+
+
+
+
+skills
+======
+• APIGEE Hybrid, APIGEE Edge for Public Cloud
+• API proxy design & best practises
+• Troubleshooting & Optimization
+• Swagger/OpenAPI Specification
+• Github, Bitbucket
+• JavaScript experience
+• Shell Script
+• Sumo Logic
+• Java Experience
+• Tools: Postman, JMeter, VS Code, Eclipse
+
+Work History
+============
+2021 Oct to current:
+--------------------
+• Modified the openapi2apigee nodejs utility in a way to create template based API proxies.
+• Implemented CORS mechanism in required API proxies.
+• Created workflows using shell scripting for automation process.
+• Generated reports periodically for Traffic, Error count and Latency of API proxies.
+• Followed the Agile Methodology through out the project development lifecycle.
+• Enhancing the develeopment of API proxies with the new findings or solutions & best approaches with the latest releases.
+• Extensively utilized Shared Flows for better code management.
+• Promoting the developed API proxies to production environments through Harness Pipelines.
+• Actively involved in production support through Sumo Logs. 
+• BAU Tasks, Security fixes, Tech Debts and Enahancements.
+
+2020 June to 2021 Oct:
+----------------------
+• Involved in Requirement gathering of various API proxies and then Designing, Documenting and Implemntation.
+• Development of new API's and Migration of Legacy API's to Enterprise Standards.
+• Worked with the most basic & important policies like Quota, SpikeArrest, VerifyAPIKey, BasicAuthentication, Regex, AccessControl, RaiseFault, AssignMessage, ExtractVariables, KVM, FlowCallout, & Service Callout.
+• Used XSLT, JSONtoXML & XMLtoJSON  policies for Request and Response Content Trasformations.
+• Configured Statistics & Data collector polcies to generate custom reports.
+• Worked with the componnets of APIGEE UI which are used in API proxy development like TargetServers, FlowHooks, SharedFlows, Keystore, Truststrore, KVM's, Cache's, Developers, API Products & Apps.
+• Implemented JS & Java polcies for client side Checks, Validations, Mappings, Modifications and for Cipher Mechanisms.
+• Did Linting for the developed API proxies as part of best practises.
+• Used postman for functional testing of API's along with Test scripts.
+• Used apickli testing framework repository for integration testing of API proxies.
+• Performed Load Testing by using JMeter tool.
+• Created Swaggers for the developed API proxies to give an insight of API's for Clients or Third Party Vendors.
+• Responsible for demonstrating the developed API proxies.

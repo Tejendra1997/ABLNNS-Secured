@@ -1,0 +1,13 @@
+OpenApiSpec vs Swagger
+======================
+• Openapispec is used to define the specifications of a restfull API
+•Swagger is a tool which is used to create the openapispecifications through swagger editor, sweagger UI
+
+Componenets of an openapispecification
+--------------------------------------
+• openapi: Defines the version of openapi
+• Info section contains the information of an api like title, description & version
+• paths sections contains the list of endpoints supported by the api
+• servers contains the target endpoint details
+• components defines the request, response & error content details 
+• Security schemas defines the type of security that the api is having like basicauth, api key, oauth...

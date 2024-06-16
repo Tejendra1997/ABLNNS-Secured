@@ -1,0 +1,127 @@
+XML(Extensible Markup Language)
+===
+• xml ki root tag anedi compulsary undaalsindhe adi madatoruy anduke json to xml policy lo okavela json lo gani root tag vachetalu gani json lekapothe apudu ah jsotoxml policy ye rook tag anedi generate chestundi.
+• Nv normal ga chuse ilaanti json payload ni 
+	{
+		"name": "teja",
+		"age": 26
+	}
+xml ga convert chesta ilaa vastaadi anukomaaku 
+	<name>teja</name>
+	<age>26</age>
+andukante asaalu xml payload ila undadhu andukantee daaniki katchitanga root element undaaali oka vela lekapothe nee jsontoxml policy anedi bydefault ga Root tag use chestundi
+	<Root>
+		<name>teja</name>
+		<age>26</age>
+	</Root>
+so json ni xml ga convert cheyalante nv in general ga chuse 1st property lo ne key value laaga kaakunda 1st property key yoka value anedi object iye undaalisinde. kaavalante nv json nunchi xml ga convert chesa sample json pauyloadas ni eval xslt proxies lo chudu daaanili st property key value objectbb  ye i untundi
+
+
+xml terminology
+---------------
+• Kinda sample payload lo 1st line vachi xml decalartion, idi optional. (UTF-8 anedi xml & json payloads lo by deafult ga vaade encoading pattern, ante deeni dwara each & every character anedi UTF-8 yoka rules ni batti encode iyi veltundi, Idhi by deafult kaabatti konni sarlu mention contenttype header lo appplication/json;charset="UTF-8" ani mention cheyakapoina backend nunchi response vachestundi endukante adi default value kaabatti)
+• 2nd & 7th line lo una http://example.com/library & http://example.com/other vaatini namespaces antaaru
+• alaane ah namespaces ni identify cheyaniki library & other prefixes ni use chesaru kaavalante 2nd & 7th lines lo ah urls ni define cheyadam chudu xmls:library & xmls:other ani ichaaru so ah namespaces ni identify cheyaniki ee library & other anevi prefixes la anamaata. So ee library & other anevi prefies.
+• bookstore, book, title, author anevi elements anamaata.
+
+<?xml version="1.0" encoding="UTF-8"?>   
+<library:bookstore xmlns:library="http://example.com/library">
+    <library:book>
+        <library:title>XML Basics</library:title>
+        <library:author>John Doe</library:author>
+    </library:book>
+    <other:book xmlns:other="http://example.com/other">
+        <other:title>Advanced XML</other:title>
+        <other:author>Jane Smith</other:author>
+    </other:book>
+</library:bookstore>
+
+
+
+cdata section
+-------------
+• CDATA section ante characterdata section ante nv edaina sample xml payload lo gani nv oka data petalanikuntunaav and ah data lo <, > & .... ilaantivi unai anuko apudu adi xml language la treat chestuni ala kaakunda daani oka text laane treat cheyalante apudu ee cdata section anedi opoyoga padutundi. Ante idi oka rankanage chuste comment laanae anaamaata simple ga aradam chesukodaanniki but comment kaadule. So ee cdata secion vaadi xml content lo even thpough xml related cghharacters una kuda vaatini text laa na  pariganinchaalante apudu ah data ni eecdata section lo petu.
+Syntax: <![CDATA[some stuff]]>
+example: 
+<document>
+    <description><![CDATA[
+        This is a sample document with a CDATA section.
+        It can contain <markup> and special characters & like <, >, and &.
+        CDATA sections are useful for preserving the original formatting and content.
+        <script type="text/javascript">
+            function showAlert() {
+                alert('This is a CDATA example.');
+            }
+        </script>
+    ]]></description>
+</document>
+
+- pi example lo chuste root tag undi and alaane cdata section lo konni mark up language characters unai but vaatini normal text laanae consider chestundi bcoz of using cdata section
+
+
+
+xslt
+----
+• Onlince XSLT Editor: http://xsltransform.net/
+• Extensible stylesheet language transformations
+• XLT lo element name lo multiple words unte - (hyphen tho seperate avtaai)
+• Idhi XML (Extensible marlkup language) ni html, text, or some other xml formats like soap lo ki convert cheyadaniki use chestaanu. (So ikada nv telusukovalsindi soap kuda oka lanti xml ye andukane kada xml:output element attribute ina method yoka value xml untaadi. so soap kuda oka laanti xml ye.
+• xslt lo elements yoka name anedi multiple words unte adi -(hyphen) tho seperate avtundi & complete lower case ye untundi.
+• xslt lo xpath, xquery kuda vastai. xpath anedi to get the particulat thing through path expression and xquery vachi to get through queries. xpaths anevi nv inthakamudu ela ithe sumologic queries lo leda vere database queries lo chusaavo alaane untaadi like / ante root ani /* ante root yoka one level down chid nodes ade /** ante root yoka anni level;s child nodes ani ardam. so xpaths anevi manchiga use avtai.ikada parths lo kuda linux laaga absolute & relative path concepts vastai. absolute path amnte starting nunchi ivaali wheras relative current state ni batti daani nunchi ivaali. Ee absolute path lko starting / petaalsinde whereas relative path staring / petabaledu.   absolute path example: <xsl:value-of select="/node/childnode1/childnode2/childnode3"/>   relative path example: <xsl:value-of select="childnode2/childnode3"/>
+• even though source xml modify chesukuntu targeted formate techukuntunaa xml paths anevi based on source path ye ivaali, present xslt lo maarastunaam kada ani vaatini daaniki taggattu marcha\baledu endukante xslt lo source nunchi niku kaavalsina targeed techukuntunaav anthe, source ni em marchatledu.
+• online xslt lo or either nee apigee xslt editor lo nv nee template intiate avyunda leda ani xsl:value-of element vaadi edaina element yoka value ni techukovachu, inka simple ga kaavalante nv xslt enter, enter press chesi new lines create chesi random ga edaina print chai oka vela compiler anedi ahh template daaka rech ithe nv create chesina new lines and rondom print msg dwaara telustundi so that niku debug cheyadam easy avtundi. so ikada js lo laaga etuvanti print statements vaadabaledu print cheayaniki just ala type chesta chaalu em kaaavalo adi porint ipotundi
+• only element values kaavalaent xsl:apply-templates select="node()|@*" intialization okati petti daani defining teesesthe saripotundi.
+• source root tag em maarchalsina avasarm lekapothe match="/" ani petu opkavela source rrot tag ki emaina prefix add cheyalsi vaste apudu ah match value ni ah root elemnet name ivu
+• Imp elements of xslt
+	<xsl:template match="/"/>
+	<xsl:element name="cus:{local-name()}"/>
+	<xsl:attribute name"xmlns:hdfc>https://hdfcbank.com</xsl:attribute>
+	<xsl:value-of select="dintach"/>
+	<xsl:apply-templates select="testtag"/>
+	<xsl:copy/>
+	<xsl:if test="expression"/>
+	<xsl:choose>
+		<xsl:whetn test="expression1"/>
+		<xsl:when test="expression2"/>
+		<xsl:when test="expression3"/>
+		<xsl:otherwise />
+	</xsl:choose>
+	
+
+• Adi first line of xslt daanilo xsl anedi common ga define cheyali prathi xslt lo endukante "xsl" ane prefix thone output, template, element, value-of, apply-templates, copy, attribute ... elememnts ani define chestunaam kaabtti.
+		<xsl:stylesheet version="2.0" 
+						xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
+						xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+		</xsl:stylesheet>
+		
+• output element lo method attribute vachi result anedi ye formate lo undaali ani chepadaaniki, omit-xml-declaration vachi soap kuda oka lanti xml formate ye anaanu kada so xml payload ki first line lo xml defining element untaadi kada adi kaavala vadha ani chepandiki ee attribute, indent attribute anedi result indentation tho kaavala vadha ani chepadaaniki.
+		<xsl:output method="xml" omit-xml-declaration="no" indent="yes"/>
+		
+• <xsl:template match="/"> ee element anedi source meeda etuvanti set of rules ni apply cheyali anedaaniki use chestaaru. match attribute yolka value vachi xpath ni teesukuntaadi. 
+
+• name() function anedi to get the element name along with prefix (only in case if exists, ledante only element ni ye istundi)
+
+• local-name() function anedi gives only element without any prefix.
+
+• <xsl:element name="cus:{local-name()}"/> element tag anedi manaku kaavalsintalu source tag ni cutsomxe chesukoniki use chestaaru.
+
+• <xsl:value-of select="tejaRoll"/>  value-of element anedi to get the value of a particular element kosam use chestaamu. select attribute aceeps xpaths
+
+• <xsl:apply-templates select="node()|@*"/> node() anedi prathi element/tag/node ni testadi. @* ante ah elements yoka attributes ni kuda testaadi. select attribute accepts xpath
+
+• <xs:copy/> anedi elements ni copy cheyaniki use chestaam.
+
+• <xsl:attribute name="xmlsns:wc">https://teja.com</xsl:attribute>, attribute element anedi to add attribute for a specific elemnt kosam use chestaam. (IDHI Teja-xslt-req4 lo use chesi undi, ah p[roxy lo ne oka element ki attribute anedi add cheydam attribute element valla kaakapothe apudu daani hardcode chesamu adi kuda chudu. so that source elemnt ni direct manaku kaavalsintatu hardcode kuda chesukovachi ani telustundi. Teja-xslt-re5 lo attribute element lo una namespace ane attribute sdwaara kuda elemets ki namespaces lanti attributes ni add cheyachu ani telisindi chudu kaavalante oka sar i ah proxy. so conclusion entante attrubutes elemts vaadi elemnt ki attributes ni add cheyachu knni sarlu namespaces kuda add cheyachu. and namespace attribute dwara element ki namespace ni add cheyachu but idi anthaga chudaledu. if it comes to ur doorstep then dive into it.
+
+• <xsl:if test="expression"/> ee if element vaadi if conditions raasukovachi. =, !=, &gt;, &lt; operators unai. Esay if condition check is <xsl:if test="1 =1">...</xsl:if>
+
+• xslt lo if else if anedi ledu gaani ee when otherwise elemnts use chesi ah functionaluy techukovachu. (IDHI Teja-xslt-req3 lo use chesi undi)
+		<xsl:choose>
+			<xsl:when test="expression1"/>
+			<xsl:when test="expression2"/>
+			<xsl:when test="expression3"/>
+			<xsl:otherwise />
+		</xsl:choose>      
+
+• ancesstor ane element kuda adhi konchem Teja-xslt-req6 lo undi kani anthaga ardam kaldeu so when it comes to ur door step then dont forget to scrutinize it		
+

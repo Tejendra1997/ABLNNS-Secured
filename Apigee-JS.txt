@@ -1,0 +1,253 @@
+Below naming conventions are suggested by chatgpt (i.e., best practise) for JS
+------------------------------------------------------------------------------
+  camelCase: variables & normal functions
+  PascalCase: constructor functions & classes
+  constants ki SCREAMING_SNAKE use cheyali ade rule
+  Use singular variable names for single value and pluar variable names for arrays & colections
+  Acronyms & Abbrevations ki uppercase lo ivu idi kuda rule ye
+  snake_case & kebab case anedi avasaaramaithe vaadutaaru ante inka tappadu ante pedataaru gani ekuvuka js lo use cheyaru so veetini vadilei
+
+• JS lo everything is an object. object ye sarvayatharaami anamaat
+	-Object is an object
+	-Array is an object
+	-Function is an object
+	-collection is an object
+	-Even primetive data types ina Number (JS lo integer, float, double ani ee data types undavu only Number data type matreme), String, Boolean kuda new keyword dwara define cheyadam, valla object wrapper vastaadi ah primitive datatypes ki , so ala avi kuda objects ye anamaata.
+	-Regex
+	-Math
+	-Date
+
+• Json objects lo manam 3 things ni add cheyachu. 
+	1. variable => idhi este daani property antaaru, niku gurthu unda length property antaaru ante adi kuda oka object lo ni property ye anamaata.
+	2.Object (idhi este adi nested object avudi)
+	3.Functions kuda jaon object lopala petachu
+
+• length property ni use chesi string & array yoka length ni kanukovachu. idi object ki panikiraadu okavela object ki use cheyalante Object.keys(obj_name).length dwaara vastaadi. length ane method ye ledu.
+
+• Json objects lo property keys anevi single word i and avi reserved words kaakunda unte apudu double quotes petaalsina avasaram ledu ade either multiple words una or reserved words ina maatram quotes petaalsinde. so better prathi saaari object define chesetapudu quotes petu.
+
+• JSON objects ni mostly const thone define cheyali okavela kudarakoapothe let tho define cheyali, var anedi anthaga evaru vaadatledu ipudu. const tho JSON objects ni define cheste new properties ni add cheyachu and existing properties ni overwrite cheyachu but complete unaavani teeesei kothavi petakudadhu.
+
+• Code consistency and readbility kodsam either double quotes or single quotes ki stick i undu. But single quote anedi professional ga vaadutaaru and also json object ni nv bayata double quote peti parameters ki single quota pedithe apudu JSON.parse dwara parse avtledu error vastundi ade bayata single quotye peti paramets ki quoble quote pedithe maatram JSON.parse work avtundi. so js strings ni epudu singlw quote tho define cheyadam uthamam but niki double quote ye alavaaltu
+
+• backtick use chesi and linux lo laaga variable substitution ni ${var_name} ni apigee yoka js editor lo kuda use avtundi.
+
+console.log() VS print()
+========================
+• Intial ga js ni web cliennt applications kosam tayaaru chesinapudu vaal console.log ye vadaaru but konthamadi maatram vaala yoka js engines lo print() vaadaaru. ee print anedi js valaadi kaadu idhi vere programming language nunchi vachunadi so official ga js developers create chesindi maatram console.log() ye. Tarvvaata kaalakrame ECMA vaalu standardised way lo and best practise lo and more engines support chese danilo ila annintilo console.log() ye ekuva print() kaadu. So console.log() anedi standardized way to print the things.
+
+JAVASCRIPT
+==========
+Youtube channels
+----------------
+• Telusko
+• programmingwith mosh
+
+
+• most used programming language for microservices/apis vachi 
+	1. js 
+	2. java 
+	3. python.
+• Intial ga js ni 1995 lo develop chesinapudu adi only clien applcations (web client app's / browsers like chrome, edge, mozila, safari, firefox....) lo matrame work ayedi ante only frontend side anamaata kani standalone application (Ante browser lo kaakunda ela ithe ipudu nv vs code lo node file_name ane command ichi run cheyagalugutunaavo ala) ga run cheyadaaaniki avadhu, mobile application ga run avadaaniki paniki raadu alanaae server side ante backend ante microservices/apis ga work cheyadaaniki ayedi kaaadu, only cline / browsers lo matrame work ayedi. Kani ipudu veru la adi not only in browsers but also stand-alone applications,  mobile, laptops, tabs, tv's, washing machines, microservices....ila anni IOT things lo kuda run avagalugutundi.
+• Munduga js anedi only web client applications ante browsers lo matrame execute ayevi ante client side scripting language laaga matrame 1995 lo create chesaru, broswers ante clients ye kada ee js anedi only web clinet applications/ browsers/ client side ki matame use chesevaalu ante server side use chesevaalu kaadu ani ardam even stand alone pplications laa kuda run cheryadaaniki use iyedi kaadu standalone ah particular machine run execute iyedi anamaata, nv gamanichunte basic js chesetaupudu nareshit... institutions lo html, css, tho paatu js code raasi danini browsers ante client side matame run chese vaalue kani ah with in computer lo command ichi runcheyledu endukante apudu ala mana machine lo run chese feasability ledu ipudu vundi anuko bcoz of nodejs adi vere vishyam but way back intial days lo undedi kaadu ante js ni only browsers/client side matame use chesukogalam kaani server side gani stand alone application ga mana machine lo run chesukodaaniki facility undedi kaadu. (anduke kada ye broswer lo inspect kodithe manaku js yoka computing engine lo js code kanipistaadi, ikada computing engine ante manam raasina code ni machine code lo marchadaaniki use iyedi)
+javascript engine (jascript engine is used to convert sourcecode to machine code)
+-----------------
+• Maanulga edaina code ni machine ki ardam ayeyla cheyalantye oka engine kavaali source code ni machine code la convert cheyaniki so that mana computers ardam chesukogalavu. ala js vaalu SPIDER MONKEY ane js engine ni create chesaru alaana js first browsers lo matrame work ayedi kaabatti ah browsers kuda vaala own javascript engine ni create chesaru like :
+	-Chrome: v8
+	-mozila: spider monkey
+	-microsoft edge: chakra
+	-safari: javascript core
+• Ila browsers ani vaala own javascript engines ni create chesukunai. veetanitlo chrome create chesina  "V8" javascript engine anedi chaala speed ga work ayedi ah v8 javascrip[t engine lo use chesina inner components valla apudu official js developers/ team members andaru ee js anedi intha wide range lo andaru chestuynaaru kada so ee v javcascript engine chesukuni vaalu "NODEJS" ane runtime environment ni create chesrau so that ah env anedi ee js code ni stad-alone applications ga run cheyaniki alanaana mobile applications lo run iyetatlu chesaru. Dani tarvaata vaalu ade nodejs use chesukuni deeni server side applications ki kuda ante backend side kuda use cheyalanaukunaaru andukani ah nodejs lo "HTTP MODULE" ni include chesaru so that manam ah nodejs ni ipudu server side applications ki kuda use cheyachu becoz http module lo get, post,request, response...... ilaantivi anni chese chance undi kaabatti. 
+
+NOTE
+----
+	-ela ithe javascrpt lo microservers ni create cheyaniki expressjs undo alaaane java lo "SPRING", "SPRINGBOTT" frameworks unai. Python lo "FLASK" "DJANGO" unai.
+	-Nodejs ni install chesinapudu npm kuda install ipodhi so that nv ne js application niku kavaalsina packegaes/modules ni npm nunchi techukovachu commands raasi ante seperate ga malli npm package tool ni local machinme lo ki install chesukovalsina avasaram ledu, nodejs install cheyagaane adfi kuda vastundi antunaa.
+
+• So ee rakanga ipudu nodejs vala js anedi front end & backend side vaadachu. front-end side ki frameworks (frameworks anevi basic prgramming concepts use chesi already mostly usefull ayye functions, mechanisms, concetps ni offical programming language vaalu best-practises tho create chestaaru, manam vaatini ela use cheyalani teliste chaalu scratch nunchi create cheyasin avasaram lekunda so that amount of code anedi tagguddi) REACTJS, ANGULARJS, VUEJS (ikada order anedi links to the most widely used in reality anamaata) unai alaane server side/ backend side vaatiki kuda oka framwork create chesaru ade "EXPRESSJS" nv anukovachu already server side applications ni create cheyaniki kavaalsina module ni nodejs lo place chesaru kada so that manam nodejs ni install chesetapudu ah http module vachestaadi kada mari malli inka seperate ga expreessjs ane framwork create chedam enduku ani, adi enbdukante server side applications ni create cheyaniki just httpmodule/package okati saripodhu inka chalaa kavaali vatanitini expressjs lo petaru, anthe kada peruguthu poye koddi manaku needs ekuva avtai dani kosam ilaanti modules/packages ni create chestaam.
+• So ila both front end & backend ni support chestundi kaabatti ee js ni database add chgesi full stack kuda chesaasaru ade "MANGODB". EE mangodb anedi js vaaladi kaadu idi vere vaaladhi but ekuvuga js ni ee database tho work chestuntaaru andukani MERN (mangodb, expressjs, reactjs, nodejs) and MEAN (mangodb, expressjs, angularjs, nodejs) ane full stack roles vachai anaamata.
+• So nv nodejs meeda work chestuinte nv ah js developers ki thanks chepaali endukante vaale js ni backend kuda use chesestaly cheyaniki ee nodejs ni create chesarui kaaabtti. alaaane ah js developers vachi google vaalaki thanks chepali endukante ah google vaale kada vaaal own browser lo js code run avadaaniki antu v8 js engine ni create chesrau and js developers ee v8 js engine ni use chesukini nodejs ni develop chesaru kaabtti.
+• SO NODEJS ANEDI FRAMEWORK KAADU, LIBRARY KAADU.. ADHI OKA RUNTIME ENV WHICH IS HELPS A LOT TO USE JS CODE TO SERVER SIDE APPLICATUIONS.
+
+• Nv js code ni ni laptop lo kaakunda cleint side run cheyali anuko ante browser lo apudu nv yemi install chesukobaledu, nodejs avasaram ledu, vs code ide avasram ledu. vs code ide ki badulaga alaano notepad untaadi kaabatti adi chaalu and ah code run cheyaniki elanao edo oka browser ni laptop lo untaadi kada adi chaaalu ah browser alano dani own javascript engine untaadi kada. so avi chaalu. ade nv js code ni laptop lo run cheyali anukuntunaavu anuko as astandalone ap;lication apudu niku baaga raayaniki, debug cheyamiki, share cheyaniki eassy ga unde vs code ide kavaali alaaane ah js ni ni laptop lo run cheyali anukuntunaav kabaatti ni laptop lo bydefaiult ga browser lo unatlu javascript engine undadhu kaatti nv nodejs ni install chesukovaaali ah nodejs anedi runtime env, adi oka javascript engine laa kuda work avudi, alaaan danilo http modules/packages undi kaabatti httpreq calls cheyachu okavela complete microservice application kavaalte apudu maatram expresss.js kvaali. So ipudu niku ardam inda starting lo niku doubt undedi kada enduko node js install chestunaam js code ni run cheyaniki ani apudu nv mohammad ni kuda adigaavu its bcoz adi oka runtime env & javascript engine & also used for developing simple server side applications. Ade just arthematic operations, china if, loops kavaalynte apudu niku nodejs avasaram ledu direct js file create chesi danini ela brwoser tho connect chesi run cheyali ani teliste chaalu browser lo output vachestaadi anamaat.
+• Telusko kuda vs code ye best anaadu javascript, nodejs, expressjs ki.
+
+
+Data Types (deenilo 5 data types matrame untai, pancha paandavulu lekka)
+==========
+• Number
+• String
+• Boolean
+• Array
+• Object
+
+Types Of Functions
+==================
+1. Regular function 
+syntax: function functionName() {
+		}
+
+2.Anonymous Function
+syntax: function() {
+		}
+		
+3. Arraow function
+syntax1: (a,b) => {
+			stmt1;
+			stmt2;
+			}
+syntax2: (a,b) => stmt1;  (adhe single stamt unte apudu braces avasaram ledu)
+
+syntax3: a => stmt1 (Adhe single stamrt and single argument ila simple ga raaseyochu)
+		
+4.Ee function ES5 lo support cheyadu, idi self-invoke functuion antaaru
+syntax: (function(){
+		});
+		
+
+Types of loops
+==============
+1.For loop
+syntax: for(let i=0; i<n; i++) {
+			stmt...
+		}
+
+2.For Each Loops
+syntax: array.forEach(function functionName() {
+			stamt1...
+			)};
+•Ee for each loop anedi specific ga arrays ni iterate cheyanike use chestaru and ee foreach lopala una function dagara nv regular function, anonymous function, arraow function and ah arrow function ni difeernebt type lo defoine chese ani forms lo kuda define cheyachu anduke niku foreach loop anedi okko dagara okko laaga kapadindi.
+
+3.For..in loop
+Syntax: for (let keyName in STUDENT) {
+			print(keyName+": "+STUDENT[keyName]);
+		}
+• Idhi specific ga object ni iterate cheyaniki use chestaru.
+
+NOTE:Forloop anedi both array & object ni kuda iterate cheyaniki use cheyachu. Array niku telisinde ee for loop dwara ela ietrate cheyalo ani and object ithe mundu Object.keys(OBJECT_NAME) function dwara list of keys ni array formate lo ki vastai apudu ah array length dwara for loop vaadi object ni ietate cheyachu anamaat.
+
+
+JSON Object methods
+===================
+1. JSON.parse(); => string ni object ga conert cheyanukiki
+eg: var heroString = '{"name": "ramcharan"}';
+	print("typeof heroString: ", typeof heroString);
+	print("heroString: ",heroString);
+	const HERO = JSON.parse(heroString);
+	print("typeof HERO: ", typeof HERO);
+	print("HERO: ",HERO);
+
+2. JSON.stringify() => object to string
+Eg: const STUDENT = new Object();
+	STUDENT.name = "teja";
+	print("typeof STUDENT: ",typeof STUDENT);
+	print("STUDENT: ", STUDENT);
+	var studentString = JSON.stringify(STUDENT);
+	print("typeof studentstring: ",typeof studentString);
+	print("studentString: ", studentString);
+
+Object methods
+==============
+1.Object.keys() => ee method anedi object yoka keys ni array formate lo return chestndi
+2.Object.seal()  => ee method dwara object lo existing properties ni overwrite cheyalemu but new properties add cheyachu.
+3. Object.freeze() => Ee method dwara object lo existing properties ni overwrite cheyalemu at the same time new properties ni kuda add chyaelemu
+
+Array Methods
+=============
+1. Array.isArray() => To check if the object is array or not.
+2. push() => To add n n.o of elements at the end of an array
+3. pop() => To remove last element of an array.
+4. indexOf() => To get the index of an array element
+5. join() => To get the array elements with a specified separator in string format.
+6. slice() => T get a sub array of an array.
+7. reverse() => To reverse an array.
+8. concat() => To concat two arrays.
+9. unshift() => To add n n.o of elements starting of an array.
+10. shift() => To remove first element of an array.
+
+
+String methods
+==============
+includes();
+indexOf();
+search();
+
+toString();
+
+split(); ==> To split a string with the specified separator
+
+substring(); => idhi & slice() anedi both almost similar kaakapothe negative numbers ki different ga handle chestadi time unapudu chudu, niku simple ga undadaniki substring() ye use chai
+slice();
+substr() => idhi first argument lo ichina startidex nunchi second argument mention chesina length number ani charactes ni substr laa istundi.
+
+replace(); => first argument ina search lo evene regex ni peti search cheyachu edi replace chayalnukuntunaavo adhi
+
+concat(); => str.concat(str2)
+
+toUpperCase();
+toLowerCase();
+
+match(); => str.match(/g/);
+
+Difference b/w ===, !== and ==, !=
+===================================
+• === anedi both left and right side lo una values and ata the same time type ni kuda compare chesi equal ithe true istundi
+• !== anedi both left and right side values ni and at the same time types ni kuda compare chestundi
+• == idhi only values ni matra,me compare chestundi, type ni pattinchukoadu.
+• != idhi kuda only values ni maaatre,e compare chestundi.
+
+• Even though object ni new keyword and object literal (ante normal ga) define chce chance una kuda preferred apudu object liter way ne. ante direct ga.
+• 
+
+String() with new and without new keyword
+=========================================
+• String() with new anedi string objects ni create cheyadaaniki use chestaam.
+	vasr s1 = new String(41);
+	print(typeof s1) ==> String (object)
+String() without new anedi constructor anmaata idi string conversion laa use avudi
+	var s1 = String(41);
+	print(typeof s1) ==> string (primitive data type)
+
+Json.stringify() vs toString() vs String()
+==========================================
+• Three are used for string conversions only but there is a differnce in what they are actually converting, time unapudu chudu.
+
+
+
+Apigee JS Rules
+===============
+• context.setVariable("request.content",JSON.stringify(JSON_OBJECT)); or error.content.asJSON = JSON_OBJECT;
+• only context.setVARIABLE tho define chesina variable matrame trace lo kanabadutundi, var tho define chesina variable trace lo kanabadadhu. Alaane anni vidaaala read chesina filed value kuda kanipistaadi.
+• legth() function ye ledu  asalu JS lo ne ledu onlu length property matrame undi. And also e length property anedi only string & arrays ki mataame work chestundi object ki pani cheyadu. Object ki length kavaalante Object.keys(sampleObj).length ani ivaali, chusaava ikada kuda length property ye undi kani length funcvtion ledu, so overall ga asalu js lo length function ye ledu edi baaga gurthu petukio.
+• extract variable lo extract chesinatle js lo kuda easy ga json payload ki cheyachu ah json payload ki path anedui json path finder lo undedhi icheste saripotundi same akada unaadhe copy chesukuni nv apigee js lo extract chesukovachu. Alaaane suppose nv read or write cheyalanukuntuna json field ki path anedi static (reqObj.name) ithe ala path ichestaav okavela path anedi static ga hardcode cheyakunda vera refernce dwara ante dynamic ga ah path kavaalante ila petali (reqObj[ref_variable]) ila ivaali.
+• extract variable lo edaina string lo oka pattern batti ante regex pattern ni batti substring kaavalanuko ela ithe oka conectpt undo alaana js lo kuda nv oka string lo substring kaavali but ah substring anedi based on index nyumbers kaakunda oka pattern ni batti kaavalanuko apudu nv regex match method vaadali. Ade based on indexed anuko elaago slice, substring, substr  ee string functions unai. so pattern based substring kaavalante js lo regex match method use chai. FOR EG jwt token heaer lo part kaavalnukovadam.
+• Dynamic string vasta adi gani might or night not exist ithe apudu nv mundu adi vachinda leda ani check chesukovali lekapothe adi raanapadu nv edaina string based lantivi gani or other operations chestunapudu cannot be done on null or undefined ani vastundi. so ala avakunda undaalante 3 ways unai.
+	1. var dynamicString = context.getVariable("name") || "Doesn't exist";
+	2. if (dynamicString)
+	3. dynamicString = dynamicString ? dynamicString : "Doesn't Exist" ; (Ee ternatry operator ki shortcut form nulling coaleshing operator ani okati undi kakapothe that is not part of ES5
+
+  
+  
+  
+  
+  
+Apigee Work Points
+==================
+• js policy lo property tag lo petina values ni source code lo retrieve cheyalante properties object vaadaaali. deeni gurunchi javascript object model lo undi chudu.
+• js lo ekadaina object literal ani vaste max adi json object structure anedi correct ga undi undadhu.
+• oka proxy lo oka js policy lo ni functionality ni inko js policy lo vaadalante mundu ah functionality ni first js lo oka named/regular function lo petu. AND ipudu nv function ni ee second js lo call cheyal;ate mundu nv second js policy lo xml lo <INCULDEURL> tag lo idi mention cheyali. apude vastundi. ledante that function is not defined ani vastundi.
+• nv oka js resource file functions kosomo, variables kosamo, array kosomo, objects kosomo vere js lo IncludeURL tag vaadi use cheste apudu ah js lo una print stams kuda ne proxy inkosari print avtai. anduke okasari niku includeURL vaadinapudu prints stmsts output lo ekuva vachai.
+
+
+Apigee Supported version for js, java, nodejs: https://docs.apigee.com/release/supported-software
+
+Rhino JavaScript engine 1.7.12
+
+Rhino anedi ECMAScript5.1 (ES5) ni support chestundi, So ES5 support chesa features ni matrame apigee support chestundi, so better nv akada daaka una features meeda focus chai.
+
+
+
+General Methods Used to work  with regexes
+==========================================
+regex.test("string") => returns true if the regex matches otherwise false
+string.match(regexObject) => return array of matched patterns otherwise null

@@ -1,0 +1,25 @@
+apigeelint -s /path/to/apiproxy/  -f table.js -e PO007
+
+
+--maxWarnings
+
+kavaaalante manam ye konni external pluigins ni create chesi manakau nachinatlu apigee linting kotha conditions petukovachau anta without deploying it into actual official github
+
+consistancy meaning
+
+For ApiProxy Design: https://www.googlecloudcommunity.com/gc/Cloud-Product-Articles/Recommended-Shared-Flows-For-All-Proxies/ta-p/77649
+
+For Why are KVMs handled differently in Apigee Edge vs. Apigee hybrid and Apigee X: https://www.googlecloudcommunity.com/gc/Cloud-Product-Articles/Providing-KVM-Content-APIs-for-Apigee-X-and-hybrid/ta-p/76054
+
+ciam team ante forgerock team (sid,krushna,sreedhar,vikram)
+
+mean & avg both formulas are same
+
+1000ms to 1sec
+ 
+Api Proxy Performance - total traffic, success trafic, error traffic, avergae tps, average time, average proxy time, average target time
+Error code Analysis - total errors, proxy errors, target errors, 4xx & 5xx errors in proxy, 4xx & 5xx series errors in target, status code analysis for proxy errors, status code analysis tar
+
+
+screenshot: windows + shift + s
+Mic lo red unte voice stop ipodi ante avatalavaariki vinap[adadhu(red=stop)

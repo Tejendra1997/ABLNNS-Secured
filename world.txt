@@ -1,0 +1,32 @@
+7 Continents
+============
+1. Asia
+2. Africa
+3. Australia
+4. Europe
+5. Antartica
+6. North America
+7. South America
+
+1. Asia
+========
+
+
+Europe
+======
+	• France
+		-Paris
+	• Germany
+		-Berlin
+	• UK / Britain
+		-Engalnd
+			London
+		-Scotland
+	• 
+
+
+
+
+Note
+=====
+• All over world there are 195 countries.

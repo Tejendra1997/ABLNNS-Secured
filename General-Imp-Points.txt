@@ -1,0 +1,607 @@
+GENERAL
+=======
+• PII info ante personally Identifiable Informatrion , Ee info ne scb vaalu log cheyakudadhu anaaru. Nijame kada PII info anedi customer related info so daani log cheyakapovadame best security process
+
+• http header names anevi case-insensitive so anduke apiudapudu nv gamaninchinte headers ni lower casde lo mention chesina vachevi upper case lo mention chesina vachevi endukanekte header names anevi case ibnsensitive kaabattti. Kani header values matram case sensitiuve ye.
+
+• jwt or jws lo signature generate cheyadaaniki private key use chestary and verify cheyadaaniki public key use chesataaru. Ade cryptography lo encryption decryption with asymmentric key concept lo encryption anedi santosh chepinatlu public key tho chestaaru decryption anedi private key tho chestary wjich is completely differnet to jwt/kws. Ee rendu diff diff vaadadam vallane nv apudapudu confuse avtunaav.
+
+• Web developer ante evado kaadu frontend developer ani ardam ante UI/UX developer ani ardam.
+
+
+1.Naming Conventions
+====================
+====================
+	thisIsCamelCase
+	this-is-kebab-case (THIS-IS-SCREAMING-KEBAB-CASE)
+	this_is_snake_case (THIS_IS_SCREAMING_SNAKE_CASE)
+	ThisIsPascalCase
+
+Use the below way for naming files
+==================================
+Apigee-Imp-Points.txt
+apigee-imp-points.txt
+Note: Dont use underscores in file naming
+
+2. Mean & average both are same. Sum of elements divided by number of elements
+   Eg: (1+2+3)/3
+   
+3. Load balancing ante distributing the network traffic across the pool of resources that supports the application. So epudaina load balancing padam vinte daani ardam vachina motham traffic ni palu palu target servers ki mallinchadam.
+
+4. Outbound apis means something that you publish some services from your server and then 3rd party tools will consume those services.(OR) outbound apis are exposed to extrernal world
+   Inbound apis means that your website will consume the services. And that services and those services published either by some 3rd party tools or ur itself for your internal purpose (OR) inbound apis are not exposed to external world & it is used by intenelly.
+
+• yaml lo indendatons anevi chaala imp avi gani thapuga pedithe errors vastai.
+
+• docker ki mundu virtal machenine undedi. ante virtal machine alternative ye docker anamaata.
+
+
+
+
+Server Means (Node = Virtaul (or) Physical Machine = Server = VM ware = computer machine)
+============
+• kubernetes lo una worker node ni virtsal machine or physical machine antaaru (Virtual or physical machine ante ento niku telusu, its a computer). ah node ne server ani kuda antaaru. So Node = Virtaul (or) Physical Machine = Server
+
+Virtaul Network Means (Virtual Network = Ipaddress = Virtual Host = Virtual service)
+=====================
+• Idhi virtual network, virtual machine kadu. so virtual network ante ipaddress ani ardam. Virtual Network = Ipadress
+
+summary: server ante compute or application, service ante ah computer ni application ni connect avadaaniki use iye dns, ipaddress.
+summary: server ante compute or application, service ante ah computer ni application ni connect avadaaniki use iye dns, ipaddress.
+
+
+•Platform or infrastucture setup ante enough resources, cpu, memory, os, storage, ram.......ila oka computer nokke machine lo apigee lanti app run avaneeki em avasam avtaayo avani setup cheyadame infra setup ante 
+
+
+
+Software architectural styles
+=============================
+• Micro service
+• Monolothic
+• Serverless
+
+
+• LDAP Authentication Service
+• Forgerock Authentication Service.
+
+Subsequent Requests VS Consecutive Requests
+===========================================
+• subesequent requests ante first call anedi intial call avudi and dani tarvaata vache call ah intial call tho link i untaadi, and dani tarvaata call ah second call tho link i untadi......, Eg: intial call auth-code cgeneration call, 2nd call token generation call, 3rd token validation call. veetini subsequent calls antaaru endukante ivi okadaanitho inkoti link i untai9 kaabatti.
+• Consecutive calls ante one after one. deenilo most;ly oka call ki inko call sambandam undadhu,independant ga untai anamaata.
+
+Types of Testing
+================
+Unit Testing: Dividing the whole application into small components and doing the testing for small components to ensure that it is developed/ written in best way. Eg: Testing all the policies seperatly in api proxy. (No need to do the test for out of box policies because already google apigee engineers should have done the test for it, we just need to do the test for custom policies like js & java...)
+Smoke Testing: Testing most important / crucial features of an application. Eg: Checking proxy deployment, target server creation, kvm creation, product creation, app creation.... after apigee updation.
+Functional Testing: To test each & every functionality seperartly. Eg: Checking all the status code of an api proxy
+Regression testing: To test that the new changes are not effected the previos features. Eg:To ensure that Onboarding of new resource does't effected the already working resources
+
+Open source VS Closed source or proprietary tools
+=================================================
+• open source DISTRIBUTION/tool/application ante ah tool anedi publicly available and andaru free ga download chesukuni use cheseyachu. 
+	eg: java, python, nodejs....
+• Commercial Distribution or closed source or proprietary tool ante adi publicly vaialble kaadu ante daani free ga use cheyalemu, pay cheyalisinde.
+	eg: AWS, Microsoft azure, GCP
+
+CICD Tools VS Package Manager Installers or tools
+==================================================
+CICD
+----
+Defintion: CICD (continous integration and continous deployment) ==> peruku taggatle updated code ni apatikapudu version control system ina git nunchi techukuntaadi kada ade CONTIONOUS INTEGRATION & ee CICD tools lo manam either shell scripting languages(bash, sh, zsh, csh..) or scripting languages(pyton, js, php, grrovy, ruby...)  use chesi server loki deploy chesetaam kada so ala CONTINOUS DEPLOYMENT kuda avudi.
+Jenkins (idhi hdfc & bdo projects lo use chestaaru)
+CircleCI (idhi mana trust bank lo use chesevaalu)
+Harness  (idhi ipiudu mana trust bank lo use chestunaaru)
+GitLab CI/CD (So nana vedios lo nv chuse ee gitlab kuda CICD tool anamaaata
+GitHub Actions
+Travis CI
+
+Package Manager Installers or tools
+-----------------------------------
+• Package ante simple ga chepaalante apigee sharedflows laaga, js lo package or modulers laaga, java lo ithe maven & libraries laaga. Ante niku oka use case undi daniki nv scratch nunchi code create cheyadam kanna already evado okadu already code ni best-practise lo raasi untaari nv ah package, module, library, maven, plugin.... ni isntall chesukunte chaalu nv malla scratch nunchi create cheyalsina avasaram ledu. Ila ah packages, modules, librarries, maven, plugin ni oka dagara store chesukodaaniki okadau npm ani oka ttu telichaadu daanilo js programming language ki avasaramaina packages / modules like ipudu niku js tho mangodb database connect cheyalanuko apudu nv mangodp package/ module ni install chesukovaali.., ila prathi requirement taginani modules/packages ee npm lo untai (recent ga around 1million packages ki npm reach indi, its a good sign becauise manaku kavaalasina anni requiremnst taginani modules r packages npm lo unaui nanmaata, alnaane java lo ee libraries, dependencies ni store chesukodaaniki maven ane store undi... ila prathi pragrramming language ki kaavasina packages, modules, libraries, dependencies, plugins ni use chesukoniki vaatikiantku oka seperate store petukunaaru.
+• Nv kavaaalante nv kuda js lne own packege/module ni create chesi npm lo upload cheyachu. Infact nv already openapi2apigee lo chesaav kada generateProxyEndpoint.js ane file lo functions ni genarteApi.js lo utilize cheyaniki module.exports ani ichaav kada ante akada generateProxyendpoint ane module ni generateApi lo use chesuntunnatle antenv already package/modulke ni create chesi ni code lo ne vera dagara vaadutunaav ade package/ module.
+	Package Manager
+	---------------
+		-NPM (Node package manager) (Javascript) ==> https://www.npmjs.com/package/store
+			DEF:  npm is a package manager for JavaScript programming language and is primarily used for managing dependencies in Node.js projects. It is used to install and manage Node.js packages (also known as modules) from the npm registry. npm is commonly used in web development for managing frontend and backend dependencies.
+		-Yarn (javascript, Idhi kuda js programming language use chese build chese applications ki vaadutaaru. Deeni facebook vaalu develop chesrau as an alternative to npm) ==> https://yarnpkg.com/package?name=registry-url
+			DEF: Yarn is another package manager for JavaScript, developed by Facebook. Like npm, Yarn is used for managing dependencies in Node.js projects. Yarn offers features such as offline installation, deterministic dependency resolution, and parallel package downloads. It is often seen as an alternative to npm, providing enhancements and improvements in certain areas.
+		-pip (python) ==> https://pypi.org/project/store/
+			DEF: pip is the package installer for Python programming language. It is used to install Python packages from the Python Package Index (PyPI) or from other sources. pip is commonly used in Python development for managing project dependencies and installing third-party libraries and packages.
+		-Homebrew
+			DEF: Homebrew is a package manager primarily used on macOS and Linux systems. It allows users to install, uninstall, and manage software packages and utilities from the command line. Homebrew is often used to install command-line tools, development libraries, and other software that may not be included in the default system installation.
+	Build Tools
+	-----------
+		-Maven (Java) ==> https://mvnrepository.com/artifact/store
+			DEF: Maven is a build automation tool primarily used for Java projects. It provides a way to define project structures, manage dependencies, compile source code, run tests, and package applications into distributable formats such as JAR files. Maven uses XML-based configuration files (POM files) to define project settings and dependencies.
+		-Gradle (java, kotlin)
+			DEF:  Gradle is another build automation tool similar to Maven but offers more flexibility and extensibility. It uses Groovy or Kotlin as its build script language and provides a more expressive DSL (Domain-Specific Language) for defining build configurations. Gradle is often used in Java, Android, and other JVM-based projects.
+
+Note: So ardam indi kada jenkins, circleci, harness, gitlab, github actions... anevi CICD tools and npm, maven, gradle... anevi package manager installers. So inkeppudu renditini kalapamaaku. And interview lo valaani question adige danbilo ye ye CICD tool use chestunaarani adugu.
+
+
+
+supported kubernetes platforms
+===============================
+GKE (Google Kubernities Engine)
+EKS (Amazon Elastic Kubernities Engine)
+AKS (Azure Kubernities Engine)
+Anthos (Google product)
+
+
+Scripting Lnaguages VS Shell-Scripting Languages
+=================================================
+• Scripting languages (js, python, php, groovy, ruby...) and shell scripting languages (bash, sh, zsh, ksh, csh) both differenyt anamaata.
+• Scripting languages ina js, python, php (idhi sisindhar vaalu dev portal lo use chese scripting programming language), groovy (jenkins lo by default ga use chese scripting programmoing language), ruby ... anevi high level programming languages ivi, ivi java laanti programming language chese programming tasks tho paatu interacts with linux-like operating system shells to execute system commands, manipulate files, automate tasks with in the CONTEXT OF OPERATING SYSTEM SHELL. But ee scripting languages(js, python, php, grrovy, ruby...) anedi specific ga os shell tho interact avadaaniki cheyaledu ivi programming tasks cheyaniki tayaaru chesaru but vaatitho paatu ee os shell related tasks kuda chestundi but in general ga chesindi maatram high level pragramming tasks kosam, ee interacting os shell anedi additional feature laaga. wheras shell scripting languanges ina bash, sh, zsh, csh anevi specific ga os shell related activities cheyadaanike develop chesraau.
+• Ade shell scripting languages bash(bourne again shell), sh(bourne shell), zsh(z shell), csh(c shell)...anuko avi only interacts with linux-like operating system shells to execute system commands, manipulate files and automate tasks with in the CONTEXT OF OPERAING SYSTEM SHELL matrame chestai, normal scripting languages ina js, python, php, groovy chese web application kind of tasks ni cheyadhu.
+• Nv name lo gamainchina telisipodhi "shell scripting" ante os shell meede use chese scripting language ani. Manam trust bank prokject lo hanrness piplines lo use chese shell scripting language bash(bourne again shell) anamaata.
+• jenkins lo high level programming language or normal scripting language ina grrovy ni use chestaaru.
+• NANA matram python top lo undi ani chepindi.
+
+CHARSETS
+========
+• oka character ki ikada character ante small a, cap b, special character, space... ivanni vastai anamaata. so ee characters ni coputer ardama chesukunedi binary formate lo so andukani ee charcters ni first oka number loki maarchi and number ni binary foirmat (0 & 1) lo ki maarchukuntaam. Like a char ki 65 konda gurthu peani petukuntaam ipudu ah 65 ni binary number lo ki maarchi send chestaam backend ki. ela ithe a ki 65 ani petukunaamo alaa prathi character ki oka number petukuni document chesi petukodaaame charset antaaru. And most popular charsets vachi ascii & unicod. unicode ye utf-8,16, 32 idhe nv contenttype lo application/json tho kalisi vaadutaav. unicode anedi cjhaaala ekuva vaadutaaru.
+• Maamulga manam send chesa application/json payload anedi by deafult most of the times vaadedhi utf-8 encoding. but nv hdfc lo chusinatlu konni sarlu explicit ga mention cheyali andukante konni sarlu vaalaku exact ga em charset encoding ki vaadutunaaru ani teliyadaaaniki etuvantoi assumptions meeda base iyi vella kunda exact ga telisi velali anukuntaaru. apudu matrame ila explicit ga use chestaaru.
+• so high level lo charset=utf-8 ani contenttypoe value lo chuste adi encoding ki ani & also vaalu backend ki claer ga em vaadutunaaro chepali ani maaata.
+
+
+
+
+Api Gateway Uses
+================
+• Traffic Management
+• Payload Transformations, Payload Manipulation & payload masking
+• Security (Authentication & Authorizations)
+• Cache
+• Logging & Analytics
+
+
+
+Api Architecture Styles
+=======================
+• SOAP
+• REST
+• GRAPHQL
+• gRPC
+• WEB SOCKET
+• WEB HOOK
+
+SOAP vs REST
+============
+• Rest is an architectural style. Soap is a protocol
+• REST is more flexible than SOAP
+• Soap restricted to xml payload whereas REST supports xml, json, text & html...
+• Rest payload is light weight and it is easily understanable wheras SOAP is heavy weight and not that much understanble as REST, Need to have kind basic knowledge about its structore like elements, namspaces, attributes, prefix.
+• Rest is compatable with many programming languages however SOAP need frameworks, librraries... to use.
+• SOAP is used mostly by legacy API's. Nowdays REST api's are used most. 
+
+
+
+Forward Proxy VS Reverse Proxy
+==============================
+• forward proxy ina reverse proxy ina rendu client and server madyalo lo untai kaakapothe avi ah madyalo ekada untai ane dagara differnce vastundi.
+forward proxy
+-------------
+• forward proxy vachi client(any browser, software applocation...) ki internet ki madyalo untundi. 
+	client --> Forward proxy --> Internet --> Microservice
+• forward proxy entra ante its on behalf of client.
+• forward proxy ni enduku vaadutaamente:
+	- client yoka details anevi like ipaddress, region.. ilantivi server ki teliyakunda undadaniki. for eg: incognito mode kuda forward proxy ye
+	- restrict ina servers ni access cheyaniki. for eg: vpn use chesukuni prime lo america region lo maatrme availble una movies ni chudatam.
+reverse proxy
+-------------
+• reverse proxy anedi internet ki ki server ki madyalo untundi.
+	client --> Internaet --> Reverse proxy --> Microservice
+• reverse proxy as a n behalf of an target endpoint
+• reverse proxy enduku vaadutaamante, idi vaaniki chaala reasons unai and adi neeku munde telisi undaali endukante mana apigee lo build chesa proxies anni reverse proxies ye kaabatti. so apigee yoka usages ye ee reverse proxy ki varstistai.
+	- to hide target endpointr details to the client.
+	- load balancing
+	- caching
+	- security
+	- rate limiting
+	- transformations
+
+
+
+
+
+
+
+
+
+PUT vs PATCH
+============
+• put anedi mothaani update chestunidi whereas patch enedi mothaani kaakunda only small part ni matrame me  update chestundi. Deeniki justify chestatalu eg pathch anedi only small part ni matrame ye update chestundani manaku apigee lo pni patch release lo ardam avtundi ante mothaani kaaakunda only nv checpina oas policy lo examples attribute ni matrame update chestundi anduke vaalu daani patch release anaaru alaane niku ptelusu patch anedi tire puncture inapudu vestaru kada adi kuda motham veyakunda only akada matrame vastaru so patch anedi only small part updation ade put anedi mothaami up[date chestundi anaam kada daaniki justification kvm lo ni put elementit updateds the particular key entire value but not a small part of that value.
+GET = READ
+POST = CREATE
+PUT = UPDATE
+PATCH = SMALL PART UPDATION
+OPTIONS = FOR PREFLIGHT REQUEST
+DELETE = DELETE
+HEAD = Head is used to get the metadata of a resource. head is similar to get but it gets only the meta data of a resource. It typically used to check the availability of a resource, If the resource is avialbe then it gets the metadata of that resource istead of getting the entire body of that resouce like GET metghod.
+TRACE = TRACE method makes the client to get the exact request of what server is recieved so that the client can get to know what modificationbs/ changes are been made in between.
+
+
+
+
+Authentication vs Authorization
+================================
+• Authentication means proving that he is authenticated user user or he has account in that site
+• Authorization ante previlized permisssions
+
+
+
+Web service
+===========
+http://www.differencebetween.net/technology/difference-between-microservices-and-web-services/
+
+
+
+HTTP Codes
+==========
+• 1xx (Information)
+• 2xx (Success)
+• 3xx (Re-Direction)
+• 4xx (Client Error)
+• 5xx (Server Error)
+
+400 = Bad Request
+401= Unauthorized
+403 = Forbidden
+404 = Not Found
+405 = Method Not Allowed
+422 = Unprocessable Entity
+429 = Too Many Requests
+
+500 = Internal Server Error
+502 = Bad Gateway
+503 = Service Unavailable
+504 = Gateway Timeout
+
+
+
+
+Synchronous vs Asynchronous
+===========================
+• Synchronous: In order, One can start only the prior one completes. Current action/step/process/request will wait for previous one to get complete.
+• Asynchronous: Each & everything is independant. No need one to wait for other to complete. Current action/step/process/request will not wait for previos call to get complete.
+
+
+
+Microservice vs api
+===================
+• The microservice can then be delivered through an application programming interface (API)
+• For suppose client needed a particular data from backend and where that data getting is stored is called microservice and the way to reach that microservice is called api. so api is a traveeling medium between client and microservice.
+
+
+
+
+web service vs api
+==================
+• webservices lo requests and responses anevi tansfer over an internet, whereas in api the requests and responses may or may not transfer over an internet. (Ikaada may or may not anaadu, so nv api internet nunchi reqs & responses tranfer avavu ani anukomaaku konni sarlu avtai ade kada may or may not ki meaning
+• All webesrives are apis, whereas all apis are not webservices.
+• Malla rendu diffrent software applications madya communication kosam ye vaadutaaru
+• nv amazon nunchi product ni purchase cheyali anapudu payment gateway ina phonepay ki veltundi kada adi web service vallane ala ani anni over the net communication iye anni webservices anukomaaku chepanu kada apis may or may not trasfer data over an internet ani so apis kuda undachu
+• malli apis anevi ilocal lnternal components madya communication kosam kuda vaadutaaru ade kada mana apigee data plane lo unna componenets(messageprocessor, casandra, synchronizer, udca, mart) madya communication kuda ee apis dwaraana avtundi.
+• webservices anevi xml formate lo matrame data ni transfer chestai whereas api anevi json, xml, soap, plain text.. ila anni formats lo ni data ni transfer cheyaniki use avtai.
+
+GIT workflows
+=============
+• GIT anedi ela vadaali ane daniki kuda workflows unai. Like harshith vaalu oka lanti workflow use chestunaru niku okasari call lo kuda chepedu kada and manam TRUST bank app lo oka laanti workflow follow avtyunaam adi PULL REQUEST WORKFLOW idhi gaurav recommend chesadu. so ila anni compines vaala yoka development team, requirement, nature of project ni batti, colloborartive work  i batti okkokakaru okko GIT workflow followe avtuntaaru. Manam follow ayedi "PULL REQUEST WORKFLOW" workflow.
+Types of GIT workflows:
+-----------------------
+• feature branch workflow (ante main branch lo actual code untundi dani nuchi develkopers feature branches ni create chesi vaala feature ni ah feature branch lo commit chesi atlast main branch tho merge chestaaru)
+• pull request workflow (manam use chesdi idhe,idhi feature branch workflow laane kaakapothe ikada feature branch ni main tho merger chestapudu PR ni review cheipiyaali, feedback teesukovaali, if needed discussions kuda jatragaali. ide feature branch workflow ki ee pull request workflow ki difference)
+• centrailized workflow (idhi motham developers andaru main branch lo ne direct ga chenges cghesi push chestuntaaru, idhi compliocated & risk tho koodikundahi anamaata)
+
+Software Artifactory Tools
+===========================
+• jfrog artifactory
+• Nexus repository
+• amazon elastic container registry
+• google container registry
+• Apache 
+• git lab package repository
+
+Infrastructure As a code (IAC) Tools
+====================================
+Idhi server or system or virtaul machine or physical machine or bulugu lights lo hardware compomnets ni , os ni, network configurations ni, security policies ni, applications ni, montoring tools ni, database backup ni... veetanintini paatha kalama lo ga manula ga kaakundfa automatic ga configure cheyaniki ee IAC tools anevi use avtai.
+• Terraform
+• AWS Cloud Formation
+• Ansible
+• Pulumi
+• Chef
+• Puppet
+• Azure Resource Manager (ARM)
+• Google could deployment manager
+
+
+Stand-Alone applications vs Web applications
+============================================
+• stand-alone applications ante ah app/ code anedi only ah particular machine lo matrame work avtundi. ah code anedi publicly available undi andari machines lo automatic ga work avadhu only ah particular machine lo maatrame work avtundi. (Okasari rahil kuda anaadu manam rasina certificate-management utility anedi only na machine maatme work avtundi kada kani adi web lo ante dev-p[ortal lo work avaali ante naku telisi common sense tho alochistunte nenu raasina utility anedi cloud server lo petti connect cheyaali apudu matrame adi web application (ikada ye china code ina application ye ani gurthupetuko even oka addition code kuda add application ye)la andariki available untaadi.
+• web application ante paina chepukuntalu adi cloud/server lo untaadi so that andaru daanini use chesukogalaru.
+
+Frameworks
+==========
+• frameworks anevi basic prgramming concepts use chesi already mostly usefull ayye functions, mechanisms, concetps ni offical programming language vaalu best-practises tho create chestaaru, manam vaatini ela use cheyalani teliste chaalu scratch nunchi create cheyasin avasaram lekunda so that amount of code anedi tagguddi
+• framework ante librarries kind ante pre-written code untaadi nv dani use cheste chaalu malla scratch nunchi motham raayadam kanaa vaale ah most widely used functionalities/mechanisms ni vaale raastaru manam daanini plugin dwaarano, libraries dwaarano..... mana daaaniloki download chesukuni vaadukovachu, manaku ah library ni ela vaadalani telste chaalu. Ante ee frameworks dwaara amount code anedi taggudi anamaata. For eg nv js lo niku oka array lo ni elements ni reverse kavaaalante nv kuda loop use chesi code raayachu but ala nv antha kastapadaalsina avasaram lekunda already js array concept lo reverse() ane method undi adi niku kavaalsindi chesi istaundi just niku dani ela call cheyali, daaniki kavaalsina array ni input ga ivadam, alaane daniki output ni correct ga store/ assign chesukovadam... ilantivi teliste saripotundi nv em screatch nunchi loop use chesi code raayabaledu endukante already js yoka developers anevaalu ah loop petti code motham raasi manaki istunaaru vaadukora babu ani, adi develop chesindi official js developers kaabatti vaalu katchitamga best practises ne follow avtaaru. so niku ela use cheyali ani teliste saripotundi. so epudania java lo gani, javascript lo gani framework ani vinte adi edo complete kotha concept anukomaaku adi just most used concep[ts ni manam scratch nunchi develop cheyalsina avasram lekunda js developers ye manakosam develop chesi istaaru, manam just adi ela vadaalanai telsite saripotundi anthe.
+• SO FRAMEWORK ANTE ADI SUPPORT CHESE MOST USED CONCEPTS (FUNCTIONALITIES, MECHANISMS) ENTI VAATINI ELA INTIATE CHEYALI ANI TELISTE CHAALU.
+javascript
+----------
+	front-end frameworks:
+	---------------------
+	- REACTJS (idhe siva, karri munnisa, gopi, hemanth, lakshmi's husband work chesedi ante frontend framewprks meeda work chestunaaru anthe, nv edo manakna pededi chesunaaru anukunaavu)
+	- ANGULARJS
+	- VUEJS
+	Backend or microservice frameworks
+	----------------------------------
+	- EXPRESS.JS
+java
+----
+	Backend or microservice frameworks
+	----------------------------------
+	- SPRING
+	- SPRINGBOOT
+python
+------
+	Backend or microservice frameworks
+	----------------------------------
+	- FLASK
+	- DJANGO
+
+
+Stateless & Statefull
+=====================
+• Stateless applications ante data undadhu ante avi data ni store chesukovu. Eg: https edi just requests and responses ni forward chestundi anthe em store chesukodu kada.
+• Statefull applications (or) database applications ante daanilo data undundi ante database undtundi ante daaanilo logsging data, buffer memery data, cache data ... ilaanti data database or untundi. Eg: amazon, flipkart, any bank applications.
+
+
+
+Cache memory vs Buffer Memory
+=============================
+• Cache memory & buffer memory serves two different purposes, cache meory is used for fast data access and buffer memory is used for smooth data trasfer in I/O operation between two diferent components/processors that operates at different speed.
+
+
+
+Mean vs Median vs Mode
+======================
+- Mean ante avg ante sum of all iteams / no of all iteams
+		eg: 3,8,1
+		mean=(3+8+1)/3  ==> 4 is mean va;lue
+	- Meadian ante ichina list of values ni oka sorted order lo petti apudu vaati madyana unde value ne mediabn antaaru
+		eg1: 3,5,1,2,6
+		sorted order: 1,2,3,5,6
+		median: 3
+		
+		eg2: 10, 4, 2, 8, 3,6
+		sorted: 2,3,4,6,8,10 (ikada mid value 2 numbers vastunai kaabatyti vaati oka mean value ye median avtundi)
+		median: (4+6)/2 = 5 is median value
+	- Mode ante ichina list of values lo ye number ithe ekuva sarlu repear indo danine mode number antaaru
+		eg:5,3,7,2,3,9,
+		mode: 3 (since 3 is repeating more times than other numbers, so 3 is mode)
+
+
+
+Certificate Chain
+=================
+• root certificate --> Khaleesi
+• intermediate certificate1 --> Tyrion Laninster
+• intermediate certificate2 --> Jon snow
+• End user certificate --> sam
+
+
+GRAPHQL
+=======
+• vedio: https://www.youtube.com/watch?v=yWzKJPw_VzM (comments kuda chaduvu for maore info)
+• graphql anedi one of the api architectural styles
+• maamulga graphql ante adi clients ki em data kaavalo select chesune option isstaadi so that clients vaalaku kaavaalasina info ni matrama techukuntaaru daaaniki minchi gani leda takuva gani techukoru. For eg rest style lo niku kaavalsina data kosam oka 3-4 rest api calls chesta vastraadi and ah responses anintini kuda madyalo middleware lo kalapaali ante nv ikada 3-4 api calls cheyalsi untundi niku kaavalsina data kosam ade graphql lo ithe elaano em kaavalo select chesukune option undi kaabatti oka call saripodhi. inko eg ga ipudu niku kaavalsina data anedi oka api rest api nunchi vache daanikana takuva kaavalanuko ikada malli middleware ah response ni filter chesi send cheyali ade gql io ithe vaadiki em kavaalo adi select chesukune chance undi kaavbatti akada simple ga ipodi. so overall ga graphql anedi client ki em data kaavalo adi select chesune vesulabaatu istaadi anamaata.
+• rest lo ye api ki hit chestunaamo ani resource chuste ardamavtundi ade graphql anuko /graphql ani maatrame untundi clienyt gaadu ye resorce ki hit chestunaadu anedi body lo una gql payload lo chuste telustundi nv gamaninchunte scb lo gql calls lo kuda vaalu ye resource hit chestunaaru anedi niku body lo ah resouce name anedi mention chesuntaaru. so gql lo ye resource ki hit chestunaari ani teliyalante rest api lo laaga url lo teliyadu adi body lo telustundi ye resource ki hit chestunaaru ani.
+• kaapothe graphql qury ki sahakarichetatlu backernd lo mappings unadaali ah query ki ee response mapping ani anduke kada name graphql ani petaaru graphh ante mapping laa. so idi konchem complicatew avtundi ekuva iye kodhi mappings cheyadam anedi complex avudi. ee graphql anedi chaala pedha organization or ekuva apis ni handle chese vaale vaadali endukantye edi graphql chaal amoney tho koodukunadhi and deeni test cheytadam kosam koda vere evo tools dabbulu peti teesukovalsi untundi andukane chaala ekuva apis una companies maatrame ee graph ql joliki velai (mari mana scb velindi mana scb anedi hdfc, icici kanaa ekuva anamaat)). asalu ee graphql create chesinada facebook vaalu ante nv ardam chesukovachi vaaaladi chaal pedha company & vaalaku chaala api;s untai anduke ani api's ni hiyt cheyaleka vaalu edi kanipetaru. so grapghql pedha companies ye vaadalai chinna companies vaadakudahu and at the same time api's ekuva ayee kodhi ee graphql anedi complex ga tayaaridi. so andukuna rest vs greaphql ante simple ga rest ani chepu endukante rest anedi ekuva calls cheyalsi vachina chaal asimple ga untundi ee graphql laa complex undadhu. so rest api is good.
+
+
+Headers
+=======
+• x-forwarded-for header ki multple values vastunai ante ah source request(postman req) anedi target endpoint (proxyendpoint ki) ki reach iye lopu madyalo anni servers or proxies gunda request potundo ah servers/proxuies yoka ip's ye avi. ante list of vaues of x-forwarded-header lo first value ye source di (postman di) max nv ade consider cheyali, tarvaata unavi anni madyalo tagilaina servers vi and last lo unde ip proxy endpoint ni hit cheyaboye mundu tagilina server di, by default ga mana access control policy anedi list of all ip's ni validate chestundi. manaku kavaalte either only first ip ni validate chai or last ip ni validate chai ani chepachu but ah tag anedi sarriga work avtledu. Ante nv x-forwarded-for ki mulktiple values vachetatlu configure cheyalante direct ga postman lo mock cghesina or proxy lo assign msg policy use chesi multiple add cheina ah policy ki okate veltundi endukante akada source only okate kaabtti so niku multple values vachetatlu simulate cheyali ante apudu nv ne eval proxy nunchi praneeth eval proxy lo ki proxy chaining chai so that proaeeth proxy reach iyetapudu ne postman ip okati vastaadi and ni eval proxy ip inkoti vastaadi anamaata.
+
+
+CRYPTOGRAPHY
+============
+-> ENCRYPTION & DECRYPTION
+	•Symmentric
+	•Asymmentric
+	•Hybrid
+-> Hashing
+	• checksum/digest/hash process
+-> JWT/JWS
+-> SSL/TLS
+-> OAUTH2.O
+
+1
+==
+• client and sever madyalo internaet untundi danili internet service providers untai(ISP's) avidata ni clenit nunchi server ki trasfer chestai but ikada once once client nuchi date anedi internet ki velte dani evaraina chudachu, dani evarian modify cheyachu, dani evarina tessukovachu ila jaragakunda undadaaniki ee ssl/tls anedi client ki server ki madyalo across the internet oka tunnel create chestundi so that dani gunda sgare iye data motham secured ga untundi. Idhe pani konchem large scale lo chesadanine vpn(virtual private network antaaru).
+2
+==
+• ssl/tls anedi 3 functionalities provide chestaadi so that manaku kavaalsina security motham vastaadi.
+	Confidentiality(Evaru data ni read cheyakunda cheyadam, deeni kosam ENCRYPTION ane sucurity concept help avudhi)
+	Integrity(ante evaru ah data ni modify chesina telisipoyatatlu chestundi, deeni kosam HASING ane concept ni vaadutaaru)
+	Authentication (ante idi everu evariki send cheyalo vaaleke send chestalu alaana evaru ithe send chestunaaro adi nijamga vaale anetatlu feature ni provide chestundi , deeni kosam security concept ina PUBLICKEYINFRASTRUCTURE concept ni use chestaaru)
+3
+==
+• paina chepina concepts anevi max motham security issues ni clear chestundi but inka hackers teliviga kotha kotha ways lo ela vaalaku taginatlu cheyachu anevi vetukutunaaru daanilove ee kinda una replay & repudiation issues. veetini kuda ssl/tls cover chestundi.
+Anti-Replay
+-----------
+• Ante middile man elano confifdentiality valla data ni read cheyaledu, integrity valla data ni modify chesta telispotundi alanaa evaru identity ni pretend/spoof cheyaleru authentication valla but what if the middleman can resend the same request to server mutiple times, deeni valla issue entante ipudu nenu hacker anukio naku oka bank lo account undi and nenu naa account oka 1lakh credeit chesukunaanu and ipudu nenu same 1lakh credit chesukune mesg ni server ki mutlple times senbd cheste apudu na account 1crore daaka amount credit ipoynatle kada. deeni overcome cheyadaanike Anti-replay ane feature dwaraa prathi request msg ki oka serial number anedi ee ssl/tls provide chestuaadi so that server anedi once ah orginal msg anedi tanaku vachinapudu dani yoka serial nu,mber ni kuda log chesukunaati so ipudu middelman ah msg ni multiple times send chesina kuda same serial number already server lo log indi kaabatti server daani reject chestaadi.
+Anti-Repudiation
+----------------
+• Idi entante ipudu okadu send chesina data lo vaadi guruche cheduga undanuko apudu adi once server ki velina tarvata ah client gadu nenu ah call cheyaledu ani bukhaa inchakunda undakunda undenduku. asalu e feature anedi explicit ga provide em chetledu idi already integrity & authentication features dwarara vachestundi ela ante integrity dwarraa elanoo evaru evaru data ni modify cheyaleru so data marchesaaru ani vaadu analedu alaane authentication dwaraa adi send chesindi vaade ani telustundi so adi nenu kadu ani kuda bukhaainachaledu. So ee feature anedi default gaane vachestundi.
+• hackers ilaanti kotha kotha ways tho vastunaaru kaaabtette vaatini handle chedaaniki developers kuda ssl nuchi tls ki vacharu and versions ni release chestu vastunaaru to make sure that every new way of hacking is prevented.
+4
+==
+• client ante ipudu una generation lo edaina avachu like app, phoone, tab, laptop, smarttv, smart refigirator, smart ac..... anything that work on internet.
+• top 5 CA's vachi
+	IdenTrust(51%)
+	DigiTrust(19%) ==> mana scb vaalu second most used CA ina digicert ni vaadutunaaru ante nv ardam chesukovachu mana scb vaala range.
+	Sectigo(17%)
+	GoDaddy(7%)
+	Globalsign(3%)
+5
+==
+• ssl1.0
+• ssl2.0
+• ssl3.0
+• tls 1.0
+• tls 1.1
+• tls 1.2 (Mana scb vaalue use chesi tls1.2 ne)
+• tls 1.3
+7
+==
+• Hasing anedi integrity ni provide chestaadi ante evaru data ni modifu cheyakunda aapadhu idi okavela modify cheste telisela chestaadi
+• Hashing charcterstics:
+	-Idhi one way encrypotion laaga everau reverse engineer cheyaleru
+	-orginal msg lo small chenge kudan drastic chage tevali digest lo endukante hasing motivi lo okati entnate asalu elanti hints ivakudadhu original; msg em i undadhu ani danilo idhi kunda una points
+	-ye size msg ki ina oka fixed length digest ni create cheyali.
+• collision ane china drawback undi hashing lo but chaaala rare ga vastaadi le, vediuo chudu ardam avudi.
+8
+==
+• Hashing secret key ni msg tho ela combine chestunaam anedi digest result meeda chaala depend i untundi.
+9
+==
+Symmentric Encryption
+---------------------
+• Symmentric encrption uses shared secret key for both encyption an decryption
+• It moves in both forward and backword direction for encryption and decryption
+• Idhi faster endukante matmetic calculations and algorithms anevi konchem simple ga untai so that cpu cost utilization kuda takkuve
+• deeni mathematical calculations konchem simple untai kaabtti bulk data ni kuda process chestundi
+• deeni cipher length sam as plain text anthe untaadi.
+• Idhu konchem unsecure endukante secret key ni share cheyali kaabtti
+
+Assyemmentric Encryption
+------------------------
+• Assymemntric encryption uses different keys (public & private keys) for encryption and decryption
+• It moves only in forward direction for both enc & dec
+• idi slower endukante mathematical calculations anevi complex ga untai kaabatti, so that cpu utilization kuda ekuve untaadi
+• idi bulk data ni process cheydam kastam ekuva time cpu utilizatoion untaadi kaabatti.
+• deeni cipher text anedi plain text kanna ekuva untaadi.
+• idi secured endukante private key ni evariki cheyaalsina avasaram ledu kaabbtii.
+
+• Ee both ways ni use chesi oka daaniloni weakneess tho overcome chesi best way bayataku teestam daanine HYBRID ENCRYPTIO antaaru.
+
+10
+==
+• Asymmentric encryption lo una private & puclic key ni enc & dec ki different ways lo use cheyadam valla different advantages unai. first ENCRYPTION kosam public key tho enc chesi private key tho decrypt chestaaru so that chesindi enc pub key tho kaabatti decrypt cheyalante katchitamga pri key kaavaali adi only okadi dagare untaadi ah okade decrypt chesi read cheyagaladu, so ee process lo niku data ni third person read cheyakuna unde facility CONFIDENTIALITY vastundi.(but deenilo evaru reda cheyaledu kani madyalo evadaina vachi ee actual msg ni teesesi ade public key tho complete vere msg ni send chese chance undi endukante pub key evadi dagara ina undachu ante ee process lo niku CONFIDENTIALTY vastundi kani INTEGRITY & AUTHENTICATION ravatledu). ipudu ink way lo niku SIGNING avudi adi entante private key tho enc chesi publiuc key tho decrpt chetadam deeni valla ah msg pampichidi katchitamaga vaade ani telustundi endukante enc ki vaadina private key anedi  vaadi dagara kaakunda inko vaadi dagara unde chece ledu kada so AUTHENTICATION vastundi alaane INTEGRITY kuda vastaadi ela ante middle man send chesina msg ni read cheyagalutaadu kani dani tamper cheyaledu kada endukante daani tamper cheyalante orginal privayte key kaavali adi only sender dagara untaadi oka vela ah middle man gaadi dagra una proivate key tho tamper chesina kuda reciever decrpt cheyaledu kaabatti adi modify indi ani teliti=undi, so ee rakanga niku integrity kufa vastundi (So ee SINGNING process lo niku AUTHENTICATION & INTGREATION vastundi but CONFIDENTIALY ledu). So ela ithe symmentric & asyymmentric ni combine chesi (HYBRID ENCRYPTION) vaati yoka wealkness ni overcome chestunaamo alaaane ee ASYMMENTRIC lo una rendu ways ni combine chesi nvmotham CONFIDENTIALTY , INTEGRITY & AUTHENTICATION ni techukogalutaavu.
+There ere two features in Asymmentric way by enc & dec with diff keys:
+-----------------------------------------------------------------------
+• Enc with public key & decryption with private key (This is ENCRYPTIONand we'll get CONFIDENTIALTY)
+• Enc with private key & decryption witth public key (This is SIGNING and we'll get INTEGRITY & AUTHENTICATION)
+
+Hybrid Encryption
+-----------------
+• secret key ni enc cheyaniki Asymmentric procedure(enc with pub key & dec with pri key) vaadutaaru and actual bulk data ni transffer ceyaniki Symmenntric way ni vaadutaaru
+• Ram & Sita, first R vachi oka secret  ni generaete chestaatu and danini S pub key tho enc chesi ah key ni S ki share chestaadu and S ah enc shared key ni tana dagara una priv key tho decrpt chestundi so that idari daga ipudu  secret key undi ipudu ah key ne both enc & dec of data ki use chestaaru.
+• Ee hybrid enc ye ssl/tls lo jerigedhi
+
+SIGNING
+-------
+• Asymmentric way lo ni pri key tho enc & pub key tho decrypt chesta signigning avudi, but nv asymmentirc way lo motham payload ni enc cheyali but adi saadyam kadu endukante inthakamudu chepukunaam kada asymmentric lo bulk data ni enc cheyalemu ani so okavela payload ni enc cheyalante ah payload ni refer chese adian chinadi kaavali..., yes hasing valla payload ki chinadi create chesi and daanini enc cheyada,m ade SIGNING ante ade apigee lo iyedi.
+• first ram tana data ni hasinhg chestaadu tarvaata tana dagara una pri key tho ah hash ni enc chesi data tho patu seetha ki send chestaadu ipudu seetha first plain data ni hash chesi pakkana petukuntaadi dani tarvaaata data tho paatuga vachina enc hash ni ram pub key tho dec chestaadi so ipudu tanu generate chesina hash & tanaku vachina hash ni compare chestundi. 
+• Ide APIGEE lo kuda avudi akada data ante base64 encoaded header & payload and daani apigee apigee hash hash chesi private key tho enc chestaadi (chudu kaavalte jwt/jws lo asymmentic ante private key tags ye unai enc ki) ala data(1st & 2nd part of base64encoaded header & payload) & sign(3rd part sgnature) ni send chestaadi.
+
+• SO ILA SYMMENTIRC & ASYMMENTIRC ENCRYPTION NI VAADI HYBRID ENCRYPTION GA ALANAA ASYMMENTRIC ENCTYPTION LO UNA RENDU WAYS NI COMBINE CHESINAPUDU TOTAL CONFIDENBTIALY, INTEGRITY, AUTHENTICATION RAAVADAM ALAANE AASYMMENTRIC ENCRPTION LO NI 2ND WAY INA (PRI KEY THO ENC & PUB KEY THO DEC) SIGNING NI HASHING CONCEPT THO KALAPDAM... ILA ANNI CRYPTOGRAPHY CONECETPS ANII HAHD-IN-HAND VETAI ANAMAATA.
+
+11
+==
+• PKI (public key infrastructure) ante client, server & certificate authority.
+
+12
+==
+• Onlu webservice PKI matrame kaadu inka chaaala PKI's unai bayata like nv edaina software ni install chesukte oka worning popup vastaadi kada like do you really want this app to make changes to ur compute ani akada kuda PKI undi ante akada client vachi OperatingSystem, server vachi software application which wanted to install & CA vachi alaanti software app ki seperate ver ca's untai le not like godaddy, digicert..., veetiki vere set of  ca's untai le. (SO ika nunchi nv apudaina app ni install chesina prathi saari ah popup ni chsuinapudalaaa niku ee PKI gurthuravaali). 
+• So deeni batti enti ante only web PKI matrme kaadu inke vere chaaala PKI's unai ani ardam.
+
+
+• Symmentric key ante both encryption ki public key & decryption ki private key use cheyakunda rendintiki same keys vaadutaaru ani ardam.
+• Hashing ante madyalo evaru data ni evadaina tamper chesta teluesukodaaniki use avtundi.
+CRYPTOGRAPHIC FUNCTIONS
+-----------------------
+-encryption (data confidentiality kosam)
+-hashing (data ni evaru modify chesina telispodaaaniki)
+-authentication (authenticated user laaga pretend or spoof cheyakunda undenduku)
+
+hashing
+-------
+• hdfc lo gani icici lo gani hashing reqirement vachindata vaalu ah particular filed anedi madyalo ekada tamper or modified avaledu kada ensure chesukodaaniki maatrame vaadutunaaaru. (so hasing anedi modify avakunda prevent cheyadu okavela modify ithe adi teliyachestundi anthe)
+• Ee concept ni overall ga 
+	features
+	--------
+	• hasing anedi one way encryption ante evaru
+
+VPN(Vitual Private Network)
+===========================
+• idhi ssl features ne konchem pedha scale lo istundi between device & services.
+
+Serialization Languages
+=======================
+• ipudu rendu applications anevi differenenrt tools, programming languages, synatxes...... etc ila chala completly same or contrast tho create chesaru anuko apuidu vaati madya data transfer ki oka formate kavaali daanine serialization language antaaru.
+• Most popular & widely used serialization language
+	1. JSON ==> Ee serialiozation language chaala easy & human redable seriazation language niku telisnde.
+	2. XML  ==> Ee serialization language kuda baane vaadutaaru espectially in legacy & soap apis lo. but idhi large weight & antha human redable for mate kaadu.
+	3. YAML
+	-------
+	• Ee serialization language anedi mostly configuartion files lo use chestaaru. like docker compose, kuberneties, harness pipleine configuration files kuda yaml format lo ne untai kada, ansible, promethesus and openapispecs.
+	• opanapispecs ni only 2 serialization languages lo maatrame rayagal;amu. 1.json & 2.yaml. json anedi default serialization language openapispec ki adhe yaml anedi altrernative language but mana scb & trust bank vaalu yaml use chesaaru. chaala mandi yaml serialization language ne use chestaaru.
+	• Yaml anedi chaala human readble formate lo untaadi.
+	• json lo ithe {}, [], : ekuva vaadutaaru. Ade xml lo ithe <> vaadutaaru adhe ee yaml serialization language lo ithe ilanti special characters kaadu spaces, new lines, tabs indendation ye vaadutaaru objects ni, array ni manchiga config cheyaniki.
+	• niku okavela edaina project lo openapispec ni create chese task vaste apudu nana yaml tutorial chudu, manchiga anni syantaxes cover chesindi.
+
+CORS (Cross Origin Resource Sharing)
+====
+• cors is a mechanisn that aalows a website on one url to access data from a different url. ante for eg nv browser lo tupaki website lo nunchi walkaroo add site loki veltunaav kada ade. Mamulaga ithe ala velalevu endukanate by default annni browsers same origin policy ye vaadutundi security purpose valla so that nv only tupaki website nunchi ah websitre yoka vera extension services matarme access cheyagalavu kani vera vere website apis ni access cheyalaevu cheyalani try chesta cors error vastundi and niku browser anedi ah error gurunchi ekuva info ivadi security reasons valla kani nv tupaki lo access cheyalgalugiutunaav kada adi endukante akada walkaroo api dagara vaadu cors headers petaadu ante vaadu access-control-allow-origin: https://tupaki.com, access-control-allow-headers lo katchitanga tupaki gaadu send chese anni haeders ni allow chesuntaadu allana accees control-allow-methods lo kuda tup[aki gadu request chese verb untundi anduke nv browser lo tupaki nunchi walkarroo vella galugutunaav. So browsers nunchi nunch oka origin nunchi inko origin ki calls vellalante apudu nv ah destination api setup loki velli ee list of cors headers ni add cheyali evaru access cheyali ani code rayaali kani anni apis / microservices lone cheste mari gateway enduku so trundgh chepinatlu as a gateway apigee anedi ee cors ni handle cheyali. so apigee lo matauku apigee url ye server anbukuni configure cheyali
+
+•(cross origin resource sharing name lone niku telustundi dani purpose3 neti anedi. 
+
+• And vedio lo em chepadu ante cerstian http requests like put, pathch, delete ane requests vachinapudu browser anedi oka preflight check chestundi ante actual request chesa mundu browser ye automaticg optionas call tho server ni hit chestundi (but scb lo idhi anni verb calls ki options call veltundi, naku telisi ade correct) like saying that to server okadu vachi niku request cheyalanukuntunaadu vaadini ninu request cheyanichahcha ani ante direct ga server ki actual request cheyadanikannna mundu oka test request tho server bi hit chesi adi eligible ah kaada ani teelusukunsti. Ee motham proceess ni preflight antaaru ante whether this reqyest is ready or not to fly on that server ani & aee preflight re3quest anedi browser ye automatic ga chestundi. Inthakumudu chepinatliu cors ni handle cheyalante server side lo configurations chesi matrame handle cheyafalam ani ante aserver seide gateway side ani so ee prefilght reqyest ni kuda server side apigee gateway lo ne handle cheyali chestunaam kuda oka RSAISEFAULYU peti with options condition cors headers ni set chesi send cheyali with 200 response. And importantly ah cors headers values  ni fill cheyadaaniki oka mechanism undi scb lo chesaam first cleint ni adigi vaadu ye ye origins ki, ye ye methods ki, ye ye headers ki ivaali anukuntunaado avi anii oka comma sepaerated arrys lo kvms lo store chesukuni apudu proxy kvm policy dwaara vaatini extract chesukuni ipudu vaatini requested origin, header, verb tho match iyi vaatini matrame petali cors headers values ga. okavela requested origin anedi kvm listed origins lo lekapothe either nv ah dynamic var ni null ani peti cors header lo petu or headers set chese policies lo ne firstnonull vaadi dynamic var define avakapothe null ni assign chai anela petu. ilaane actual ga cors header values ni set cheyalsindi so that manam client manaku send chesina vaalaku matrame access istunatlu work avudi. so ila headers ni petadama valla idi backend nunchi vachina response headers laa browser treat chestundi. And ikada preflight ni handle cheyadanuki raisefault ye patetali endiukante preflight anedi test call laantidi ah request ni server daaka send cheyadam enduku so andukew rasidefault policy peti ah preflight requyest check chesi akda aapaeyali server daaka send cheyalsina avasaram ledu. And once pre4flight request ina tarvaat a ant e preflight ah actualcall  i allow chestunanu ani chepina tarvaat aactual call vastadi kada ah actual call velli server ni hit chesi succes response vachetapudu kuda manam proxy response flow lo same preflight req ni handle chesatapudu dynamic ga pedutuna headrrs ni ikada asssign message policy vaadi set cheyali endukante backend nunchi actual calls ki kuda cors headers vachi nantklu undaali kada lekapothe browser lo requested resource is not having cors headrers ani vastundi so succcess response flow lo kuda add cors headers petu. Alaan efor suppose backend nunchu error vaste apudu nv proxy response flow lo petina cors headers anevi trigger avaka browser lo ah backend error msg anedi velakunda malli cors headers are missing at requested resource antundi andukani defaultfaultrule or falutrule lo kuda same cors headers ni set chai, so that error msg browser ki veltundi.
+
+• Ee preflightrequest ina raisefault policy ki, success response flow lo una addcors policy ki, falutrule lo addcors policy ki  request.header.origin != null ani condition pettu. andukante ivi only browser nunchi vache calls ki matar,me set avaali okavela ah proxy ki browser nuchi kaakunda 3rd part application nunchi calls vaste apudu vaalaku anavasranga ee cors enduku send cheyadam. (NOTE:rasiefalut kl oprtions header kuda untaadi le)
+
+• Ee cors setup only when the prsoxy gets traffic from browser then only we need to apply coz brwsers are only having same origin policy rule. So no need to when the proxies are getting reqs from other 3rd part applications
+ 
+• cors ni add cheyaniki set use chai add cheyamaaku.
+• access-control-allow-headers ki multiple values petakudadhu.
+• Cors Headers lo allowed headers lo automatic ga generate iye headers add cheyabaledu just client side nunchi vache headers ni add chesta saripotundi
+• Cors headers lo allowed methods lo OPTIONS petabaledu.
+
+• max.age usage same type of requests malli vaste ee prefligfht check em cheyakunda direct ga backend ki call entha sepu varaku send cheyachu ane time. deeni valla performance oncrease avudi
+
+Access to XMLHttpRequest at 'https://tejandras-eval-test.apigee.net/ttt' from origin 'https://test-cors.org' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: The 'Access-Control-Allow-Origin' header contains multiple values 'https://test-cors.org, https://test-cors.org', but only one is allowed.
+Access to XMLHttpRequest at 'https://tejandras-eval-test.apigee.net/ttt' from origin 'https://test-cors.org' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+
+
+Default Port Numbers
+====================
+• http ==> 80
+• https ==> 443
+• nodejs ==> 3000 (anduke kada ye js apploication ni ina 3000 port  number tho ne configure chestunaaru)
+• java ==> 8080
+• python ==> 8000
+
+TEAMS
+=====
+• EVERYONE ante gropu lo una prathio okariki notification veltundi.
+
+SCREENSHOT SHOPRCUTKEY
+======================
+• windows + shift + s
+
+Note Taking Apps
+=================
+• Evernote
+• Notion
+
+Amer-Mint Creds
+===============
+• sivau@sidgs.com
+• Sivapriya1@
+
+Note
+====
+• nana chepindi java ki eclipse kanna intellij baaguntaadi anui. even naku kuda chustunte ade anipistundi ah editor UI konchem vscode laane undi. so ikanunchi apigee ki nv eclispse badulu intellij vaadu.
+• linux lo edaina path ni specify cheyaniki forward slash(/) ni use cheste windows lo maatram backward slash(\) ni use chestaam. Adi linux ki windows ki difference.
+• Macos lo package manager ina homebrew lo nunche ekuva mandi developers software applications  ni down load chesukuntaaru. Mana windowsd lo laaga direct official site ki velli download button nokkaru. Niku gurthu unte hari gaaru kuda okasaari homebrew vaadamanaaru. Ayana ante cloud engineer kaabatti ayanaki homebrew ante telusu manaki apudu asalu adi enti packagamenger ah adi enti ane tatlu unaam. Homebrew anedi konchem dedicated ga macos ye anitatlu undi nv okasari dani google chesina apple dani kosam ani mention chesaru.

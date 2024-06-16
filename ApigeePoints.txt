@@ -1,0 +1,499 @@
+APIGEE LIMITIS
+===============
+===============
+• Api proxy bundle size anedi 15mb daaati undakudadhu but in private clouds lo matram manaku istamochina size limit nio set chesukovachu
+
+• Apigee lo message payload size yoka limiit enthante 10mb okavela 10mb kana daatitha toobig patyload ani error msg vastundi, ikada nenu msg payload anaanu ante both request payload and response payload ki varthinstundi anamaata. E point praneeth kuda chepadu payload limit 10mb ani.
+
+• oas policy anedi only 3.0.0, 3.0.1, 3.0.2 versions ni matrame support chestundi
+
+• Apigee lo each env lo 60 matarame deploy cheyali ane limit undi kada andulo kuda only 50 matrame proxy deployments. Migilinavi shredflow ala deployemnts. So proxies only 50 matrame deploy cheyagalam.
+
+• let keyword doesn't supports in apigee js
+
+• environments & environment groups upto 85 (But it is based on contract)
+
+•
+
+WORK BASED POINTS
+=================
+=================
+• Target endpoint kosam URL tag kaakunda Sever tag vaadithe target.url flow var panicheyadhu apudu loadbalancing.targetserver flow var vaadali apudu kuda manaku url raadu just target server name vastundi. So url motham kavaalante <URL> tag vaadali kani URL tag vaaithe linting errior vastundi atlast vaadu em antunnaadu ante yrl ni read cheydam, tapu antunaadu but at the same inka mee istam anatlu malli target.url ane flow var ichaadu use chesukune pani ithe use chesukondi ani.
+• get call chesinapudu request.conetnt anedi empty avudi anthe kani null avadhu. so epudaina get method ki edaina policy varthichakudaadhu anukunapudu (request.content != "") ani petu anthe kani (request.contnet != null) ani petamaaku workl avadhu.
+• message content lo leni property ni js policy dwara extract chesukovaali anukunte undefined vastaadi.
+• Either message content lo ni property or any other flow or custom var ni extract var lo extract chesukunedi define chesi but adi runtime lo asalu lekapothe apudu ah var ni either js or in step condition or in assign msg policy lo vaadalani chute adi null ani vastaadi
+• Edaina header lekapoina kuda js lo get chesukodaaniki try chesina or step condition lo vaadina or assign msg lo vaadina kuda null ye vastaadi
+• target.copy.pathsuffix by default true untaadui andukaane request path suffix target url ki append avtundi
+• context.setVariable("request.content"JSON.stringify(reqObject));
+  request.content.asJSON=reqObject;
+• js with json.stringufy in assign msg
+• neeraja requirement ki thagattu Loadbalance path elecment anedi both static & dynamic values ni support chestundi.
+• mamuluga / anedi esca[e charcter laaga reserved charcters ki use chestam kada ala e apigee lo % anedi escape character laaga reeserved charcters ki use avtundi.
+• policies ekadaina time ni mention chesta adi nanao seconds ah, milli seconds, seconds, minutes, hours, days ah anedi comments lo mention chai. Like in oauth expires, cors max-age laantivi.
+• proxies lo konni sarlu wrong case leda typo error ki save chesinapudu error raakunda deploy chestunapudu error vastundi & ah error anedi clear ga undadhu nv adhi env issue ani kuda anukovach so better initial revision ni deploy chesi chudu. so that apudu niku telustundi adi proxy loni error ah env error ah ani
+• maamulga private ani  tho variables ni define hesta avi trace lo kanabadau kada adi otti kvm lo matrame kadu js, assignmsg ilaa varibles n i ekada define cheyuagalamo akada anthaa ila petchu. and aviu kanapadavu trace lo.
+• apigee lo adaina cheyaniki (CRUD operations) 2 ways untai. okati UI inkoti Api managemnt call (api's)
+• Extract variable policy lo gani msg templates lo ni xpath() function dwaraa gani manam xml payload lo ni array elements ni extract cheyalemu adi community lo ne undi. Only json payload ki matarme array elements ni extract cheyagalamu xnl ki cheyalemu xml lo only one value ye adi kuda string format lo vastundi.
+• maamulga clients contenttype header lo send chese charset kaakunda api proxy level lo inko encoding petaali ante apudu nv proxyenspoint properties(avunu, ela ithe target endpoint ki properties unaayo alaane proxy endpoint ki kuda unai) ina request.queryparams.ignore.content.type.charset ni true chesta apudu adi cleinet pampichina charset ni ignore chestundi apudu nv proxy lo niku kaavalsindi raayachu. okavela clinets send chesedhe kaavalia  anukunte apudu either false or tag ni complete ga omit cheyadamo cheyali.
+• kvm json objects ni as it is ga petayachu tarvaata code lo JSO.parse() method vaadi object laa conevert chesukovachu etuvanti escape charcters vaadabaledu kvm lo json ni store chesukodaaniki. kaakapothe nv kvm lo entry anedi direct ui nunchi kaakunda api mgmt call dwaara istunte apudu nv ah json ni escape charcter vaadi send cheyali (ante string formate lo send cheyali anamaata) endukantre api mgt call anedi json object ni alaaa as it is paampista valedu andukani escape character vaadalai but adi  velli store itedi maatram normal actual json laane etuvanti escape charcters undavu. so at last chepedi entatnet kvm lojson objects as it is petachu etuvantii escape charcters vaadabaledu.
+• Host header anedi automatic ga generate iye header , idhi nv eval lo ni proxy ni hit chesinapudu host: tejandras@eval.com ani untundi (And deeni okavela proxy lo overwrite cheyalante ProxyEndpoint lo request.header.host flow var use chesi overwrite cheyachu) and ah proxy anedi suppose httpbin.org/anuything endpoint ni hit chestundi anuko apudu ah endpoint vellinapuidu host value anedi "htpbin.org" ani untundi idhi gurthupetuko nv tejandras-eval.org ye untaadi anukunaavu inni rohjulu ala kaadu ye endpoint ni hit chestundo request automatic ga ah hit cheyabotuna endpoint host anedi host header value ga vastaadi so ala cl;ient to api proxy hit chesinapudu host value apigee url host and proxy nunchi target endpoint ni hit chesetapudu host value vachi qah target endpoint url host. so ala ye endpoint ni hit cheste ah endpoint yoka url host vachi hpost herader value laaga maaripothuuu untaadi (service callout policy lo call chese endpoint ki kuda anthe). Okavela ee target endpoint ki velle host  header value ni maarchalante nv target.header.host flow var ni targetendpoint lo use cheste change avutundi. ee target.header.host flow var's unai ani niku document lo kuda mention cheyaledu but existance lo unai gurthu petuko. And proxy endpoint & target enpoint ki diff lo proxy.path.suffix, target.url,target.status.code tho paatu ee target.header.host var ni mention chai.
+• ika nunchi edaina timezone value kaavalante nv js objects lo uyna crypto object lo ni crypto.dateFormat();
+
+Apigee Imp Points
+==================
+==================
+• SCB lo mention chesinatlku asalu oka proxy upate chestunapudu downtime anede undadhu ela ante new deply avyunaa process lo kuda api proxy ki already deploy ina old revision lo nunchoi traffic veltundi etuvanti 404 error raadu idi nenu try chesi cheputunanu. so RA lo deploy apudu downtime mention cheyaslina vasartam ledu until or unless ah new updation deployment wrong othe thapa.
+
+• X- tho start ye headers ani system generate chesa headers anamaata client nunchi server ki velatapudu. veeetini metadata & logging or monitoring ki vaadutaaru like x-b3-traceId , x-b3-requestId, x-b3-spanId.. ila veetini manchiga logging & debugging ki vaadachu. X- tho start iye headers ani naku telisi postman generate chesa headers & X-apigee tho start iye headers ani apigee generate chese headers.
+
+TYPES OF TESTING
+================
+================
+Integration testing = postman testing
+sanity testing
+functional testing 
+penitration testing
+
+LATENCY DASHBOARD
+=================
+• latency dashboard ki vella mundu niku asalu statstics calculation telusundaali ante mean, median, mode. 
+	- Mean ante avg ante sum of all iteams / no of all iteams
+		eg: 3,8,1
+		mean=(3+8+1)/3  ==> 4 is mean va;lue
+	- Meadian ante ichina list of values ni oka sorted order lo petti apudu vaati madyana unde value ne mediabn antaaru
+		eg1: 3,5,1,2,6
+		sorted order: 1,2,3,5,6
+		median: 3
+		
+		eg2: 10, 4, 2, 8, 3,6
+		sorted: 2,3,4,6,8,10 (ikada mid value 2 numbers vastunai kaabatyti vaati oka mean value ye median avtundi)
+		median: (4+6)/2 = 5 is median value
+	- Mode ante ichina list of values lo ye number ithe ekuva sarlu repear indo danine mode number antaaru
+		eg:5,3,7,2,3,9,
+		mode: 3 (since 3 is repeating more times than other numbers, so 3 is mode)
+• Lantency dashborad lo 3 values vastai
+1. median (median value ante middile value ani niku telusu so half of the traffic yoka latency anedi ee median value ki kinda untaadi and another half traffic yoka latency vachi ee median value ki pina untaadi)
+2. 95 percentile (ante mothan traffic lo 95% traffic anedi ee 95 percentile value ki lopale untaadi or in other words only 5% of traffic matrame ee 95 percentile value kanna ekuva untaadi)
+3. 99 percentile (ante motham traffic lo 99% traffic anedi ee 99 percentile value ki lopale untaadi or in other words only 1% of traffic matrame 22 99 percentile value kanna ekuva untaadi)
+
+TOKEN GENERATION WAYS
+=====================
+=====================
+1)
+gcloud auth activate-service-account --key-file filename.json
+gcloud auth print-access-token
+
+
+OVERALL APIGEE AS A PRODUCT POINTS
+==================================
+• Apigee is not a software that we can download or install and run in our local system. Its a cloud based platform which is owned by google and its accessable via web browser.
+• apigee anedi one of the google cloud product ante oka rakanaga apigee anedi cloud ye
+• apigee ni vera vaalue tayaaru chesta daninin 2016 lo google konesindi. so andukane e product manthagaa public lo ki veladhu so ipude konindi kaabati inka konni yekuva years utaadi le ranu ranu. First lo google konakamundu e product aws lo host iundedhi dani tarvaata google konina tarvaat ae product GCP lo ki vachindi. First prroduct vachi APIGEE EDGE SAAS ante public cloud dani tarvaata APIGEE EDGE OPDK ante ade private cloud dani tarvaat apigee ni rendu baagalau chesi oka component ina management plane/ management application/ control plane ni GOOGLE handle chesidi runtime plane/ runtime apllication / data plane  ni clients vaala supported kubernetes platform lo install chesukovachu adi either vaala onpremises gani or either vaala cloud lo gani danilo ina install chesokovachu. kavaalante okate run time plane/ ru time application/ date plane ni rendu clusters lo kuda nstall chesukovachu ante oka maaamulga oka cluster lo matrame install chestam kani apigee etuvanti down time undakunda  undaaalnani multi clusters ni support chesutndi so kaaavalante multi clusters lo kuda run time plane ni install cheyachu. dani tarvaat recement ga 2021 ante nv job lo join ina one year tarvaata APIGEEX/ APIGEE ni realese chesrau
+• apigee platform flavours: https://docs.apigee.com/migration-to-x/compare-apigee-edge-to-apigee-x
+		apigee edge for public cloud 
+		apigee edge for private cloud (apigee edge private cloud saas ki kuda version numbers undavu)
+		apigee x or APIGEE (apigeex ki version numbers undavu)
+		apigee hybrid
+• starting lo 2012 apigee edge ni release chesaru but ipudu apigee edge ni sale cheyatledu google ante apigeee edge ki new licences ni provide cheyatledu. (Already una licence ni matram alaane maintain chestundi but new licence ni ivatledu), so apigee edge for public cloud(saas) badulaga APIGEEX or APIGEE undi ipudu. Ante evarian apigee edge for public cloud(saas) kaavalante ipudu konaleru only apigee hyrid & apigeex matame goolge sale chestundi.
+• apigee saas lo both management plane & run time plane is handled by google, wheras hybrid lo only management plane is handled by google and run time plane anedi manaame handle chestaam.
+• FLOW OF AN API FROM CLIENT TO BACKEND POINT/ BACKEND SERVICES/ MICROSERVICES/ MICRO APPLICATION .
+	
+		Client --> Management plane --> RUNTIME PLANE  --> BACKEND ENDPOINT
+		so mundu management plane vastundi flow lo and dani tarvaat runt ime plane vastundi.
+•APIGEEX kuda same saas(apigee edge public cloud) laane infrasturcture untaadi anamaata ante motham google ye maintain chesukuntuaadi and at the the same time IT GIVES THE FEASABILITY TO THE CUSTOMER FOR CHOOSING THE DEPLOYMENT LOCATION  FOR RUNTIME SERVICES ACROSS 24 GOOGLE CLOUD REGIONS and apigeex yoka UI anedi hybrid laa untaadi.
+		
+•apigee edge trail organizatiuon ipudu ivatledu. kami eval matarm trail org ye org details mgmt call lo chusdanu and amer-mint matrram paid org.
+• Hybrid ki matrame versions untai. ApigeeX or APIGEE ki versions undavu ante vesrion numbers undavu but updations ithe uintai gani version number anedi apigeex ki maintrain cheyaru.
+• Hub ane word vaste adi oka epository container laa anamaataa like github, docker hub & alaage api hub in paigee. so apihub anaa kuda adi oka repository tool laa anuko. ipatikaithe ee info chaalu ante. hub ante repositoy conatiner tool laaga anamaata.
+• Apigee 1(MAJOR).9(MINOR).3(PATCH) releases untai. Every year minor releases 3 untai. And hari garu chepinatlu e[pudu n-1 version ye maintain cheyali.
+
+Conditions or Operators
+=======================
+• := (Equals caseInsensitive)
+• ~~ (Java regex, which supports all the regex patterns of java)
+• ~ (Matches, This is supports regex becoz for regex already there is a javaregex. This is used to compare with literal string and also the main purpose is for allowing zero or n number of wild characters by using * character)
+• MatchesPath (Used to match paths)
+• :| (startswith)
+
+Target Endpoint Properties
+==========================
+• keep alive timeout property is used to allow multiple http request / responses througha single TCP connection instead of creating new connections in that specified time range.
+• io timeout is used to specify that how long the message processor should process the input outout operations with target endpoint.
+• connection timeout property is used to specify that how long a message processor should wait to establish a connection with the target endpoint.
+
+Proxy Endpoint Properties
+=========================
+• api.timeout property is used to specify the timeout configuratuion for streaming enabled api proxies.
+• This proxy endpoint will also had request.streaming.ennabled & response.streaming.enabled properties.
+• It also had a property which is used to change the encoding of the content instead oif the default UTF-8
+
+Flow Variables
+==============
+CR,TS,TR,CS
+-----------
+• client.recieved.start.timestamp ==> The time at which the proxy starts recieving the request from originating client, client.recieved.end.timestamp ==> The time at which the proxy complety recieves the request from the originating client.
+• target.sent.starttime => The time at which the proxy starts to send the request to the URL, target.sent.end.timestamp => The time at which the proxy completely sends the request to the URL
+• target.recieved.start.timestamp => The time at which the TargetEndpoint gateway starts reciving the response from backend URL, target.recieved.end.timestamp => The time at whcih the TARGETENDPOINT gateway compltely recieves the response from backend URL
+• client.sent.start.timestamp => The time at which the proxy starts sending the response to the originating client, client.sent.end.timestamp => The time at which the proxy completes sends the response to the originating client.
+
+• is.error
+• messageid
+• system.pod.name
+• system.region.name
+• system.time.zone
+
+APIGEE INFRA
+============
+https://cloud.google.com/apigee/docs/hybrid/v1.9/what-is-hybrid#about-the-runtime-plane (Through this u can get the hyperlinks)
+
+• hybrid anedi cost cutting purpose lkosame kaakunda ah project ki taggatu auto scalling chesukodaaniki use avudi alaana other containeriozed operations kuda chesukovachu, alaanwe mari mukhyam ga runtime component anedi vaala own premise lo undani ane feeling dwaraa privacy/safety vastaadi. Ilaanti vaati kosam kuda chesukune chance undi not just only for cost cutting purpose
+• oka cluster lo multiple orgs setup cheyachu but deeeniki konni limitiations untai ante chaala varaku services only primary org ki maatrame vastai but google idi suport chesina it never recommends to do like this.
+
+
+Differnence between apigee edge vs apigee hybrid vs apigeex
+============================================================
+APIGEE EDGE 					APIGEE HYBRID         				APIGEE X
+•Supports specs					• Not supports specs				•Not Supports sapecs
+•Supports soap services			• Not supports soap service 		•Not supports soap services 
+ and nodejs application			  & nodejs application				 and nodesjs applications.
+•Dont Supports recent 			•Supports recent debugs
+ debugs
+•In ui can create kvm           • In ui can create kvm 
+ entries directly	    		 entries directly
+• cache available in UI			•cache not available in UI			
+•Multiple revisions can			• Multiple revisions cannot 
+ deploy in same env				  deploy in same env.
+• wont sopport 
+•Supports oauthv1				•Not supports oauthv1				•Not supports oauthv1
+
+
+Apigee Policies
+===============
+Quota
+-----
+• quota polcy is used to limit the number of requests for an api proxy over a period of time.
+
+Spikearrest 
+-----------
+• Spike arrest policy is also used tro limit the number of requests for an api proxy over a peruod of time but its more towards to protect from traffic surges or spikes.
+
+Reset Quota
+-----------
+• Reset quota policy is used to reduce the client used quota count so that he would be able to make few more requests to the api proxy. For example thare is an api proxy where quota is configured as 100/week and the client had already used hois quota with in a week itself and if he want to make few more calls then we cann allow it by using this reset quota policy with allow count 50 so that 50 request will get reduced from his used count and he could be able to make 50 more requests over the remaining 6days.
+
+Response Cache
+--------------
+• Response cache policy is used in a kind of api's where the response will be constant for a period of time, In those type of api proxies we can use this policy to get the response from cache itself ind=stead of hitting backend and getting from it.
+• Response cache policy can only be used in proxy request & response flow.
+• We can also configuyre the cache TTL by consideing the response cache headers. For example there is an api proxy  where the response cache policy is using UseResponseCachHeaders tag  & cache is given as 2 days then if the response cache headers contains 1 day as TTL then the policy will compare both and configures whartever is having less TTL that means 1day od response cache headers.
+• All kvms and caches are always encrypted in both apigee & apigee hybrid
+
+Populate caches-
+---------------
+• Populate cache policy is to write the entries to explicit cache or included shared cacahe
+
+Lookup Cache
+------------
+• Lookup cache policy is used to read the cache entries either from explicit cache or included shared cache
+
+Invalidate Cache
+----------------
+• Invalidate cache polic is used to delete the entries from explicit cache or included shared cache.
+
+Basic Authebntication
+---------------------
+• Basic authentication policy is used to perform base64 encode & decode operations on the crdentoials.
+
+XML Threat protection
+---------------------
+• XML threat protection polcy is used to reduce the xml content level attacks by specifying the limits to xml payload lkike the size of elemenbt name, attribute name, prefix name, node depth, NamespaceURI....
+
+JSON Threat Protection
+----------------------
+• JSON threat protection policy is also used to reduce the json content level attacks by specifying the limits to the json payload like  property length, array counts, container depth, string value length....
+
+Regex
+-----
+• Regex policy is used to validate the request and response content against the configured patterns in the policy, In these patterns we can include whatever the keywords and characters that cause threats, so that whenever the request contains these keywords then policy will detect it and throws an error.
+
+Verify api key-file
+-------------------
+• Verify api key policy is used to check whether the client is allowed to make request to an api proxy by validating the api key in request.
+• it also contains one tag on how much time the apikey should be stored in cache from 1-180 seconds(L1 OR message processor or in-memory). if you dont include that element then by default will be 180seconnds
+
+Access Control
+--------------
+• Access control policy gives us the feasabilty to allow or deny for the list of ips and range of ips to access an api proxy.
+• Access control policy should be placed before authentication & rate limiting policies (acesscontrol -> authentication policy -> spike -> quota)
+• Access control policy lo norulematchaction ane attribute untaadi adi entante daani kunda unda matchrule action ki apply kanivani em cheyalo akada (norulematchaction lo mention chestaamu).
+• Okavela same ip ni oka matchrule1 lo allow chesi inko matchruleaction2 lo deny cheste apudu policy anedi order lo potindi so allow unadaani ni priority ichi deny ni skip chestundi.
+• access contol policy first it will check for the ip in True-Client-ip header if in case its not present or ignaoretrustclientip tag is true then it will chec the ip in x-forwarded-for header(This x-forwarded-for header will be genearted by the apigee)
+• Not only 8,16,24,32 masks are availble to use in policy but also u can give any customized number u want if incase u need to skip mask of 0 to 255 range then u can give the number for whetever the range you want to allow but its required a bit of binary calculation.
+• mask 32 ante as it is 4 numbers. mask 24 ante 4th unit anedi * ante 0 to 255. Ade 16 ante last two units anevi 0 to 255 range lo edasina undachu.
+
+Generate SAML Assertion & Validate SAML Assetion
+------------------------------------------------
+• ee policies guruchi telusukovalante mundu SSO & SAML telisundaaali.
+• In general SAML ante sharing user authentication information in a secured way from identity provider to service provider.
+• SSO ante oka app(okta, which is an identitry provider) lo matrame dani yoka creda ichi authenticate i daani nunchi migilina apps(slack, teams, github.....ante service providers ) ni access cheyadaani SSO antaaru.
+• Ee sso process lo client yoka authentication and authorixzation info ni secured ga oka markup language lo encrypt and signing chesi identity provider (okta) nunchi service provider(slack, teams, github...) ki secured ga send chestaadi, ante ila cleinet authtication data secured ga identity provider nuchi service provider ki send chestaadi, ante ee sso ane big concept lo secured ga client authentication sdata ni transfer chesedi ee saml concept anthe, idhi oka poattern deeni baaga implement chesina daani saml okati (same service mesh ane pattern ni istion ela ithe manchiga implement chesido ala..). SAML ki alternatives vachi oauth, jwt, LDAP, openid connect.
+• Ipudu mana scb lo ela jaruguntundo chudu first identity provider ina okta lo nv daani yoka creds ni istaavu adi kuda nv only username istaav password anedi biometric ipodi (ante send cheyalsina oka app creds ni kuda entha easy ga send cheyacho chudu) apudu nv okta(IDP)nuchi service providers(slack, teams..) icon ni clieck cheyagaane apudu request anedi ah SP nunchi IDP ki veltaadi apudu ah okata(IDP) ni yoka details ni oka security assertion markup languiage lo set chesi daani encrypt and signing chesi apudu ah SAML ni service provider ki send chestaadi apudu ah SP tana dagara una data tho ah  saml ni decrypt chesi tana dagara una data and vachina data same unte service ni ante slack open avtundi lekapothe slack open avakunda refresh page ani niku vachinatlu vastundi. So ee motham process lo ardam chesukovalsindi entante SSO anedi oka app creds ni matrame ichi migilina apps ni access cheyachdam and ee big concept lo oka user data anedi secured ga oka app nunchi inko app ki send chese pattern ye SAML, SAML ki alternative ga openid, LDAP, oauth, jwt/jws. 
+• GenerateSAML Asssertion policy is used to attach a SAML for outbound XML requests.
+• ValidateSAMLassertion policy is used to validate the SAML that are attached for an inbound SOAP request.
+
+oauth
+======
+• Oauthv2 policy is used to provide the limited access for third party applications to a resource server.
+• resouce owner ante end user ani ardam.
+
+diff b/w verifyapikey & oauth: 
+------------------------------
+• expiry
+• refresh token (supports only in auth code & password granttype)
+• revoke tokens and re-approval tokens
+• re-approval
+• scope
+
+granttypes
+-----------
+• Authorization code grantype is a secured way to provide access token because here inthis cleint will provide the credentials on resource server site only not on client side. It will used in third party app;ications which are untrusted. In this type first the client will request for auth code and then exchange it for access token there by he could be able to access to respective resouce server.
+
+• Implicit grantype is simplefied of authorization code but auth code is an 3legged oauth and this is 2 legged that means here client will diectly get the token through creds (only clientid) there will be no auth code step. 
+
+• password grant type typically used in trusted applications only because in this type the client has to provide his resource server credentials to the client so it'll be used only in trusted applications. (implicit is alsoused in trusted applications only)
+
+• In clientcredentials grantype the client itself acts like an resource owner (enduser) because ihere in this scenariuo the client will go register/subscribe to get the clientid & client secret and use those to get the access token.
+
+
+generate
+--------
+• 
+verify
+------
+• verifyapikey and refreshtoken operation anedi token anedi approved(not revoked) and expirt untene allow chestundi.
+• oauth verify operation lo by default ga access token ni authorization header nunchi expect chesundi and bearer token ante niku already idea undi tokwen staqring lo prefix followed by space untaadi and adi by default ga ah pooicy ye trim chesi only token ni validate chestaadi manam etuvanti comnfigurations cheyakunda kani okavela nv authorization heaer nunchi ivaaltante apudu <ACCESSToken> tag ni use cheyali and inka niku ah token anedi beaere ane word thgo kaakunda teja ane woprd tgho prefix chesi token send cheyali anipiste ala kuda cheyachu using <AccessTokenPrefix> danilo nv teja iste apudu nv request teja ani ichina token ni adi trim chesi only token validate chese facility kuda uindi.
+
+
+jwt access tokens
+-----------------
+• ipudu 1.7.* nunchi jwt formatted oauth tokens ni kuda support chestundi along with tradional oauth tokens. Ee jwt formatted oauth tokens ante same jwt formate lo laaga header.payload.signature parts untai but drawback entante ee jwt access token ni revoke cheyalemu.
+• generating, verifying and refreshing the jwt formatted oauth tokens(jwt access tokens). jwt access tokens ni revoke cheyalemu kaabatti ikada revoke ane concept ledu.
+• jwt formatted access tokens supports all granttypes which are supported by traditional oauth token (opaque tokens).
+• ee jwt formatted oauth tokens ni generate cheyaniki use cheyalsina operation vachi GenerateJWTAccessToken & GenerateJWTAccessTokenImplicitGrant(this is for for impliciut granttype)
+• refresh token ane concept ni kuda ee jwt access token support chestundi same how traditional token supports (refresh token concept suppot=rts normally in auth code & apssword granttypes)
+• ee jwt access token ni revoke cheyalemu, kani refresh token ni matram revoke cheyachu.(naku telisi jwt access token anedi jwt formate lo undadadam valla dani revokde cheyal;emu but refresh token anedi normal ga untundi kaabtti dani refresh cheyachu)
+• jwt oauth token anedi jwt formate lo una kuda daaani yoka refresh token anedi maatram traditional formate lo ne unatlu undi andukemo revoke policy use chesina kuda jwt access token ni revoke cheyalemu dani yoka refreash token ni cheyachu anaaru.
+• edi only jwt signing lanti tokens ni matreme support chestundi encrypted jwt ni support cheyadhu.
+
+Operations
+----------
+• GenerateAccessToken => To generate access token for clientcredentials, password, authorization code access token (not code for token only)
+• GenerateAccessTokenImplicitGrant => generate accesstoken for implicit grantype
+• GenerateAuthorizationCode => operation to generate authorization code
+• RefreshAccessToken => operation to create a new access token through refresh token
+• VerifyAccessToken=> to validate the token
+• InvalidateToken => To invalidate access token or refresh token
+• ValidateToken => re-approve the revoked access token and refresh token
+• GenerateJWTAccessToken=> operation to generate jwt format oauth token
+• GenerateJWTAccessTokenImplicitGrant => generate jwt access token for implicit grantype
+• VerifyJWTAccessToken => verifying jwt access token
+• RefreshJWTAccessToken => refresh jwt access token
+
+RrefreshToken
+-------------
+• refresh token anedi only auth code & password grant type ki mateme varthistundi.
+• access token lo set chesina custom attributes anevi refresh token dwara generate iye access token lo reflect avavu.
+• nv anukuvachu refresh token badulugfa malli generatetoken endpoint use chesukovachu kada alaanoo refreshtoken endpoint lo app creds [pass cheyalsi vastundi but ipatikiithe naku telisindi entante yes refreshtoken lo kuda malli app creds ni pass chestunaam buit generatetoken tho compare cheste refreshtoken endpoint lo password granttype ithe resorceservver creds ni pass cheyatledu alaana authcode ithe mundu code dani tarvaata token ni hit chestaam ade refresh token endpoint lo ithe direct oka call tho ne token vachestundi. so getoken endpoint tho compare cheste refreshtoken anedi knochem simple. I guess backgrounbd process for refresh token to generate access token would be simple than normal generate access token process
+
+Revoke Token
+------------
+• revoken accesstoken anedi 4 granttype tokens ki varthistundi. Refreshtoken anedi authcode & password granttype ki apply avtundi. Kani jwt format oauth token ni matram revoke cheyalemu endukante adi jwt formate lo untaadi kabatti malli dani yoka refresh token ni revoke cheyagala endukanate adi traditional formate lo untundi kaabatti.
+• revoke token ni 2 wayslo cheyach. 1. oauthv2 policy lo operation vachi InvalidateToken ani pedithe vastaadi 2. Revokeoauthv2token policy.
+• oauthv2 policy loni operation "InavalidateToken" dwaarane niku oka access token anedi oka sari matreme work avtundi even expiry una kudaanu. And ee invalidatetoken opartion lo nv correct token refernce ivalai motham bearer token unadi ivakudadhu enkante adi bearer ni teseyaledu. so only token una variable refernce ne ivaali anduke scb/hdfc lo verifyapikey policy output lo vache access_toen flow var ni refrence lo istaaru danilo otti token matrme untundi.
+• Okasari revoke ina access token and refresh token ni nv malli kaavalante re-approval cheyachu oauthv2 policy lo"ValidateToken" operation dwaara.
+• access tokern anedi revoke ina sare adi cache lo 180- seconds persist i untundi so apativaraku kuda adi success ni istundi.
+• jwt based access token yoka refresh token ni nv oauthv2 policy lo ni "InvalidateToken" operation dwara ithe matram cheyalevu deeni cheyalante katchitamga revokeoauthv2 policy use cheyaalsinde. (migilina grantypes anevi both ways lo avtai)
+• Alaane appenduserId dwara kuda tokens ni revoke cheyachu ante ipudu some creds ni oka 3 clients vaadutunaaru anuko apudu nv only oka client gaadike (hdfc) ah creds tho gen chesina token anedi work avakudadhu migilna clients ki ah same creds work avaali ante nv token generation policy lo AppEndUser tag vaadi accesstoken response payload lo ah client gaadi id ni kuda cherachaali so that ipudu revokeoauthv2 policy ni verifyapitoken policy kana mundu peti  appuserid  = "hdfc" ani step condition petu apudu only ah hdfc ani userid una vaadiki marame token work avadhu migilna vaalaku same creds work avtundi. And ee appuserid tho tokns ni revoke cheyadam anedi only revokeoauthv2 policy dwaara avtundi oauthv2 policy with "InvalidateOperation" avadhu.
+• Nv kaavalante appid tho accesstokens and refresh tokens ni revoke cheyachu ante ah partcular creds asalu evariki use avavu kani idi inka easy ga UI app lo status revoke p[etina ipotundi.
+
+NOTE
+-----
+• token gerated output lo vache application_name anedi nv app yoka info get cheyaniki appyoka id isstaav kada same ade idi.
+• oauth generate policy run ina tarvaata ah request flow lo ye policy petina execute avadhu only response flow lo petina policies matrame execute avtai.
+• GenerateAccessToken & RefreshAccessToken lo mention chese expiry time anedi millisecinds lo untudi ade generate accesstoeken response lo vache expires property filed value vachi seconds lo untundi. (Idhi somekind of senseless ani vaale doc lo mention chesaru)
+• password granttype lo token ni generate chesataupudu end user yoka resource server creds ni token generation api request lo present inda leda ani matame check chestundi anthe kani avi correct ah username password correct ah kaada ah ani em check cheyadu. docs lo mention chesaru.
+• refresh token ane concept anedi only authorization code granttype and resourceowner password crededntials grantypes ki matreme vastundi. Client crentials and implivit grant type ki varthianchadu.
+• Implicit granttype anedi authorization code grant type laane untaadi anaam just authcode 3 legged ithe deenilo 2 legged ah code part anedi lekunda direct ga redirect uri nunchi token vachestundi anaam kada alaana auth code lo server side login avtamm but ikada cleint side login avtaam anaanu kada. ade kaakunda china china minor changes kuda unai implementation lo avi entante, implict granttype token ni generate chesetapudu GenerateAccessTokenImplicitGrant ani operation iste saripotundi vere granttypes ni generate chesatapudu ela ithe supportedgranttype tag use chestaavo adi ikada avasaram ledu just GenerateAccessTokenImplicitGrant ani operation iste chaalu, alaane authcode grant type lo ina nv code ni generate cheyalanapudu clientid ivaali and code nuchi token ni exchange chesatpudu both clientid & secret istaav kani ikada onliy cilentid matrame istaav token generation request lo, authcode & implicit chaala varaku same kaabatte akada & ikada grantyopes lo matrame response_type ane param vaadutamu akada vachi value "code" ikada "token" vere cliencrded & paswword grantype lo ee param use cheyam. And authcode granttype lo niku code anedi redirectURI queryparam lo vachindi ade deenilo ithe token anedi URI loni fragment identifier (which is a part after url starts with #, ex: https://httpbin.org/get#access_token=VlexgteMBlHmmhovqNidJirFvNGA&scope=&expires_in=1799) dagara vachindi. ee fragment identifierr ni chatgpt lo search adi chepe point (js based) and docs lo implicit applicable iye point same untundi.
+• Nv policy lo mention chesina token & refresh token expiry time anedi configure chesina dani kanna 1 sec tkuva istundi adi transit time valla jarugutundi.
+
+
+Set oauthv2
+-----------
+• Set oauthv2 policy is used to create & update only the custom attributes of an access token.
+• If the custom attribute exists then it will update or else it'll create.
+• it wont update reserved attributes like scope, expiry, appid...., It only update & create custom attributes of an access token
+
+GetOauthv2
+----------
+• Getoauthv2 policy is used to get the details that are associated to an accesstoken, refreshtoken, authorization code & cklientid.
+• This policy is used mostly in proxies where the verifyapikey policy is not exists because it it exists then with that only able to ge all the details of access, refreshtoke, authcode & clientapp. So in the proxies where the verifitoken policy is not exists at there we can use this policy to ge the details.
+• It will work only for valida token
+• We can also get the datils of expitred tokens as well using this.
+• And importatantly the resouce of this policy is being used and the resouce path of toiken generation policy has to be placed in same product then only we would be able to get the details using policy.
+
+Delete oauthv2
+--------------
+• Delete oauthv2 policy is used to delete the access token & autorization code.
+• Deleting access token ki revoking acces token ki teda enti aqnte once acceess token ni delete chesethe daani malli re-approval cheyalemu kani revoke chesina token ni re-approval cheyachu kada
+
+Revokeoauthv2token
+------------------
+• Revoke oauthv2 policy is used to revoke the access token & refresh token of traditional tokens & jwt access tokens.
+
+HMAC
+====
+• HMAC policy is used to generate & optionally verify the hash based message authentication code.
+• Deeni=ilo Message ane element untaadi danilo edi ithe hash cheyalankuntunaamo daani ivaali. ah tag value anedi static ithe apudu normal ga nv epudu ichetatlu ah complete tag like open tag, tag value, close anedi oka line lo ne ivu. new line or space vaadithe adi hash meesda effect chupuistaadi. telusu kada china change kuda hash lo drastic chenge istundani.
+
+Javascript
+==========
+• context
+---------
+	child objects
+	-------------
+		- proxy_req_flow
+		-proxy_response_flow
+		-target_request_flow
+		-target_response_flow
+	Property
+	--------
+		-current.flow (which gives actual names for conditional flows also)
+	Methods
+	-------
+		-setVariable()
+		-getVariable()
+		-removeVariable()
+	context.session
+	---------------
+		- idhi asyncronous calls lo use avudu anta. idi use chesukuni manam httpClient tho request flow lo oka api ki call chesta apudu idi ah response vache daaka em wait cheyanikunda tarvaata una code ah tarvaata una poices i exceute chestundi ipudu nv response flow lo context.session vaadi httpclient call chesina yoka request yoka response ikada response flow techukovachu. ante ikada motham parallel ga run avtundi. ante idi mostly target endpoint nuchi vache response ni and inko api ki kuda oka call chesi dani yoka response ni combine chesi emaina cheyali anapudu idi use cheyadam valla antha parllel ga jarudhi, speed ga performance baaguntyundi. inka details kaavalante bookmark chesanu chudu.
+• request & response
+-------------------
+	- Nv kavaalante request.content.asJSON.firstname ani direct ga step conditions lo petachu without using extract variable policy.
+• crypto
+--------
+	-to perform basic cryptographic functions like SHA1, SHA252, SHA512, MD5
+	- ee crypto objhect kothage manaku kaavalisna formate & timezone lo ki time ni convert chesiuknue vesulubaatu ni kuda istundi.
+• print
+• property
+----------
+	-already property anedi oka object inapudu daanu extract retrieve cheyaniki context.getVariable ane inko object vaadalanukovadam moorkathvam. so nv direct ga property.firstname ani ila ivachu antunaaa
+• httpClient
+------------
+	-get()
+	-sent()
+	-It return exhange object and that object has some other functions.
+	
+JSON TO XML
+===========
+• Idhi content-type application/json ithe run avtaadi anta lekapothe skip ithaadi anta.
+• ee policy run ina tarvaata content-type applcation/json nuchi text/xml ki automatic ga convert itundi.
+• Ee policy niku json payload lo ni properties ni namespcaes ga use chesukodaaniki facility klalpistundi.
+• ee policy niku json object lo ni properties ni attributes ga maarchukune facility istundi.
+• ee policy niku json object lo ni array elements xml lo ki convert chesukodaaniki kuda seperate elements istundi.
+• json obkject lo specific property yoka value anedi "teja001" ithe nv ah value anedani null chese option kuda undi ante nv based on key kaakunda based on value null ga specify chese vesulubaatu istunaaru.
+• okavela ee policy provide chesina elements tho ni requirement anedi fullfil avakapothe apudu xslt kuda combination ga vaadaaali.
+
+XML TO JSON
+===========
+• Idhi kuda automatic ga application/xm l or text/xml una contenttype ni application/json lo ki maarustundi.
+• Deenilo nv either direct ga Options tag vaadi kaavalsina configuratiosn cheyachu leda Format tag vaadi already  oka naalugutuni idi support chestaadi vaatlio kuda already options anevi untai anaaamta. kaavalante nv adaina vaadacgu. kakapothe Options child elements (idhi more flexibel)lo niku configuration chesukodaaaniki ekuva scope undi Eee format tag lo available una avaiulable choices lo takuva options matarme unai. ina asalu manam epudu ee format ni vaadam le. And ee formate anedi eexmltojson policy lo ne undi jsontoxml policy lo ledu.
+• ela ithe jsontoxml policy lo nested json obhjects ni namspaces & attribuytes ga chesukovacho alaane eexmltojson p[olicy lo  namspaces & attributes ni  nested json objects ga convert chesukovachu.
+• alaane arrays configurations kuda support chestundi
+• okavela niku input xml payload anedi generate avtuna json payload lo oka property yoka value ga set chesukovaalante <OutputPrefix> & <OutputSuffix> tags ni use chesi cheyachu. ah output nested json pina kaavalsindi antha ee <OutputPrefix> tag lo petaali and kinda kaavalsindi <OutputSuffix> lo petaali.
+
+Raise Fault
+===========
+• Raiae fault policy is used to raise errors for custom conditions so that proxy execution will move from normal flow to error flow and no any other policies in normal flow will execute.
+
+XSLT
+====
+• xslt policy is used to trasform payload from xml to other formats like html, plain text, soap...
+
+OAS
+===
+• OAS policy is used to verify the request & respoonse content agaisnt the openapi specification. For example if we want to check whther the request or response content contains all the required parameters, properties are exists ort not and the values are in expected formate or not we can do all these using this policy validating against the openapispecification.
+
+AssignMessage 
+=============
+• Assign message policy is used to set, add, copy & remove message contants and also defines & sets custom & pre-defined flow variables.
+• ee policy lo oka policy lo ne nv multiple operations cheyachu ante nv kaavalante all set, add, remove, copy anni ikade cheyachu. for eg niku vastuna request obje ni teesesi new object ni set cheyalanukunte apudu nv 2 policies use cheyalsina avasaram ledu oka policy lo ne both remove &  set petai cheyachu kaaakapothe mundu remove tag vaadi dani tarvaata set tag vadaali ikada order anedi imp, so multiple functionalities oka assign messagew policy lo ne cheyachu but manam ewpudu oka functionality ye cheyadam valla oka policy lo niku eelaanti requirement vaste 2 policies use cheyachu so ala use cheyakunda ila oka policy lo ne cheyachu ani teliyacheyadaaniki cheputuna.
+• assign variuable lo  ni Ref tag lo nv flow variables ni direct ga mention cheyachu vere dagara mention chestunatlu curly braces use cheyalsina avasaram ledu.
+• assign variable <Template ref='my-var'>{message.id}-{system.time}</Template> ani ichinapudu ref lo unadi non-null kaakapthe apudu daanithone varaible anedi asssign avudi okavela adi non null ithe apudu {message.id}-{system.time} anedi assign avudi. idi same konchem firstnonull laane anamaata.
+• <PropertysetRef> name anedi nv static ga kaavalante lieteral ga ivachu ledu dynamic ga kaavalante flow var's vaadachu okavelka rendu kavaalante ee two combinations ni vbaadachu ante propertyset yoka name first part anedi dynamic ga flow var's tho refer chesi migilina daaani literal ga iche combination kuda undi antunaaaq.
+• ResourceURL anedi resource files nunchi techukovachu antunaaru but clear example provide cheyaledu.
+
+Extract Variable
+================
+• Extract variable policy is used to extract properties and elements of message content for json & xml payloads and also to extract any part of queryparams, headers, formaprams, uri params and flow variables.
+
+Access Entity
+=============
+• AccessEntity policy is used to retrieve the information about the profiles like App, Api product, Developer....
+• Will go for secondaryIdentifier only if we gets multiple profiles with the provided primary identifier details then will use this tag to be even more specific of what we required.
+• Idhi verify apikey or oauth policy lekunda entities access cheyachu anaam kada mari vaatini ela techukuntaam ante, app ki ithe either app name, app id, consumer key. product ki ithe either api-product name or product id or consumer key. adhe developer ithe developer id or developer email..., ilaanti details input ga ichi kavaalsina entity profiles ni techukuntaam anamaata.
+
+KVM
+===
+• KVM policy is used to store key value map entries at datastore for ling persistance and using this policy we can retrive them in proxy flow at runtime, This policy allows us to do crud operation like creating, reading, updating & deleteing entries.
+• Recent ga MapName ane element ni introduce chesrau idi kuda same mapidentifier attribute laane chestundi but kani deenilo nv kavaalante kvm name literal ga ivachu, refernce ga ivachu, both ref & literal ivachu okavela reference anedi resolve kaakapothe literal lo petukunadi tessukuntaadi. But deeni literal ga kvm name ni ivaslina time lo vaadamaku daani klosam seperate mapidentifer attribute undi kada daani vaadu deeni vaadamaaku idi only dynamic ga kvm name ni ivaalanaupudu matareme vaadu. issues emaina raavachu.
+• normal ga kvm anedi casandra lo store chesukuntaam kani przthi request daani nunchi techkodaaniki time ekuva patti performance meeda effect chupistundi andukane kvm ni message processor lo una in memory(l2 memory) lo cache chesukune vesulubaatu ExpiryTimeInseconds element dwaara icharu idi by default 300 ante 5 mins untaadi ante first call tarwaata 5 mins subsequent/consecutive calls ki caache nunchi vastadanamaata. idhi ekuva traffic una proxies ki ekuva sepu store chesukunentatlu configure chai so that ekuva saarlu caache refresh avadhu idi best practise lo undi. alaane ee caache ni nv ui & api mgmt callss dwara set and reset cheyalevu only kvm policy dwaarane avtundi.  ipudu nv already set chesina cache time ni marchaalante apudu put operation vaadui akafada expirt tme lo maarchu but key & values matram same ivi lekapothe cache time maaradam tho paatu key value kuda maripotaadi.
+• If in case get operation lo key anedi resolve avakapothe apudu kuda entry create ipodhi with key something like $$__##__....... ila.
+• Key element lopala una property elements multiple time iste apudu adi key ni ila prop1__prop2__prop3__..... ila teesukuntaadi.
+
+Apigee Limits
+=============
+• In org total 4250 api proxies can be deployed.
+• In org,Upto 85 environments & environments groups can be created. (Its based on contract, pay as you go (means need to pay before and u will get the services upto the amonut u had paid)
+• In env, total 60(proxies & sharedflows) can be deployed. (Best practyise is 50proxies, 10 sharedflows or 30 proxies 30 sharedflows or 10 proxies 50 sharedflows)
+• Api proxy size can be 15mb. (resource files kuda upto 15mb)
+• Message content size can be 11mb (idhi intakaumundu 10mb undedi but ipudu 11mb chupistundi, may be increase chesundachu)
+• Oka proxy lo upto 250 revisions create cheyachu.
+
+Issue or challenge that you came across
+=======================================
+• Bug of not allowing to consider only the first ip address value for x-forwarded-for header instead of all comma seperated values.
+
+Resource Files
+===============
+• praneeth chepinantlu resource files anevi env scope lo kuda create chesi ah env motham vaatini vaadukovachu.
+• E resource files anevi js, jsc, java, xsl, properties.
+• Ipudu nv env scoped js resource file anedi create chesavu and ah resource file file lo una oka function ni nv oka proxy lo intiate cheyalanukunte apudu nv ah env scoped js tesource file ni <IncludeURL> tag vaadi ah function ni use cheyachu. Ade nv ah complete js file ni mothamga ni proxy js ki apply cheyalante just Resource tag lo mention cheste saripotundi. And one more point nv edaina js resource file ni vere policy lo includeurl tag vaadi use chestunte apudu ah resource file lo unavi kuda print ipothai.
+
+Property Sets
+=============
+• Popertry sets anevi two scopes untai. proxy (idi niku hybrid or apigee resourcefile ni add chese dagara propertysets ani chupistundi) & env scope. (so env scoped property sets ni create chestunapudu ah name env name ni mention chai)
+• property sets vs kvm ah ani based on performance chudamaaku. endukante mostly rendu okate kvm lo 1st call ~4ms padithe tarvaata subsequent (happeining after sometgiung) calls cache nunchi teesukuntai kaabatti vaatiki less tha 1ms time padutuindi wheras propertysets ki ithe 1st call & last call ki oka time padutuindi that too less than 1 ms. but nv epuidu performance ni base chesukuni either kvm ah propertsets ah decide chesukokudadhu. endukante kvm's anevi encrypt i untai ade propertysets anevi plain text malli kvm ni access cheyante daniki antu seperate ga kvm policy ni use cheyali ade propertysets ki the just flowvariable use cheste saripotundi. So epudu p[erformance ni base chesukuni decide chesukobaaku requirement ni base chesukuni chudu.
+
+Message Templates
+=================
+• nested functions are not supported.
+• We can define default values for dynamic vaule of json object key value like {claim.age:Not Defined}
+• ela ithe js object lo crypto object lo dateFormate function undo alaane message tem,plates conmcept lo kuda timeFormate function undi but idi only epoch time ni human readble formate lo ki testundi that too supports only UTC
+
+
+question that has to ask S, N, M, P
+==============================
+• who is responsible for creating environment & virtual
+• Debug filtetriung options are able to do in hybrid or in x
+
+
+• See DialogFlow policies which are supported only in hybrid and X
+• Assert condition, graphql, trace capture, publish message policies
+
+
+APIGEE Github links
+===================
+• Generate Tokens ==> https://github.com/DinoChiesa/get-gcp-access-token?tab=readme-ov-file
+• Deploy API proxies ==> https://github.com/apigee/apigee-deploy-maven-plugin
+• Deploy APIGEE configs ==> https://github.com/apigee/apigee-config-maven-plugin
+• 

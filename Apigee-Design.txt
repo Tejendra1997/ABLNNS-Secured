@@ -1,0 +1,105 @@
+Naming Conventions
+==================
+==================
+• Vere project ki shift inapudu best practises and anti patterns okasari chudu.
+• Api Proxy Name: last lo version anedi compulsary. Eg: Employees-v1
+• Ye request or response or error or service l callout lo ni request or response ila edaina message context lo camelcase ye follow avaali, kaavlante apigee lo ni service callout lo ni docs chudu akada calloutRequest & calloutResponse ani ichi untaaru. So ye mesage content variables ina camel case ye follow avaali.
+SharedFlow Name: starting lo SF- compulsary. Eg: SF-Security-v1. 
+Key Value Maps: {org-name}-{map-name} 										Eg:phx-external-prod-splunk
+				{env-name}-{map-name} 										Eg:dev-external-ext-01-sumologic
+				{api-name}-{map-name} 										EG: customer-service-v1-forgerock
+				entry lo key ki pascal case ye vaadu. Daani retrieve chesukoni assign chesuklunedi antheinaa adi kuda variable ye kaabati camelcase ye vaadu
+TargetServer: {server-name}-service   										Eg:payments-service
+Api Product Name: Dont use special characters
+App Name: 
+• Same thing multiple scope lo create chese chance unapudu better naming conventions manchiga ivu like kvms & resource files anevi proxy, env based create cheyachu, so same name tho two scopes lo create chesinapudu conbfuse avakunda undadaaniki and at the same time readbility kodsam env based kvm, resource files prefix lo env name petu.
+
+• Api basepath last lo version number petu like this : /deposit-account-service/v1   & /fraud-service/v1
+
+• logs lo conditional flows names kuda log chai.
+
+• prathi request & response flow staring lo current.flow variable ni use chesi errorTriggeredFlow ane variable ni define & assign chai including conditional flow, postclient flow... all flows and final policy in response flow lo ah errorTriggeredFlow ni nothing ani assign chai, so that epudaina edaina flow lo error vaste adi ye flow lo vachindani ee variable ni log cheste easy ga untundi.
+
+• is.error ane flow variable undi ani marchipomaaku, adi best practises lo use avtundi ani anukuntunaanu. alaane messageid ane flow variable undi adi prathi request ki oka uniqueid istaadi idi kuda use avachi marchipomaaku deeni kuda.
+
+• Api product lo una Access anedi ela use avudi ante, ipudu oka proxy ki three types of authentication mechanisms unai anuko and ah proxy ni types of clients anevaaru utilize chestaaru anuko apudu vaalaki okkokariki okko authentication apply avaali ante vaalu ye type of clients ani telipe identifier undaali alaanti identifier kinde ee Api product lo una Access field ani use avudi okavela apiproiduct access type anedi public vaste vaalaki oauth authentication, ade cpi product type anedi private vaste vaalaki verifyapikey aithentication ade internal type vaste vaalaku etuvanti authentication mechanism ledi. Idi naku praneeth chepaadu.
+
+
+• Proxy & target endpoint lo unhandled errors vachinapudu ye default error message ivaali. Murali garu 500(Internal Server Error) icharu esign lo.
+
+• oauth token expiration anedi veelinata varaku takuva sepu matrme petu endukante ekuva days lo expiration set chesta anni rojul;u paatu casandra srtore iyi untundi daani valla disk lo storage ekuva rojulu paatu occupy iyuntundi kada so daani overscome cheyanike oauth tokens expiry time anedi mari ekuva days petamaaku. alaana refresh token expiration time anedi access token ki double set chai ante access token ki expiration 30mins ithe efresh token ki expiration 60misn petu.
+
+• error handling lo ela ithe error content ela undaalo ani clients nunchi requirement teesukuntaavo alaaaane emaina headers kuda petala ani adagaali endukanate error response thop paatu chaalla mandi konni headers kuda kuda client kli send cheyali anukuntaaru
+
+• Flowcallout lo ni propertoies ni use chai ela ante sharedflow lo motham antha hard code cheyakunda ee flowcallout properties dwaara nunchi dynamic ga teesuko. Edi vaade scenario entante nv scb lo tyhterat sharedflow lo string value length idi annintiki okate laaga oka static value ichesaav kada ipudu niku kni exception proxies ki em chestunaav sharedflow ni teesesi explict ga ah threat policies ni use chestunaava ala kaakunda ah proxy lo ni flowcallout propertioes lo ne mention cheste apudu nv expliciut ga add cheyalsina avasarm undadhu kada. soee flow callout lo  ji propertiesw ni edaina sharedflow lo nji properties konni proxies ki maatram, vera value laa ivaalte apudu edi baaga use avtundi.
+
+• wrong basepaths tho calls vaste normal ga apigee without any response body it will give just 404 error, If you want to handle those type of requests and want to give some meaningfull error msg then you should create an api proxy with bvasepath /. odhi kuda best practise lo mention chesaru.
+
+•  Policy attribute name, display name & xml name ee 3 same undali lekapothe linting error vastundi. Okavela policyname lo nv a policy yoka usage ni sariga conevey cheyalekapothe apudu policy una proxy endpoint lo gani or target endpoint lo gani comments lo rayachu. Infact adi best practise ani docs lo mention chesaru.
+
+• Sreeni chepindhe correct veelinthe varaku outofbox policies ye vadaali. js, java,python lo code policies use cheyakudadhu. Ee point best practise lo undi.
+
+• Idhi nv already chestunaav kani malli type chestunanu, multiple route rules unte proxy lo apudu oka route rule ki matram etuvanti conditions petamaaku.
+
+• accescontrol -> authentication -> spike -> quota (Anthe kada nana kuda tana netwrking & ssh concept lo mundu firewall lo ip range ni whtelist chesi (success ithe connectivity erpadutundi) tarvaata either ssh keys or username & password dwaara authentication chestaam kada, so ante mundi ip whitelisting dani tarvaata authentication anamaata)
+
+• apudaina policies or proixies lo time ni mention chesta adi seconds ah, milli seconds ah, nano seconds ah, minutes, hours ah, days ah anedi mention chai comments apude evarikaina bayatavaadiki ardam avtundi.
+
+•edaina two proxies oke target server ni use chestunte apudu better oka proxy lo ne multiple proxy endpoints petu instead of creating multiple api proxies. KANI okati gurthu petuko mari ekuva multiple proxy endpoints undadam anedi manchidi kaadu.
+
+•multiple header vaules ni array lo  
+
+• For good readability & consistency kosam js lo quotes meeda oka daniki stick iyi undu either singlw quote or double quote. And also for readability & consistency kosamnaming conventions follow avu
+  Below naming conventions are suggested by chatgpt (i.e., best practise) for JS
+  ------------------------------------------------------------------------------
+  camelCase: variables & normal functions
+  PascalCase: constructor functions & classes
+  snake_case & kebab case anedi avasaaramaithe vaadutaaru ante inka tappadu ante pedataaru gani ekuvuka js lo use cheyaru so veetini vadilei
+  Use singular variable for single value
+  Use pluar variables for arrays & colections
+  constants ki SCREAMING_SNAKE use cheyali ade rule
+  Acronyms & Abbrevations ki uppercase lo ivu idi kuda rule ye
+
+
+API PROXY DEVELOPMENT PROCESS
+=============================
+Client Requirement Documents
+Open Api Specs
+Api Prooxy Development
+Linting (For best practises & to avoid anti-patterns)
+Unit Testing
+Functional Testing (Postman testing, It would be better if we do it along with test scripts)
+Integration Testing (Apickli Integration Testing)
+
+
+
+
+APIGEE MULTI CLUSTER INFRA SETUP IN SCB
+=======================================
+• SCB lo di sindle region (singapore google region) with multi cluster data setup
+
+• multi cluster endukante apigee updations chestunapudu konchem downtime untaadi dani overscome cheyadaniki okadaani updani update chestunapudu inkoti standby undadaanu=iki google multi cluster setup suggest chesindi adi manavaalu implement chesukunaaru. so apigee updations jarugutunapudu downtime ni overcome cheyaniki multi cluster setup anamaata.
+
+• scb enviroment grops lo oko env group ki multiple 3 hsots unai kada ilaa
+	1. api.apigee.dmz.dev.nonprod.p0.phx-infra.com
+	2. api-dc1.apigee.dmz.dev.nonprod.p0.phx-infra.com
+	3. api-dc2.apigee.dmz.dev.nonprod.p0.phx-infra.com
+ veetilo first di vachi (api.apigee.dmz.dev.nonprod.p0.phx-infra.com) global DNS anamaata mundu migilina rendu vachi (api-dc1.apigee.dmz.dev.nonprod.p0.phx-infra.com,api-dc2.apigee.dmz.dev.nonprod.p0.phx-infra.com) first data cluster/center di inkoti second data center/cluster di . anta mundu request global DNS ki vastaadi daani gunda is edi ye data center less busy lo unte daaniki request ni send chestaadi inka daani gunda mngmt plane -> runtime plane -> backend service ki velataadi.
+ 
+• scb lo all stg orgs ani oka cluster lo, alna all dev orgs ani inko cluster lo alanae all prod orgs ani oka cluster lo unau. ante total 3 clusters. Malli prathi cluster ki inko cluster set chesaru idi not only for prod cluyster but laso for stg & dev clusters, ala chepagalaugutubnaanu ante nv stg & dev env groups lo chusunte dc1 & dc2 ani two virtual; hosts kanipistai. Ante katchitamga prod tho patu dev & stg clusters ki kuda cheroka spare cluster undanamaata ante total 6 cluster untai.
+ 
+• ikada 2 clusters ki 2 casandra data bases untai and avi rendu epudu sync lo ne untai etuvanti data overwriting avakunda undadaaniki and ah casandra database every day dilip every 4hours ki backup teesi scb vaala aws lo store chestraaadu.
+
+• Manam book lo rasukuntalu both mgmt plane & runtime plane google services ni use chestai ani vaatilo imp inavi IAM & GCP LOGS. IAM anedi mana trust ye manage chestaadi with okta & GCP logs anevi manam pedaagaa vaadam ante proxy deploy evaru chesrau, sharedflow evaru delete chgesrau ituvanti infoi ni GOOGLE LOGS lo  vuntiundi but mana projhect unag=de nenu gaurav so edaina chesta nenu tane chestaam so andukani inka GCP logs tho pani em undi anduke manam vbaadam just tracsaction logs ni sumologic chustaam
+
+• scb lo aws cloud front anedi apigee cluster ki mundu (before) untundi. Ee aws cloud front anedi data ki rate limiting, threats detection and allowing only from some regions .... ilaantivi chestundi.
+
+
+
+
+
+
+
+
+
+

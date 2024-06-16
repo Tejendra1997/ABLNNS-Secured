@@ -1,0 +1,1066 @@
+• Co-relate = co-relating ip address with student roll numbers
+		switch is co-relate to pune
+		router is co-relate to watchman
+• Interim = oka particular event jariginapudu nunchi inko event daaka una period ni interim antaaru ante oka teacher maanaste inko permananet teacher vachedaaka madyalo ah time period lo 	     inko temporary teacher pedataaru kada athani interim teacher antaaru
+• retrieve = get or bring
+• Abandon
+• interraogation tone
+• arbitary naming
+• Adhoc = (Immediate, Unplanned)
+• reside
+• await
+• ambiguity
+{
+meaning: aspashtatha
+used: using double quote in string value will create ambiguity for interpretor to understand
+}
+• simulate
+{
+	meaning: To create a situation or event which seems real but not real. It is especially used to help people on how to react on that type of situations
+	Used: arnold use chesadu "to simulate that ani......" "aiswarya laso has used this while simulating error case sceeanrio
+	}
+• onsite
+{
+meaning: ante company headquarters or main branch anedi ekada ye place lo unte ah place lo ne work chestuinte daani onsite antaaru and ah team ni onshore team antaaru. adae main ofc una country lo kakaunda vera country lo unte vaalani offshore team antaaru. so inka nunchi confusw aavku offshore ante onshore team anapudu.
+}
+• feasability
+{
+meaning: capable of being done
+usage: Garav used like "based on the feasability of options, vendor will select one"
+}
+• workaround
+{
+meaning: making something work despite the problem, without completetly solving it.
+usage: oas deployment issue ki workaround solution ye ichindi ante temporary solution
+}
+• tenure
+{
+meaning: period of time for something like job/ loan/ 
+usage: what is thetenure for your home loan.
+}
+• have (present tense)
+• had   (past tense)
+• aggregate (It is same as consolidate)
+• segregate = set apart from others or general mass. Segregate ante separate lekkane
+• vendor (sshopkeeper, direct contact to customer/client)
+{
+	vendor ante venkata ramana anna and client/customer ante nuve ra babu. evaro anukunevu
+}
+{
+usage: sorry for the false alarm
+}
+• briefly
+{
+meaning : ante pi pinaa..
+usage: aishwarys use chesindi tanu reset quota & concurrent rate limit policies anidi brief ga chstanu ani
+}
+• thoroughly
+{
+meaning: briefly ki opposite ye thoroughly ante chaala deep ga chudaam. e word vaadalsina usage niku chaala sarlu vachndi but niku tye word vaadalo teliyaledu ipudu telisindi akada so idi vaadu
+usage: idi kuda aishwarya ne vaadindi. wquota & spike policies thoroughly ga chustunanu ani
+}
+• firstname (Tejendra)
+  lastname (Sada)
+{
+simple ga shekar kammula garidi follow ipo alaago ina us kaabati ina anni correct ga untaaru
+}
+• yep/yup
+{
+meaning: yes
+}
+{
+meaning: avamaanichadam
+usage: neeraja & sandeep use chesaru kada
+}	
+• Home Renovation
+• Provoking
+• Optimistic
+{
+	meaning: hoping or believing that good things will happen in future
+	usage: Both nani & nandini reddy are optimistic persons
+}
+• composed
+• compatability
+• empathy
+• self-introspection
+• consistency
+{
+	meaning: sthirathvam or nilakada
+	usage: js lo oke lanti quotes use cheyadam valla consistency & readability baaguntundi.
+}
+• Honesty
+• Belief
+• prior
+{
+	meaning: before a particular date
+	usage: prior 2023 may I was happy
+}
+• alright
+{
+	meaning: it is used to express agreement or approval after a slght hesistation or discussion
+}
+• pretend
+• hand-in-hand
+• previliges
+• components
+{
+	meaning: A part of a large whole
+	usage: application compomnents, kubernetes components, Docker components, apigee components, git components
+}
+• best practise/ good pactise & common practise / good or better security practises
+• gel avadam
+• Nuance
+{
+	meaning: slight difference
+	usage: difference between me & her is nuance
+}
+• Mitigate
+{
+	meaning: To make something less severiety
+	usage: How can we mitigate the rsiks
+}
+• retain
+{
+	meaning: continue to have
+	usiage: I will retain her memories
+}
+•intuitive
+{
+	meaning: based on fealings rather than facts or proofs
+	usage: pavan mother is intuitive towards him
+}
+•process
+{
+	meaning: A sequence of steps or actions in order to achive a partcular things
+	usage: message processors are used to process the request and responses. And al the things what im doing right now is the process of getting more package
+}
+• beneath
+{
+	meaning: under, in lower position
+	usage: L2 memory is beaneath of L1 memory
+}
+• Accordingly
+• gonna
+• breathing space
+• compliant
+{
+	meaning: willing to do what other peoople wants you to do (or) obeying a particular rule or law
+	usage: Girls are always non-compliant means they are not ready to do what mens want them to do.
+}
+• contemporary
+{
+	meaning: right now existing (or) currently happening now
+	usage: who is your favourite contemporary actor
+}
+• constraint
+{
+	meaning: something that controls what you do by keeping you with in particular limits (or) limit (or) restriction
+	usage: May be the constraints of being good of mine making her feeling more dictator
+}
+• may or may not
+• downgrade (dont use update/ upgrade for changing high(20.0.0) to low(10.0.0)
+
+•should
+{
+	meaning: strong recommendation & strong suggestion & strong capability
+}
+• could
+{
+	meaning: if there is a possibility and if is in your capability
+	ex1: if there is a possiblity ki example, aishwarys could go for hike (endukante idi tanaku possibility undi & alochiste  this will come under capability also
+	ex2: if it is in ur capability, 
+			-could u please approve this PR (pr ni approve cheyadam anedi vaala capability lone untaadi)
+			-could u pls help us here(idi kuda vaala oka capability lone undi)
+}
+• would
+{
+	meaning: imaginary situations & scenarios and making polite requests
+	ex1: imaginary stuation, if she didn't did anything wtrong then wouldn't have reacted in that way
+	ex2: polite requests, 
+			-It would be greate if you could help us here (idi polite request)
+			-I would request you to review this PR
+			-I would request you to rana to move this side because I cant ask the same questions to rajamouli that I will ask you because my regards and respect towards him DOES'T ALLOW me to do that.
+}
+• sooner or later (Sooner or later i can achieve what i want)
+{
+	- Sooner/Later she'll be mine
+}
+• instead
+{
+	meaning:  replacement 
+	usage:  From now onwards I'll talk with raveendra instead of pavan 
+}
+• rather
+{
+	meaning: prefernece
+	usage: For time being Ill prefer IT rather than films
+}
+• May & Might (May ekuva possibility, Might thakuva possibility)
+{
+	meaning: Used in possibilities & in permissions
+	Usage: I May enter into films
+		   May I get a chance to meet rajamouli
+		   
+	Meaning: Might is used only in less possibility
+	Usage: I might not able to solve the problem of mine
+}
+• May vs Can (May is for formal & policte requests, Can is for Informal & everday requests)
+{
+	-Gaurav, May Iget ur approval for this PR
+	-Hi Team, Can I get someone approval for this
+}
+• Either, Or (IDHI LEDA ADHI)
+• Neither, Nor (RENDOOO KADHU)
+{
+	meaning : when both are negatice or not choosen
+	Usage: 
+		- Neither I will join in tcs nor ibm
+		-Neither belitting nor demeaning are not fall under my intentional & ethics truly
+}
+• Till (Informal & general usage)
+• Untill (Formal usage) BUT YOU USE UNTILL ONLY ONLY.
+• runbook
+{
+	meaning: a book which contains the steps for doing a commonly repeated task or procedure
+	usage:  banking palform team contains a set of runbook documents for all of their repeated tasks or procedures.
+}
+• opinion form
+• opinion difference
+• generally / In general
+• usually
+• Obvious = (Easily Understood)"Avoid obvious comments"
+• certainly
+• probabliy
+• tentatively
+• ideally
+• Gradually
+{
+	meaning: in the best possible way
+	usage Ideally continuing in IT is the correct decision for this contemporary situation
+}
+• reciprocate
+{
+	meaning: behave in the same way as someone else
+	usage: I'll not able reciprocate pavan like me towards girls
+}
+• enhance
+• belittle (or) belitting 
+{
+	meaning: chinnachoopu
+	usage: Neithe belitting nor demeaning are not fall under my intentions and ethics truly
+}
+• demean (or) demeaning
+{
+	meaning: kinchaparachadam
+	usage: Neither belitting nor demeaning are not fsall under my intetions & ethics truly
+}
+• humiliation
+• Shout (or) Yell (ARAVADAM)
+{
+	- Dont make me  shoult or yell on u
+}
+•Scold (THITTADAM)
+{
+	- I'll never immedialty scolded anyone I'll give chances like shishupalya for upto some mistakes, after that only I'll scold anyone.
+}
+• Values (VILUVALU)
+• Ethics (NEETHISAASTHRAM)
+• Principles (SOOTHRAALU)
+• Hold
+{
+	- Max I can hold anger is upto 2-3 days
+}
+• Nobody
+{
+	- what if there are NOBODY than otherthan us.
+}
+• Matters
+{
+	-It really really matters to me a lot.
+}
+• Bothers
+{
+	- It really bothers mne a lot
+}
+• Point
+{
+	- Is that ur point
+}
+• Essence (SAARAAMSAM)
+{
+	meaning: the baic or most important idea or quality of something.
+	Usage: I will always been surprised the way u put the consolidate essence of whole film in 8-10 lines
+}
+• on the way to the office
+• Worried
+{
+	-Yes, Im worried about her
+}
+• Concerned
+{
+	- Yes, Im concerned about her
+}
+• Doubtfullness
+{
+	-Yes, Im doubtfull but its not on her its one me whether I can have the same existment and interst untill I turned out to 30
+}
+• Afraid
+• Scared
+• Exitment
+• Enthusiasm
+• Zeal
+• Still (INKAA) (can be used as altrernative to request sometimes)
+{
+	- Its just a trailer teja, still there are a lot more of difficulties to come. Be prepare for it.
+	- Im still not done crying over that film
+	- I could still feel the emotion of jersy film ever after of these many years
+}
+• Seek (KORUTHUU)
+{
+	-Cs team seeks your help on this
+	-when platform team seek help from apigee for testing, the ask is really
+	-may i kindly seek your help on this one
+	-Hi tea, seeking your help to review this pr
+	-Hi team, seek your review for :
+}
+• Tired
+• Exhausted
+• Drowsy
+• Sleepy
+• Concentrate
+• focus
+• Commitment
+• Dedication
+• Attentiveness(SHRADHA)
+•Disrespectafull
+• Rude
+• Growing Up
+{
+	- At the time while Im growing up Im very arrogant and had attitude
+	- While Im growing my father was very stricy and I ewanted to be friendly with my sonbut I've seen some kids who got spoiled/ruined by their parnts over friendly nature. So how parents should treat their chidren, either friendly or strict? Ans: Dont think about that much coz anyways you'll be thinking of it so by keeping that aside first you need to be perfect coz childreans will observe u alot like how u did at ur childhood so be as good as possible so that the child will not look outside for any other inspiration/motivation at outside.
+}
+• Spoil/Ruin
+{
+	-While Im growing up my father used to be very strict and I thougth I shloid be friendly with my son but I knew some kids who got SPOILED becoz of their parents obver friendly nature, So whats my question my question isHow the parents should grtow up their kids either stricyly or friendly
+	-I think we need to be more strict over our closed ones otherwise it would be like that we are only spoiling them. And at the same time the one which you are following that also ned to follow which is "Dont put the same rules for the people in ur circle like for outer people, be flexible with them. And at the same time if they tried up to thier then also it didn't worked, in this scenario & if they're in a situation not to giove it a try then also go & help them.
+}
+• Effect/Impact
+
+• active phrase VS passive phrase
+{
+	-I ate an apple.
+	-An apple was eaten by me
+}
+
+• Disrespectfull
+• Rude
+• Nervous
+{
+	 -Its been nearly 10 years that Im into acting but never felt NERVOUS, ANXIOUS, TENSED, AFRAID or FEAR while performing infront of someone UNTIL mr.junnu came onto the sets but AFTER A WHILE I SOMEHOW manbged to get RID of that.
+	 - Intially I've been NERVOUS, ANXIOUS, TENSED, AFRAID, FEAR  while giving interviews but AFTER A WHILE I'LL SOMEHOW managed to get RID of it.
+}
+• Anxious
+• tensed
+• Afraid
+• Fear
+• Worried
+• Scared
+{
+	- Are you scared of your wige? Yes, In some ways.
+}
+• Rid (VADHILINCHUKOVADAM) (make someone or something completly free of someone or something)
+{
+	- I found that restarting slack gets rid of that popup
+	- I hope that you should be able to get rid of that issue
+	- Its not that much easy to get rid off from me
+}
+• Context
+{
+	- Could you please provide me some CONTEXT on it.
+	- The CONTEXT is, In dev proxy is updated from/v9 to /v10
+}
+• Reminds
+{
+	- I think I love her INDEED, because everything REMINDS me of her only
+}
+• Flash
+• No Guarentees
+{
+	- We can have a conversation but no gurantees that it would be as zovial as before
+}
+• Indeed (NIJAMGA)
+{
+	-Yes, Indeed
+	-She is a good girl indeed
+}
+• Sometime in this week
+{
+	- Will definetly meet SOMETIME IN THIS YEAR or AFTER A YEAR
+}
+•Hi team begfore we starts & go through all those stuff I just wanted to make a note that a lot of work has been done or is BEING done by EUC team and ALL THAT IS REQUIRED is that everyone should take the OWNERSHIP/RESPONSIVENESS/INTIATIVE to do the testing for their application and just let the team know about the result. So I'm kindly requesting, I MEAN dont MAKE the team to CHASE every team beacuse its very difficult / complex for them to CHASE each & every application because there are a lot of applications, Si Im once again kindly requesting that everyone take the ownership & do the testing, This is TO ENSURE that applications are working as expected. Hoping that all you guys will MAKE it HAPPEN for them and for the organization as well.
+• Being
+• Responsiveness/ Ownership/ Initiative
+• ALL that is required is
+• Chase
+• Make
+• What Else (INKA EM)
+{
+	-What else do you expect me to do, do you want me to have argument with you. No I cant ALL THAT I CAN DO IS just simply ignoring the negative people around me THAT'S ALL I can do.
+	-What else can we do for a person who is making such huge things around us
+}
+• Rdiculous (HAASYASPADAM/ STUPID)
+• Stupidity (MOORKATHVAM)
+• Idot
+• Brat (PENKITHANAM)
+• Pleasing (giving a feeling of satisfaction or enjoyment)
+{
+	- Is it that much difficult to please telugu audience
+}
+•  Chinese whisperers
+• Appropriate 
+{
+	meaning: Suitable or correct for that situation
+	usage: The decision which I took that was made consiously and I belive its appropriate as well
+}
+• Consious
+• Inferior (Not as good as something or someone)
+{
+	-Never feel inferior by comparing with someother bad qualities
+	-How doeas someone's bad quality makes me to feel inferior as a person
+}
+• Irony (A situation in which something which was intended to have a particular result has a completely opposite or different reaction)
+{
+	-Irony is that I tried to explain the meaning for irony word but she gets more confused now with my explanation
+}
+• Emabarising (IBANDHIPADADAM)
+• Regret (CHINTINCHADAM)
+• Guility (APARAADHA BAAVANA)
+• Diverse (VIBHINAMM)
+• Descrimination (VIVAKSHA)
+• Biased / Partiality / Favour
+• Resistance (PRATHIGATINCHADAM)
+• Never Mind (VADHILESAI)
+• Preceeded (PRAADHAANYATHA)
+{
+	- MAY I know which deployment has taken the PRECEEDENCE
+}
+• Trait (LAKSHANAM)
+• Soak (NAANABETTADAM)
+• Since / As
+• Justification
+• I've (Informal) vs I have (Formal)
+• Can Vs Could(can anedi if there is a possibility & permissions. Could anedi polite requests ki)
+• Don't(present lo)
+• Didn't (past lo)
+• Doesn't (present lo that too for he, she or something)
+• Bring
+{
+	-She's yelling on u as u r bringing ur friends daily to hostel.
+}
+• so far (IPATIVARAKU) (until now)'
+{
+	- Im adding the requirements whatever we've recieved so far.
+	- Few days back I have ordered something from your app and at that time it showed that it i'll be delivered by yesterday but I haven't recieved the product SO FAR
+}
+• Nice
+• Cool
+• Good
+• Great
+• Super
+• Awesome
+• Perfetct
+• Lets not talk about that, Lets not rush it, Lets not go off topic
+• When did I ever give up, When did I ever said that Im liking you
+• Deliberately (UDHESEPOORVAKANGA)
+{
+	- Its not a deliberate decision
+	- The decision was made consiously only
+}
+• Simultaneaously (Yekakaalamlo)
+{
+	- Will deploy both the RA's simultanously
+}
+• Predominently (PRAPRAADAMIKANGA)
+• Backlash (BEDISIKOTTADAM)
+{
+	- Trisha tweet on animal movie got backlash
+}
+• Backfire
+• Misfire
+{
+	- Nani comments onthreatrical release got mis fired, Not only this one there are couple of times where his statements got misfired.
+}
+• Mislead
+• Backward compatability
+• Bear minimum Effort / checks / 
+• I think
+• I guess
+• I assume
+• I suspect
+• I doubt
+• I feel
+• Purchase
+{
+	- Im thinking to purtchase a laptop which is around 75 or 80k
+}
+• Brought
+{
+	- She brought a knife with her
+}
+• Bought
+{
+	- Pavan bought the ipad from online
+}
+• Must try
+{
+	• Whats the must try iteam here.
+}
+• Unfortunately No
+{
+	Unfortunetly Im not that much confidemnce as Im right now
+}
+• Myth (Traditional Story)
+• Superstiostion (MOODANAMMAKAM)
+{
+	- I still believe in some superstitions
+}
+• Supposeed (I have to..)
+{
+	- What I supposed to advice the customer
+	- Is this supposed to be a good thing or bad thing
+}
+•Vulgar (ASABYAKARAMUGA)
+{
+	- I never spoke with any girl anthing vulgar
+}
+• Liberty (SWTECHA)
+{
+	- I had some liberty to order her
+}
+• noun (NAAMAVACHAKAM) All names of objects, living creatures, everything...
+• pronoun (instead of direct names if we address it with
+• verb (KRIAYA, yedaina pani / actio n cheyadam like walking, playing....)
+• adverb (words ends with ly)
+• Adjective
+• Absoultely (KATCHITAMGA, without any doubt), Scruitinize (Examine someone or something carefully), Wondering
+{
+	- Whenever I go and naarate a scene to prabhas, he ABSOLUTLY loves the drama in it and he DOES NOT SCRUITNIZE it and I'll go back and start WONDERING if i need to go for a second opinion or what, Coz I used to SCRUITINIZE from my 1st film onwards, I MEAN SCRUITINIZE in a good way.
+}
+• Either this Or
+• Retain (continue to have)
+{
+	- Santosh has been retained by the company.
+}
+• Convineant (Kind of easy, Less difficulty)
+{
+	It was even more CONVINEANT for us to do THAT but somehow Im not capable of to do that.
+}
+• As much as
+{
+	- The intention was never to make a movie as much as violenece to get an A certificate.
+}
+• As soon as (or) Soon (TWARAGA, TONDARGA)
+{
+	- Let me knbow AS SOON AS its done
+	- Please help us here SOON as we need to update the config BEFORE HANDS
+	- We are still implementing, its not so SOON
+}
+• As lons as, Fullfiling
+{
+	- As long as my salary is fullfiling my needs I shouldn't be worrying right
+}
+• Gutts
+{
+	- One really needs a strong guts to limit thier strength
+}
+• good, correct, ok
+{
+	- Could you please check the provideed apigee details are all GOOD?
+}
+• Issue, Challange, Difficulty, Problem
+{
+	- Then what is the CHALLANGE
+}
+• Did u able to manage to get start on this one
+• Did you get a chance to work on this one
+• Decommission (Remove or Retire from an active service)
+{
+	- Decommmision unused proxies/ endpoints
+}
+• Dilute
+{
+	- I really dont want to get dilute my efforts or concentration of what Im working for in any way 
+}
+• Witness
+• I'd like see her angry
+• Appreciate, If you could expedite this
+• I dont think we can get another date before that.
+• I need more time to investigate, I'll update you if I get more findings
+• After more trouble shooting, I dont think the issue is in infra. I think the issue is in...
+• bypass (Ignoring an official rule or autority)
+• refinement (Making something pure by removing impurities)
+• Significant (PRADAANYATHA KALIGINA)
+• Proper
+{
+	- we can also do in that way but its not proper way.
+	- Please add the proper commitmsg to the commit
+}
+• Over componensate
+{
+	-Ranvijay singh has already over compensated rashmika in terms of ***
+	- The amount of work which I did december & january months is like a compensation for the period of time where I havent worked much.
+}
+• over to you *******
+• non-compliance (not complying with the company's policies)
+• Unpredicatable
+{
+	- Actor shine is unpredictable. we dont know when he'll react in what way.
+	- Same with sandeep reddy vanga heros as well, His hero characterization is always unpredicatble.
+}
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+Yes or No type questions
+------------------------
+• is (Is it enough? No)
+• Are(Are u a virgin? Yes)
+• Do (Do you really want to prolong this? yes)
+• Did (Did u ever been in bangalore? No)
+• Does (Does she know that ur a craacked person? No)
+• Can (Can u please approve this PR? yes)
+• Will (will u be as my friend? yes)
+• has
+• Have (Have you ever been to bombay? NO)
+• could (Couls you pls make a request now? Yes)
+• Should (Should we connect once? Yes)
+• Would (Would you please help me here? Sure)
+
+• Anyomre (IKAPI)
+{
+	- The things won't be same anymore
+}
+
+Negative contractions (contraction means combining two words)
+---------------------
+USE THESE WHENEVER YOU WANT TO USE isn't, aren't, dont, didn't, doesn't, cant, won't, hasn't, haven't, couldn't, wouldn't, shouldn't AND ALSO WHENEVER YOU WANT TO USE is not, are not, do not, did not, does not, cannot, will not, has not, have not, could not, would not, should not BUT IF IT FEELS THAT IT DOESN'T SUITS IN THE SENTENCE THEN ONLY / EXACTLY YOU NEED TO USE THESE, THESE ARE ALTERNATIVES FOR THAT ONLY
+• Isn't IS NOT (He is't a good guy anymore)
+• Aren't ARE NOT(They aren't friends anymore)
+• Don't DO NOT(I dont leave the things as it is anymore, will put my efforts to resolve it)
+• Didn't DOES NOT(He didn't want to think of her anymore)
+• Doesn't DOES NOT(She doesn't look at me anymore)
+• Can't CANNOT(I can't help you anymore)
+• Won't WILL NOT(He wont be available anymore)
+• Hasn't HAS NOT 
+• Haven't  HAVE NOT
+• Couldn't COULD NOT(I couldn't help you anymore)
+• Would WOULD NOT(May be they wouldn't knew about that)
+• Shouldn't SHOULD NOT(It shouldn't effect him anymore)
+
+Uncertainity expressions
+------------------------
+• I think
+• I guess
+• I assume
+• I suspect
+Certainity Expressions
+----------------------
+• I believe
+• I'm Sure 
+{
+	- I'm sure that all the movies which got released in sankranthi has increased the your joyfull ness, so we thought why CAN'T we join and increase your joyfullness even more. Jersey tease will be realesing at 12
+}
+• I knew
+• Been
+{
+	- celebreity personlities like rajamouli, sukumar, sirivennela seetharamasasthri and song lyrics and movies are always BEEN my source of inspiration, motivation but recently into that mythology is been added and more over I kept mythology in top most 1st place so that if I had doubts & suspects on someone's PHILOSOPHY or ETHICS, VALUES who is most poplar at global level then I will deep dive into mythology to check whether that PHILOSOPHY, ETHICS, VALUES are correct or not. (Mostly It will be false statement only, I'll always be correct entire world is running oin relations, justice, love and whtever )
+	- Its BEEN bothering in my mind from past few days onwards
+	- its BEEN alomost 10 years that Im into acting industry but never felt NERVOUS, ANXIOUS, SCRAED, TENSED, AFRAID, FEAR while acting infront of someone UNTIL mr.junnu came into sets but AFTER A WHILE SOMEHOW i managed to get rif of it.
+	- Rajamouli is always been my inspiration from past few years onwards and now in one way nani also become my inspiration
+}
+• Later / After a while
+• Rush
+{
+	- Not much rush for this
+	- No need to rush the things
+	- Back to non-rush mode
+	- Thre is a rush to deploy this proxy into production
+	- Rush hour deal
+}
+ • No Matter (YEDHI YAMAINAPATTIKI)\
+ {
+	-No matter what externals factors tries to seperate us I'll always find the reasons to lover her even more
+	-No matter what others say I'll always believes in her'
+	-He loves her the most, No matter what mistakes she made
+	-No matter how the world revolve around us we will always tries to find the ways to connect with you guys
+}
+• Segment
+• Category
+• Section
+• Fortunate
+• Lucky
+• Blessed
+• Whatever
+• Whichever
+• Whenever
+• Remains
+{
+	- My love will not on her untill the things are not in my hand
+}
+	
+• Distinct
+• Driving Force
+• Zone out
+• Mentally drain
+• Heads Up (warning that something is going to happen, so that one can be prepared)
+{
+	- Thanks for the heads up
+	- Just give us the headsup once u strats the deployment
+	- Hi team, Just an heads up that 3 PR's are going to come in your way
+}
+• Eventually (CHIVARAAKARAKU)
+{
+	- Whatever hard things will happen right now eventually I'll make sure that everthing got fixed.
+}
+• Among
+• Across
+• Ever
+{
+	-Affirmative phrases like truts, facts, statements ==> Rajamouli & nani are the best human beings that I've seen ever.
+	-Intterogative phrase ==> Is this best movie ever as per your view (OR) Have you ever been to kerala.
+}
+• Never
+• Common Practise
+• Generally speaking
+• Rage
+• Encounter
+• Expression / opinion
+{
+
+	- How someone can make their balls with metals
+}
+• Factor
+{
+	- there are some many factor for why Im being like this.
+}
+• Culture & Tradition (SAMSKRUTHI & SAAMPRADAAYAM)
+• Gonna (going to)
+• We'll get it done.
+• Underlying (beneath)
+{
+	- Kuberneties underlying server
+}
+• Ecosystem
+{
+	-Apple ecosystem
+	- AWS ecosystem
+}
+• Tackle (try to deal with something or someone)
+• Has vs Have vs Had
+• Does vs Do vs Did
+• credibility, goodwill
+• precautionary measures
+• over 
+{
+	- Complete switch OVER these two proxies to gloo endpoint.
+	- I will get rid off from acne and tan OVER a period of time If i follow a strct diet.
+}
+• reality check & practicality
+• Traume (A severe and lasting pain given by a upsetting situation)
+• Often vs Frequently
+• Rejected vs Refused
+{
+	- I haven't refused there offer yet.
+}
+• Control vs Resisit
+{
+	- Actually I need to ressist myself so much not to talk with anybody and keep focusing on what I reaaly need to be.
+}
+• GET
+{
+	- Can we GET into a call
+	- I will GET update my system
+	- How it will get updated automatically by itself
+}
+
+
+
+
+Iwtbadtech@123456789
+
+https://techworld-with-nana.teachable.com/
+https://techworld-with-nana.teachable.com/courses/enrolled/1108792
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SIMILAR
+=======
+generally / In general
+obviously
+usually
+probably
+certainly
+tentativly
+ideally
+undoubtedly
+gradually
+eventually
+
+
+Composed
+Consistency
+Compatabilty
+Empathy
+Self-Introspection
+Optimistic
+Honesty
+Believe
+
+
+
+Exhausted
+Tired
+Dissappointed
+Low feel
+Frustrated
+Irritated
+Drosy
+Sleepy
+
+
+
+
+Concentration
+Focus
+Dedication
+Commitment
+Attentiveness
+
+
+
+Nervous
+Anxious
+Tensed
+Affraid
+Fear
+Scared
+Worried
+
+
+
+briefly
+thoroughly
+
+whatever
+whichever
+whenever
+
+Belittle (or) belitting
+demean (or) demeaning
+Humilate
+Shout
+Yell
+Scold
+
+
+
+values
+ethics
+priciples
+
+
+
+Instead vs rather
+May vs Might
+May vs Can
+Should vs Could vs Would
+Either, Or vs Neither,Nor
+Till vs Untill
+Still
+Can vs Could
+I have vs I've
+Reminds vs Flash
+diverse vs Distinct
+
+
+Worried
+Doubtfullness
+Afraid
+Scared
+
+
+
+Grab
+Hold
+Resist
+Pull
+
+
+Matters
+Bothers
+Point
+Essence
+
+
+
+Exitment
+Enthusiasm
+Zeal
+
+Later
+After a while
+
+
+
+segment
+section
+category
+
+
+
+Fortunate
+Lucky
+Blessed
+
+
+
+The words which u r aware of it but ur not using in ur converstaions and as a result ur noting those here to remember.
+----------------------------------------------------------------------------------------------------------------------
+
+Hold
+Worried
+Spoil/Ruin
+been
+Somehow
+Never
+Nevermind
+I mean (use this whenever ur phrese has grammer mistakes then to coreect that use this)
+• Gutt feeling
+• AS LONG AS the salary is FULFILING my needs I shouldn't be worrying right
+• What I SUPPOSED to advice the customer
+• I cant let it go like that
+• I wanted to tell you this but before that only YOU GOT TO KNOW
+• Kind ( when that kind of money is involved in ur project then You'll have a JITTERY feeling)
+
+
+
+
+
+
+Fancy lines, By using these will make your sentences more beautifully
+---------------------------------------------------------------------
+I think for scb everything got FALL UNDER correct places.
+
+
+
+
+
+Contractions
+============
+• I'd
+• She's
+
+
+
+Polite Way of saying:
+=====================
+• Could I check is there anything that got changed regarding this ticket
+• Could we get the help from apigee team to update the implemnatoion plan
+• May I know what changes that I need to do
+• Can I seek your help to review this PR.
+• Can we also hac
+• We are expecting the requirements in written format
+• Just from my observation I've noticed that
+• Are you checking the docs from your end
+• I dont think that I can comment on this righ now, I need to check once with manager on this.
+• I'D like to check your availability for apigee deployment, Are you available on any of these dates
+• Tanh apigee related support & deployments needs to be COMUNICATED & confirmed by regina. I think we would be ok with 26th or 27th. But pls check one with regina once SHE'S gets back from dsick leave.
+• It is not fulfilling the 5 days notice lead time notice, any reason for the same
+• Hi jordan - Appreciate a quick update mate
+
+
+
+
+Better use this combination while using some words
+==================================================
+• Do we need to bo ON STANDBY
+• I found that restarting slack GETS RID of that issue.
+• We were TOLD THAT / we were ASKED THAT whenever the forgerock returns empty field values thenwe should throw the error.
+• Is being
+
+
+
+Learn texting tips from people
+==============================
+Radhika gaaru (...)
+Trung Do ( putting in braces)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
