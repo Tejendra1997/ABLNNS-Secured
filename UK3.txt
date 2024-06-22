@@ -1,0 +1,101 @@
+{
+    "request_priority": "1",
+    "original_sender_system_user_id_type": "email",
+    "sender_system_user_id": "1",
+    "resent_indicator": "true",
+    "parent_request_datetime": "2022_11_25 09:03:39.687+0530",
+    "original_request_priority": "1",
+    "message_type": "reverse-feed",
+    "api_version": "1.0.0",
+    "parent_request_id": "30F14673-BF37-4C55-89E3-AD7ED78BFB14",
+    "original_sender_system_id": "NTS",
+    "test_indicator": "false",
+    "sender_system_id": "NTS",
+    "sender_system_user_id_type": "email",
+    "original_request_datetime": "2022-11-25 09:03:39.687+0530",
+    "operation_name": "bill-payment",
+    "original_request_id": "131280011",
+    "product_type": "reverse-feed",
+    "payload": {
+        "bill_reference_number": "0007UMFC0066823",
+        "sgdo_issued": "N",
+        "sgdo_no": "",
+        "documents": {
+            "swift_copy": "",
+            "debit_advice": "JVBERi0xLjQKJeLjz9MK0YK"
+        },
+        "total_taxes": "67.5",
+        "total_bill_amount_details": {
+            "total_bill_amount": "100",
+            "outstanding_bill_amount": "0",
+            "bill_originating_branch": "MEGA-Delhi",
+            "bill_currency": "USD",
+            "total_other_bank_charges": "0",
+            "bill_realized_amount": "100",
+            "total_outstanding_other_bank_charges": "0"
+        },
+        "payment_terms": "less than 180 Days",
+        "other_bank_reference_number": "W23W32W",
+        "original_documents_received": "Y",
+        "lc_date": "",
+        "total_charges": "192.5",
+        "gst_no": "35ZVWCU9960G1ZA",
+        "realization_details": {
+            "realization_amount": "100",
+            "realization_currency": "USD",
+            "realization_type": "Full"
+        },
+        "event_date": "2022-10-11 00:00:00.0",
+        "bank_gst_no": "07AAACI1195H1ZO",
+        "bill_type": "Bank to Bank",
+        "purpose_code": "S0102",
+        "reference_date": "11-10-2022",
+        "debit_advice_details": {
+            "fc_conversion_rate": "83.5 INR",
+            "charges_debit_account_number": "039351000051",
+            "debit_details": [
+                {
+                    "debit_ccy": "USD",
+                    "debit_account_number": "039351000051",
+                    "debit_amount": "100",
+                    "equivalent_INR": "9180.2"
+                }
+            ],
+            "int_conversion_rate": "NA",
+            "value_of_supply_for_fc_conversion": "250.00",
+            "conversion_rate": "83.5 INR"
+        },
+        "product": "MFCR",
+        "transcation_status": "Processed",
+        "bill_currency": "USD",
+        "due_date": "25-11-2022",
+        "lc_no": "",
+        "transaction_type": "Normal",
+        "tol_reference_number": "",
+        "charges_breakup": [
+            {
+                "DebitCCY": "INR",
+                "DESCRIPTION": "Commission",
+                "DebitAmount": "125.00"
+            },
+            {
+                "DebitCCY": "INR",
+                "DESCRIPTION": "Commission - IGST(18%)",
+                "DebitAmount": "22.50"
+            },
+            {
+                "DebitCCY": "INR",
+                "DESCRIPTION": "FC Conversion Tax - IGST(18%)",
+                "DebitAmount": "45.00"
+            }
+        ],
+        "customer_reference_number": "",
+        "cust_id": "502432824",
+        "discrepancy_reason": ""
+    },
+    "original_sender_system_user_id": "",
+    "original_channel_id": "NTS",
+    "request_id": "7C615D36-1529-4B0C-A1E6-C5C67D5FA353",
+    "request_datetime": "2022-11-25 09:03:39.687+0530",
+    "channel_id": "NTS"
+}

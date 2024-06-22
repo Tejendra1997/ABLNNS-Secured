@@ -1,0 +1,34 @@
+Topics that needs to cover before interview
+============================================
+• Oauth 2.0 
+• JWT
+• 4 Most Used Authentication Mechanisms
+• Load Balancing Algorithms
+• 
+• Basic JS notes
+
+
+• Session, Cache, Oauth, JWT, SSO (Identity Access Management)
+• How HTTP works
+• HTTP Headers
+• OSI model
+• Cloud DataBase Cheat Sheet **
+• Micro Services Best Practises
+• LINUX Componenets
+• Firewall
+• Types Of DataBases
+
+Brij Kishore Pandey
+-------------------
+• API Courses
+• API Tools 2023
+• API Architectural Styles
+• API Driven Application Blueprint
+• HTTP Methods
+• Types of API Testing
+• Devops Componenets
+• Docker Architecture
+• Linux Directory structure
+• TCP/IP works
+• DEVOPS roadmap
+

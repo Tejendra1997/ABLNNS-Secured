@@ -1,0 +1,29 @@
+{
+        "Customer_ID" : "502432824",
+        "Lc_number" : "0681EC2200008DAH",
+        "Advising_bank_reference_no." : "0681EC2200008DAH",
+        "Customer_reference_number" : "ABC1234567",
+        "Bill_reference_number" : "0544NMFC0212422",
+        "Bill_Currency_code" : "USD",
+        "Bill_amount" : "21868.75",
+        "Bill_date" : "04-01-2022",
+        "Bill_type" : "Bank to Bank",
+        "Account_number" : "2000191017845",
+        "presenting_bank_name": "WELLS FARGO BANK, N.A.",
+        "presenting_bank_address": "30 HUDSON YARDS INTERNATIONAL OPERA",
+        "Presentation_Date" : "11-01-2022",
+        "PO_reference_number" : "NA"
+};
+
+
+
+{
+    "cust_id": "Customer_ID",
+    "lc_no": "Lc_number",
+    "other_bank_reference_number": "Advising_bank_reference_no",
+    "customer_reference_number": "Customer_reference_number",
+    "bill_reference_number": "Bill_reference_number",
+    "bill_currency": "Bill_Currency_code",
+    "bill_amount": "Bill_amount",
+    "bill_date": "Bill_date",
+};

@@ -275,14 +275,23 @@ Microservice vs api
 
 
 
-web service vs api
+WEB SERVICE vs API
 ==================
+API
+---
+	- It is a bridge that makes one program to communicate or transfer data with another program.
+	- It is a set of rules and tools which allows two software applications to communicate with each other.
 • webservices lo requests and responses anevi tansfer over an internet, whereas in api the requests and responses may or may not transfer over an internet. (Ikaada may or may not anaadu, so nv api internet nunchi reqs & responses tranfer avavu ani anukomaaku konni sarlu avtai ade kada may or may not ki meaning
-• All webesrives are apis, whereas all apis are not webservices.
+• All webesrives are apis, whereas all apis are not webservices. (Anni karmalau kaaryale, kani anni kaaryalu karmalu kaavu)
 • Malla rendu diffrent software applications madya communication kosam ye vaadutaaru
 • nv amazon nunchi product ni purchase cheyali anapudu payment gateway ina phonepay ki veltundi kada adi web service vallane ala ani anni over the net communication iye anni webservices anukomaaku chepanu kada apis may or may not trasfer data over an internet ani so apis kuda undachu
 • malli apis anevi ilocal lnternal components madya communication kosam kuda vaadutaaru ade kada mana apigee data plane lo unna componenets(messageprocessor, casandra, synchronizer, udca, mart) madya communication kuda ee apis dwaraana avtundi.
 • webservices anevi xml formate lo matrame data ni transfer chestai whereas api anevi json, xml, soap, plain text.. ila anni formats lo ni data ni transfer cheyaniki use avtai.
+
+API vs APIPROXY
+---------------
+• API is a bridge that makes one program to communicate or transfer data with another program. wheras APIPROXY is, Let me tell you this in lamen perspective if we just goole what is proxy then it will give us saying that proxy is something which pretends on behalf of another so here APIPROXY also pretends like an API where its actually not but it will do some functionalities of API like ratelimiting, ip whitelisting, trasformations...
+
 
 GIT workflows
 =============
@@ -597,11 +606,43 @@ Note Taking Apps
 
 Amer-Mint Creds
 ===============
-• sivau@sidgs.com
-• Sivapriya1@
+Usename: sivau@sidgs.com
+Password: Sivapriya1@
 
 Note
 ====
 • nana chepindi java ki eclipse kanna intellij baaguntaadi anui. even naku kuda chustunte ade anipistundi ah editor UI konchem vscode laane undi. so ikanunchi apigee ki nv eclispse badulu intellij vaadu.
 • linux lo edaina path ni specify cheyaniki forward slash(/) ni use cheste windows lo maatram backward slash(\) ni use chestaam. Adi linux ki windows ki difference.
 • Macos lo package manager ina homebrew lo nunche ekuva mandi developers software applications  ni down load chesukuntaaru. Mana windowsd lo laaga direct official site ki velli download button nokkaru. Niku gurthu unte hari gaaru kuda okasaari homebrew vaadamanaaru. Ayana ante cloud engineer kaabatti ayanaki homebrew ante telusu manaki apudu asalu adi enti packagamenger ah adi enti ane tatlu unaam. Homebrew anedi konchem dedicated ga macos ye anitatlu undi nv okasari dani google chesina apple dani kosam ani mention chesaru.
+
+
+
+HTC ==> Cleared
+Innominds ==> Documents verifying
+Birla Soft ==> waiting for 2nd round result
+TSYS ==> Today managerial round got sceduled
+TCS ==> Tomorrow 2nd round got scheduled
+Tech Mahindra ==> Need to schedule 2nd round
+Cloud-Design ==> waiting for 1st round feedback
+SLK ==> Waiting for 1st round feedback
+
+
+
+
+mac PIN
+=======
+240614
+
+Innominds Credentials
+=====================
+tejendrasada29@gmail.com
+6u83bJmcIo
+
+
+
+EPF LINKS
+=========
+EPF Passbook Login: https://passbook.epfindia.gov.in/MemberPassBook/login?error=invalid-token
+
+
+

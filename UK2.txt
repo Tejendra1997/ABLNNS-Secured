@@ -1,0 +1,651 @@
+/tradereversefeed/billpresentation   -(Done)
+============================================
+Mapping
+-------
+{
+    "Customer_ID": "cust_id",
+    "Lc_number": "lc_no",
+    "Advising_bank_reference_no.": "other_bank_reference_number",
+    "Customer_reference_number": "customer_reference_number",
+    "Bill_reference_number": "bill_reference_number",
+    "Bill_Currency_code": "bill_currency",
+    "Bill_date": "bill_date" ,
+    "Bill_amount": "bill_amount",
+    "Account_number": "account_number",
+    "Bill_type": "bill_type",
+    "presenting_bank_name": "presenting_bank_name",
+    "presenting_bank_address": "presenting_bank_address",
+    "Presentation_Date": "presentation_date",
+    "PO_reference_number": "po_reference_number"
+}
+
+
+byzan fiunal output
+------------------
+{
+    "Customer_ID": "502432824",
+    "Lc_number": "12345678",
+    "Advising_bank_reference_no.": "0013615",
+    "Customer_reference_number": "",
+    "Bill_reference_number": "0007UMFC0079623",
+    "Bill_Currency_code": "INR",
+    "Bill_date": "11-11-2022",
+    "Bill_amount": "999",
+    "Account_number": "000705001225",
+    "Bill_type": "Customer to Bank",
+    "presenting_bank_name": "CITIBANK N.A.",
+    "presenting_bank_address": "9A PHELPS BUILDING CONNAUGHT CIRCUS NEW DELHI",
+    "Presentation_Date": "15-11-2022",
+    "PO_reference_number": ""
+}
+
+whole request content
+---------------------
+{
+    "payload": {
+        "bill_reference_number": "0007UMFC0079623",
+        "account_number": "000705001225",
+        "bill_date": "11-11-2022",
+        "sgdo_issued": "N",
+        "sgdo_no": "",
+        "documents": {
+            "other_documents": "",
+            "presentation_memo": "JVBERi0xLjQKJe==",
+            "transport_documents": "",
+            "invoice": "",
+            "covering_schedule": "",
+            "debit_advice": "JVBERi0KMDAwMDA4NzUwNSAwMDAwwMDA4ODk2NCAwMDAwMCBuIAowMDAwMDk5OTU5IDAwMDAwIG4gCjAwMDAxMDE1NjkgMDAwMDAgbiAKMDAwMDEwOTEwOSAwMDAwMCBuIAowMDAwMTEwMjAzIDAwMDAwIG4gCnRyYWlsZXIKPDwvU2l6ZSAyNC9Sb290IDIzIDAgUi9JbmZvIDEgMCBSL0lEIFs8OGE0NDk5NTEyNmQyYmU2OTg0YmE5YTE5YWMwYjg4MDU+PDNlZWNjZTEzMmY1MjBiNmNmM2EwYWUxNDEwZjAzZDgxPl0+PgolaVRleHQtNS41LjEyCnN0YXJ0eHJlZgoxMTAyNTAKJSVFT0YK"
+        },
+        "total_taxes": "1440.0",
+        "charges_account_number": "000705001225",
+        "total_bill_amount_details": {
+            "total_bill_amount": "100",
+            "outstanding_bill_amount": "100",
+            "total_other_bank_charges": "0",
+            "total_outstanding_other_bank_charges": "0",
+            "bill_realised_amount": "0"
+        },
+        "payment_terms": "less than 180 Days",
+        "other_bank_reference_number": "0013615",
+        "tenor_description": "Others",
+        "invoice_amount": "100",
+        "interest_amount": "0",
+        "invoice_date": "11-11-2022",
+        "tenor": "10",
+        "total_charges": "9440.0",
+        "gst_no": "37BHXPA5475L1Z1",
+        "bank_gst_no": "07AAACI1195H1ZO",
+        "bill_type": "Customer to Bank",
+        "purpose_code": "S0102",
+        "presenting_bank_name": "CITIBANK N.A.",
+        "reference_date": "11-11-2022",
+        "po_reference_number": "",
+        "invoice_number": "dtet",
+        "type_of_import": "Goods",
+        "bl_awb_date": "11-11-2022",
+        "product": "MFCL",
+        "bill_amount": "999",
+        "transcation_status": "Processed",
+        "bill_currency": "INR",
+        "bill_originating_branch": "MEGA-Delhi",
+        "capital_goods": "N",
+        "due_date": "21-11-2022",
+        "lc_no": "12345678",
+        "bl_awb_no": "TESTSS",
+        "transaction_type": "Normal",
+        "charges_breakup": [
+            {
+                "DebitCCY": "INR",
+                "DESCRIPTION": "Bill Handling",
+                "DebitAmount": "3,000.00"
+            },
+            {
+                "DebitCCY": "INR",
+                "DESCRIPTION": "Bill Handling - IGST(18%)",
+                "DebitAmount": "540.00"
+            },
+            {
+                "DebitCCY": "INR",
+                "DESCRIPTION": "Commission",
+                "DebitAmount": "5,000.00"
+            },
+            {
+                "DebitCCY": "INR",
+                "DESCRIPTION": "Commission - IGST(18%)",
+                "DebitAmount": "900.00"
+            }
+        ],
+        "presenting_bank_address": "9A PHELPS BUILDING CONNAUGHT CIRCUS NEW DELHI",
+        "customer_reference_number": "",
+        "presentation_date": "15-11-2022",
+        "invoice_amount_currency": "USD",
+        "cust_id": "502432824",
+        "discrepancy_reason": ""
+    }
+}
+
+ 
+
+ 
+
+/tradereversefeed/billacceptance  (Done)
+========================================
+Mapping
+-------
+{
+    "Customer_ID": "cust_id",
+    "Customer_reference_Number": "customer_reference_number",
+    "Bill_Reference_Number": "bill_reference_number",
+    "LetterOfCredit_number": "lc_no",
+    "Originating_branch": "originating_branch",
+    "Bill_Currency": "bill_currency",
+    "Bill_Amount": "bill_amount",
+    "Charges_account_number": "charges_account_number",
+    "Acceptance_amount": "acceptance_amount",
+    "Acceptance_Date": "acceptance_date",
+    "TOL_ref_number": "tol_reference_number",
+    "Original_documents_received": "original_documents_received",
+    "acceptance_advice_copy": "acceptance_advice"
+}
+
+byzan fiunal output
+------------------
+{
+    "Customer_ID": "502432824",
+    "Customer_reference_Number": "",
+    "Bill_Reference_Number": "0007UMUB0024223",
+    "LetterOfCredit_number": "0007NMLC0071423",
+    "Originating_branch": "MEGA-Delhi",
+    "Bill_Currency": "USD",
+    "Bill_Amount": "130000",
+    "Charges_account_number": "000705001225",
+    "Acceptance_amount": "130000",
+    "Acceptance_Date": "30-09-2022",
+    "TOL_ref_number": "",
+    "Original_documents_received": "Y",
+    "acceptance_advice_copy": "c2FtcGxl"
+}
+
+whole request content
+---------------------
+{
+    "payload": {
+        "bill_reference_number": "0007UMUB0024223",
+        "acceptance_amount": "130000",
+        "bill_amount": "130000",
+        "transcation_status": "Processed",
+        "bill_currency": "USD",
+        "documents": {
+            "acceptance_advice": "c2FtcGxl",
+            "transport_documents": "c2FtcGxl",
+            "swift_copy": ""
+        },
+        "lc_no": "0007NMLC0071423",
+        "charges_account_number": "000705001225",
+        "acceptance_date": "30-09-2022",
+        "original_documents_received": "Y",
+        "originating_branch": "MEGA-Delhi",
+        "tol_reference_number": "",
+        "customer_reference_number": "",
+        "cust_id": "502432824",
+        "discrepancy_reason": ""
+    }
+}
+
+ 
+
+/tradereversefeed/orm  (Done)
+======================
+JSON path Mapping for complex fields
+-------------------------------------
+{
+    "Customer_ID": "cust_id"
+    "Remit_Mode": "remit_mode"
+    "Purpose_Code": "purpose_code"
+    "debit_details": "debit_details"
+    "debit_ccy": "debit_details[*].debit_ccy"
+    "debit_account_number": "debit_account_number"
+    "deal_id": "deal_id"
+    "Bene_vendor": "bene_details.bene_name1"
+    "bene_email": "bene_details.bene_email"
+    "debit_advice": "document.debit_advice"
+}
+
+Mapping
+-------
+{
+    "Customer_ID": "cust_id",
+    "Remit_Mode": "remit_mode",
+    "Purpose_Code": "purpose_code",
+    "debit_details": "debit_details",
+    "debit_ccy": "debit_ccy",
+    "debit_account_number": "debit_account_number",
+    "deal_id": "deal_id",
+    "Bene_vendor": "bene_name1",
+    "bene_email": "bene_email",
+    "debit_advice": "debit_advice"
+}
+
+byzan fiunal output
+------------------
+{
+    "Customer_ID": "502432824",
+    "Remit_Mode": "SWIFT",
+    "Purpose_Code": "S0101",
+    "debit_details": [
+        {
+            "debit_ccy": "USD",
+            "debit_account_number": "039351000051",
+            "debit_amount": "1000",
+            "equivalent_INR": "71355",
+            "deal_id": "35046597",
+            "conversion_rate": "71.355"
+        },
+        {
+            "debit_ccy": "USD",
+            "debit_account_number": "039351000051",
+            "debit_amount": "1000",
+            "equivalent_INR": "74965",
+            "deal_id": "38769576",
+            "conversion_rate": "74.965"
+        }
+    ],
+    "debit_ccy": "USD",
+    "debit_account_number": "039351000051",
+    "deal_id": [
+        "35046597",
+        "38769576"
+    ],
+    "Bene_vendor": "MASTER LTD",
+    "bene_email": "",
+    "debit_advice": ""
+}
+
+whole request content
+---------------------
+{
+    "payload": {
+        "transaction_date": "05-12-2017",
+        "transaction_status": "Processed",
+        "remit_amount_in_fc": "2000",
+        "total_taxes": "311.69",
+        "document": {
+            "debit_advice": "",
+            "swift": ""
+        },
+        "bank_reference_number": "0007TSMI0174623",
+        "charges_account_no": "039351000051",
+        "bene_details": {
+            "bene_country": "US",
+            "bene_bank_address": "388 GREENWICH STREET,NEW YORK,NY,NEW YORK,NY 10013",
+            "bene_email": "",
+            "bene_account": "12345",
+            "bene_bic_code": "CITIUS33XXX",
+            "bene_bank_name": "CITIBANK N.A.",
+            "bene_name1": "MASTER LTD",
+            "bene_bank_country": "US",
+            "bene_add1": "LANE",
+            "bene_add2": "RA"
+        },
+        "hs_code": "72107000",
+        "total_charges": "811.69",
+        "charges_breakup": [
+            {
+                "DebitCCY": "INR",
+                "Description": "Late Deal Utilization Charges",
+                "DebitAmount": "500.00"
+            },
+            {
+                "DebitCCY": "INR",
+                "Description": "IGST",
+                "DebitAmount": "90.00"
+            },
+            {
+                "DebitCCY": "INR",
+                "Description": "Value of supply FC Conversion Tax IGST",
+                "DebitAmount": "221.69"
+            }
+        ],
+        "product_type": "SMI",
+        "debit_details": [
+            {
+                "debit_ccy": "USD",
+                "debit_account_number": "039351000051",
+                "debit_amount": "1000",
+                "equivalent_INR": "71355",
+                "deal_id": "35046597",
+                "conversion_rate": "71.355"
+            },
+            {
+                "debit_ccy": "USD",
+                "debit_account_number": "039351000051",
+                "debit_amount": "1000",
+                "equivalent_INR": "74965",
+                "deal_id": "38769576",
+                "conversion_rate": "74.965"
+            }
+        ],
+        "tol_reference_no": "",
+        "gst_no": "35ZVWCU9960G1ZA",
+        "customer_reference_number": "",
+        "bank_gst_no": "07AAACI1195H1ZO",
+        "value_of_supply_for_fc_conversion": "1,231.60",
+        "currency": "USD",
+        "purpose_code": "S0101",
+        "cust_id": "502432824",
+        "remit_mode": "SWIFT",
+        "discrepancy_reason": ""
+    }
+}
+
+/tradereversefeed/billpayment  (Done)
+=====================================
+JSON path Mapping for complex fields
+-------------------------------------
+{
+    "Customer_ID": "cust_id"
+    "Customer_reference_Number": "customer_reference_number"
+    "TxN_type": "transaction_type"
+    "Currency_for_Total_other_bank_charges": "realization_currency"
+    "Bill_Amount": "total_bill_amount"
+    "Currency" :"bill_currency"
+    "Total_other_bank_charges": "total_other_bank_charges"
+    "Bill_realized_Amount": "bill_realized_amount"
+    "Due_date": "due_date"
+    "Debit_ac_number": "debit_advice_details.debit_details[].debit_account_number"
+    "Charges_Break_up": "charges_breakup"
+    "Disc": "charges_breakup[0].DESCRIPTION"
+    "Amount": "charges_breakup[0].DebitAmount"
+}
+
+Mapping
+-------
+{
+    "Customer_ID": "cust_id"
+    "Customer_reference_Number": "customer_reference_number"
+    "TxN_type": "transaction_type"
+    "Currency_for_Total_other_bank_charges": "realization_currency"
+    "Bill_Amount": "total_bill_amount"
+    "Currency" :"bill_currency"
+    "Total_other_bank_charges": "total_other_bank_charges"
+    "Bill_realized_Amount": "bill_realized_amount"
+    "Due_date": "due_date"
+    "Debit_ac_number": "debit_account_number"
+    "Charges_Break_up": "charges_breakup"
+    "Disc": "DESCRIPTION"
+    "Amount": "DebitAmount"
+}
+
+byzan fiunal output
+------------------
+{
+    "Customer_ID": "502432824",
+    "Customer_reference_Number": "",
+    "TxN_type": "Normal",
+    "Currency_for_Total_other_bank_charges": "USD",
+    "Bill_Amount": "100",
+    "Currency": "USD",
+    "Total_other_bank_charges": "0",
+    "Bill_realized_Amount": "153455.66",
+    "Due_date": "25-11-2022",
+    "Debit_ac_number": "039351000051",
+    "Charges_Break_up": [
+        {
+            "DebitCCY": "INR",
+            "DESCRIPTION": "Commission",
+            "DebitAmount": "125.00"
+        },
+        {
+            "DebitCCY": "INR",
+            "DESCRIPTION": "Commission - IGST(18%)",
+            "DebitAmount": "22.50"
+        },
+        {
+            "DebitCCY": "INR",
+            "DESCRIPTION": "FC Conversion Tax - IGST(18%)",
+            "DebitAmount": "45.00"
+        }
+    ],
+    "Disc": [
+        "Commission",
+        "Commission - IGST(18%)",
+        "FC Conversion Tax - IGST(18%)"
+    ],
+    "Amount": [
+        "125.00",
+        "22.50",
+        "45.00"
+    ]
+    
+}
+
+for(byzonPayloadKey in byzonPayload)
+	var byzonPayloadKey = byzonPayloadKey
+	Array.isArray(byzonPayload[byzonPayloadKey])
+		for(i=0; i<array.length; i++)
+			if(array[i] === object)
+				arrayLength=
+				get_All_the_propertiies_values_of_whose_array_length_is_3(arrayLen, byzonPayloadKey
+				for(objectKey in object)
+					if(object[objectKey] ===
+		
+
+					
+function get_All_the_propertiies_values_of_whose_array_length_is_3(arrayLen,
+	for(byzonPayloadKey in byzonPayload)
+		if(Array.isArray(byzonPayload[byzonPayloadKey]))"
+			if(byzonPayloadKey !== byzonPayloadKey & byzonPayload[byzonPayloadKey].length = 3)
+				return byzonPayload[byzonPayloadKey])
+		
+		
+
+
+payload content
+===============
+{
+    "payload": {
+        "bill_reference_number": "0007UMFC0066823",
+        "sgdo_issued": "N",
+        "sgdo_no": "",
+        "documents": {
+            "swift_copy": "",
+            "debit_advice": "JVBERi0xLjQKJeLjz9MK0YK"
+        },
+        "total_taxes": "67.5",
+        "total_bill_amount_details": {
+            "total_bill_amount": "100",
+            "outstanding_bill_amount": "0",
+            "bill_originating_branch": "MEGA-Delhi",
+            "bill_currency": "USD",
+            "total_other_bank_charges": "0",
+            "bill_realized_amount": "100",
+            "total_outstanding_other_bank_charges": "0"
+        },
+        "payment_terms": "less than 180 Days",
+        "other_bank_reference_number": "W23W32W",
+        "original_documents_received": "Y",
+        "total_charges": "192.5",
+        "gst_no": "35ZVWCU9960G1ZA",
+        "realization_details": {
+            "realization_amount": "100",
+            "realization_currency": "USD",
+            "realization_type": "Full"
+        },
+        "event_date": "2022-10-11 00:00:00.0",
+        "bank_gst_no": "07AAACI1195H1ZO",
+        "bill_type": "Bank to Bank",
+        "purpose_code": "S0102",
+        "reference_date": "11-10-2022",
+        "debit_advice_details": {
+            "fc_conversion_rate": "83.5 INR",
+            "charges_debit_account_number": "039351000051",
+            "debit_details": [
+                {
+                    "debit_ccy": "USD",
+                    "debit_account_number": "039351000051",
+                    "debit_amount": "100",
+                    "equivalent_INR": "9180.2"
+                }
+            ],
+            "int_conversion_rate": "NA",
+            "value_of_supply_for_fc_conversion": "250.00",
+            "conversion_rate": "83.5 INR"
+        },
+        "product": "MFCR",
+        "transcation_status": "Processed",
+        "bill_currency": "USD",
+        "due_date": "25-11-2022",
+        "lc_no": "",
+        "transaction_type": "Normal",
+        "tol_reference_number": "",
+        "charges_breakup": [
+            {
+                "DebitCCY": "INR",
+                "DESCRIPTION": "Commission",
+                "DebitAmount": "125.00"
+            },
+            {
+                "DebitCCY": "INR",
+                "DESCRIPTION": "Commission - IGST(18%)",
+                "DebitAmount": "22.50"
+            },
+            {
+                "DebitCCY": "INR",
+                "DESCRIPTION": "FC Conversion Tax - IGST(18%)",
+                "DebitAmount": "45.00"
+            }
+        ],
+        "customer_reference_number": "",
+        "cust_id": "0720209",
+        "discrepancy_reason": ""
+    }
+}
+
+ 
+
+/tradereversefeed/billguarantee
+================================
+JSON path Mapping for complex fields
+-------------------------------------
+{
+    "Effective_Date": "bg_effective_date",
+    "Bank_Guarantee_copy": "documents.bg_copy",
+    "Advice_copy": "documents.advice",
+    "SWIFT_copy": "documents.swift",
+    "Type": "type",
+    "Bank_Guarantee_number": "bg_number",
+    "TOL_ref_number": "tol_reference_number",
+    "Guarantee_Type": "guarantee_type",
+    "Customer_ID": "cust_id"
+}
+
+Mapping
+-------
+{
+    "Effective_Date": "bg_effective_date",
+    "Bank_Guarantee_copy": "bg_copy",
+    "Advice_copy": "advice",
+    "SWIFT_copy": "swift",
+    "Type": "type",
+    "Bank_Guarantee_number": "bg_number",
+    "TOL_ref_number": "tol_reference_number",
+    "Guarantee_Type": "guarantee_type",
+    "Customer_ID": "cust_id"
+}
+
+byzan fiunal output
+-------------------
+{
+    "Effective_Date": "09-11-2022",
+    "Bank_Guarantee_copy": "",
+    "Advice_copy": "",
+    "SWIFT_copy": "",
+    "Type": "Outward BG Issuance",
+    "Bank_Guarantee_number": "0004NFLG00129623",
+    "TOL_ref_number": "GI00674722",
+    "Guarantee_Type": "NBG",
+    "Customer_ID": "502432824"
+}
+
+
+whole request content
+---------------------
+
+{
+    "payload": {
+        "bg_currency": "USD",
+        "account_number": "039351000051",
+        "bg_effective_date": "09-11-2022",
+        "claim_expiry_as_per_sec_28": "",
+        "documents": {
+            "bg_copy": "",
+            "applicant_covering_letter": "",
+            "beneficiary_covering_letter": "",
+            "advice": "",
+            "swift": ""
+        },
+        "total_taxes": "360.0",
+        "applicant_details": {
+            "applicant_postal_code": "400009",
+            "applicant_country": "MD",
+            "applicant_name1": "R NANDLAL & SONS",
+            "applicant_add1": "LIJX4ER8L98OZ8GABJ1CKL2C4IC0QPG7BVRL563YBLN37",
+            "applicant_add2": "FJ5Q1OWLQFP1WYU48FX4Z94EJ9N4PFS1LIUK0WBGVXCRP",
+            "applicant_add3": "G9EJWGLX7MZSSVQ3OMCXKLXV6L3CAWPQET253PMNE0DBQ"
+        },
+        "type": "Outward BG Issuance",
+        "guarantee_class": "FIWAB",
+        "bene_details": {
+            "bene_country": "AE",
+            "bene_urn": "",
+            "bene_email": "",
+            "bene_bic_code": "",
+            "bene_name2": "PNB",
+            "bene_name1": "",
+            "bene_add1": "DUBAI",
+            "bene_add2": "",
+            "bene_add3": ""
+        },
+        "tenor": "0100024",
+        "total_charges": "2360.0",
+        "guarantee_category": "Financial Guarantee",
+        "gst_no": "97ZVWCU9960G1ZA",
+        "bg_number": "0004NFLG00129623",
+        "event_date": "02-04-2022",
+        "bank_gst_no": "27AAACI1195H1ZM",
+        "claim_expiry_date": "02-12-2023",
+        "bg_amendment_date": "",
+        "bg_type": "Foreign",
+        "transcation_status": "Processed",
+        "no_of_amendment": "0",
+        "bg_amount": "10",
+        "expiry_date": "02-12-2023",
+        "bg_issuance_date": "09-11-2022",
+        "equivalent_inr": "743",
+        "account_number_for_charges": "039351000051",
+        "tol_reference_number": "GI00674722",
+        "charges_breakup": [
+            {
+                "DebitCCY": "INR",
+                "DESCRIPTION": "Commission*",
+                "DebitAmount": "2,000.00"
+            },
+            {
+                "DebitCCY": "INR",
+                "DESCRIPTION": "CGST  (9%)",
+                "DebitAmount": "180.00"
+            },
+            {
+                "DebitCCY": "INR",
+                "DESCRIPTION": "SGST  (9%)",
+                "DebitAmount": "180.00"
+            }
+        ],
+        "bg_purpose": "FGCMP",
+        "customer_reference_number": "",
+        "guarantee_type": "NBG",
+        "bg_amendment_effective_date": "",
+        "cust_id": "502432824",
+        "discrepancy_reason": ""
+    }
+}
