@@ -1,22 +1,17 @@
 APIGEE LIMITIS
 ===============
-===============
 • Api proxy bundle size anedi 15mb daaati undakudadhu but in private clouds lo matram manaku istamochina size limit nio set chesukovachu
-
 • Apigee lo message payload size yoka limiit enthante 10mb okavela 10mb kana daatitha toobig patyload ani error msg vastundi, ikada nenu msg payload anaanu ante both request payload and response payload ki varthinstundi anamaata. E point praneeth kuda chepadu payload limit 10mb ani.
-
 • oas policy anedi only 3.0.0, 3.0.1, 3.0.2 versions ni matrame support chestundi
-
 • Apigee lo each env lo 60 matarame deploy cheyali ane limit undi kada andulo kuda only 50 matrame proxy deployments. Migilinavi shredflow ala deployemnts. So proxies only 50 matrame deploy cheyagalam.
-
 • let keyword doesn't supports in apigee js
-
 • environments & environment groups upto 85 (But it is based on contract)
 
-•
+
+
+
 
 WORK BASED POINTS
-=================
 =================
 • Target endpoint kosam URL tag kaakunda Sever tag vaadithe target.url flow var panicheyadhu apudu loadbalancing.targetserver flow var vaadali apudu kuda manaku url raadu just target server name vastundi. So url motham kavaalante <URL> tag vaadali kani URL tag vaaithe linting errior vastundi atlast vaadu em antunnaadu ante yrl ni read cheydam, tapu antunaadu but at the same inka mee istam anatlu malli target.url ane flow var ichaadu use chesukune pani ithe use chesukondi ani.
 • get call chesinapudu request.conetnt anedi empty avudi anthe kani null avadhu. so epudaina get method ki edaina policy varthichakudaadhu anukunapudu (request.content != "") ani petu anthe kani (request.contnet != null) ani petamaaku workl avadhu.
@@ -39,20 +34,31 @@ WORK BASED POINTS
 • Host header anedi automatic ga generate iye header , idhi nv eval lo ni proxy ni hit chesinapudu host: tejandras@eval.com ani untundi (And deeni okavela proxy lo overwrite cheyalante ProxyEndpoint lo request.header.host flow var use chesi overwrite cheyachu) and ah proxy anedi suppose httpbin.org/anuything endpoint ni hit chestundi anuko apudu ah endpoint vellinapuidu host value anedi "htpbin.org" ani untundi idhi gurthupetuko nv tejandras-eval.org ye untaadi anukunaavu inni rohjulu ala kaadu ye endpoint ni hit chestundo request automatic ga ah hit cheyabotuna endpoint host anedi host header value ga vastaadi so ala cl;ient to api proxy hit chesinapudu host value apigee url host and proxy nunchi target endpoint ni hit chesetapudu host value vachi qah target endpoint url host. so ala ye endpoint ni hit cheste ah endpoint yoka url host vachi hpost herader value laaga maaripothuuu untaadi (service callout policy lo call chese endpoint ki kuda anthe). Okavela ee target endpoint ki velle host  header value ni maarchalante nv target.header.host flow var ni targetendpoint lo use cheste change avutundi. ee target.header.host flow var's unai ani niku document lo kuda mention cheyaledu but existance lo unai gurthu petuko. And proxy endpoint & target enpoint ki diff lo proxy.path.suffix, target.url,target.status.code tho paatu ee target.header.host var ni mention chai.
 • ika nunchi edaina timezone value kaavalante nv js objects lo uyna crypto object lo ni crypto.dateFormat();
 
+
+
+
+
 Apigee Imp Points
-==================
 ==================
 • SCB lo mention chesinatlku asalu oka proxy upate chestunapudu downtime anede undadhu ela ante new deply avyunaa process lo kuda api proxy ki already deploy ina old revision lo nunchoi traffic veltundi etuvanti 404 error raadu idi nenu try chesi cheputunanu. so RA lo deploy apudu downtime mention cheyaslina vasartam ledu until or unless ah new updation deployment wrong othe thapa.
 
 • X- tho start ye headers ani system generate chesa headers anamaata client nunchi server ki velatapudu. veeetini metadata & logging or monitoring ki vaadutaaru like x-b3-traceId , x-b3-requestId, x-b3-spanId.. ila veetini manchiga logging & debugging ki vaadachu. X- tho start iye headers ani naku telisi postman generate chesa headers & X-apigee tho start iye headers ani apigee generate chese headers.
 
+
+
+
+
 TYPES OF TESTING
-================
 ================
 Integration testing = postman testing
 sanity testing
 functional testing 
 penitration testing
+
+
+
+
+
 
 LATENCY DASHBOARD
 =================
@@ -76,12 +82,19 @@ LATENCY DASHBOARD
 2. 95 percentile (ante mothan traffic lo 95% traffic anedi ee 95 percentile value ki lopale untaadi or in other words only 5% of traffic matrame ee 95 percentile value kanna ekuva untaadi)
 3. 99 percentile (ante motham traffic lo 99% traffic anedi ee 99 percentile value ki lopale untaadi or in other words only 1% of traffic matrame 22 99 percentile value kanna ekuva untaadi)
 
+
+
+
+
 TOKEN GENERATION WAYS
-=====================
 =====================
 1)
 gcloud auth activate-service-account --key-file filename.json
 gcloud auth print-access-token
+
+
+
+
 
 
 OVERALL APIGEE AS A PRODUCT POINTS
@@ -107,6 +120,10 @@ OVERALL APIGEE AS A PRODUCT POINTS
 • Hub ane word vaste adi oka epository container laa anamaataa like github, docker hub & alaage api hub in paigee. so apihub anaa kuda adi oka repository tool laa anuko. ipatikaithe ee info chaalu ante. hub ante repositoy conatiner tool laaga anamaata.
 • Apigee 1(MAJOR).9(MINOR).3(PATCH) releases untai. Every year minor releases 3 untai. And hari garu chepinatlu e[pudu n-1 version ye maintain cheyali.
 
+
+
+
+
 Conditions or Operators
 =======================
 • := (Equals caseInsensitive)
@@ -114,6 +131,10 @@ Conditions or Operators
 • ~ (Matches, This is supports regex becoz for regex already there is a javaregex. This is used to compare with literal string and also the main purpose is for allowing zero or n number of wild characters by using * character)
 • MatchesPath (Used to match paths)
 • :| (startswith)
+
+
+
+
 
 Target Endpoint Properties
 ==========================
@@ -126,6 +147,10 @@ Proxy Endpoint Properties
 • api.timeout property is used to specify the timeout configuratuion for streaming enabled api proxies.
 • This proxy endpoint will also had request.streaming.ennabled & response.streaming.enabled properties.
 • It also had a property which is used to change the encoding of the content instead oif the default UTF-8
+
+
+
+
 
 Flow Variables
 ==============
@@ -142,12 +167,67 @@ CR,TS,TR,CS
 • system.region.name
 • system.time.zone
 
+
+
+
+
 APIGEE INFRA
 ============
 https://cloud.google.com/apigee/docs/hybrid/v1.9/what-is-hybrid#about-the-runtime-plane (Through this u can get the hyperlinks)
 
 • hybrid anedi cost cutting purpose lkosame kaakunda ah project ki taggatu auto scalling chesukodaaniki use avudi alaana other containeriozed operations kuda chesukovachu, alaanwe mari mukhyam ga runtime component anedi vaala own premise lo undani ane feeling dwaraa privacy/safety vastaadi. Ilaanti vaati kosam kuda chesukune chance undi not just only for cost cutting purpose
 • oka cluster lo multiple orgs setup cheyachu but deeeniki konni limitiations untai ante chaala varaku services only primary org ki maatrame vastai but google idi suport chesina it never recommends to do like this.
+
+• APIGEE org ni 3 ways lo set up chesukovachu. okati eval org(free org), rendu sunbscription, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 Differnence between apigee edge vs apigee hybrid vs apigeex
@@ -167,53 +247,57 @@ APIGEE EDGE 					APIGEE HYBRID         				APIGEE X
 •Supports oauthv1				•Not supports oauthv1				•Not supports oauthv1
 
 
+
+
+
+
 Apigee Policies
-===============
+============
 Quota
------
+-------
 • quota polcy is used to limit the number of requests for an api proxy over a period of time.
 
 Spikearrest 
------------
+-------------
 • Spike arrest policy is also used tro limit the number of requests for an api proxy over a peruod of time but its more towards to protect from traffic surges or spikes.
 
 Reset Quota
------------
+---------------
 • Reset quota policy is used to reduce the client used quota count so that he would be able to make few more requests to the api proxy. For example thare is an api proxy where quota is configured as 100/week and the client had already used hois quota with in a week itself and if he want to make few more calls then we cann allow it by using this reset quota policy with allow count 50 so that 50 request will get reduced from his used count and he could be able to make 50 more requests over the remaining 6days.
 
 Response Cache
---------------
+--------------------
 • Response cache policy is used in a kind of api's where the response will be constant for a period of time, In those type of api proxies we can use this policy to get the response from cache itself ind=stead of hitting backend and getting from it.
 • Response cache policy can only be used in proxy request & response flow.
 • We can also configuyre the cache TTL by consideing the response cache headers. For example there is an api proxy  where the response cache policy is using UseResponseCachHeaders tag  & cache is given as 2 days then if the response cache headers contains 1 day as TTL then the policy will compare both and configures whartever is having less TTL that means 1day od response cache headers.
 • All kvms and caches are always encrypted in both apigee & apigee hybrid
 
 Populate caches-
----------------
+-------------------
 • Populate cache policy is to write the entries to explicit cache or included shared cacahe
 
 Lookup Cache
-------------
+-----------------
 • Lookup cache policy is used to read the cache entries either from explicit cache or included shared cache
 
 Invalidate Cache
-----------------
+-------------------
 • Invalidate cache polic is used to delete the entries from explicit cache or included shared cache.
 
 Basic Authebntication
----------------------
+-------------------------
 • Basic authentication policy is used to perform base64 encode & decode operations on the crdentoials.
 
 XML Threat protection
----------------------
+--------------------------
 • XML threat protection polcy is used to reduce the xml content level attacks by specifying the limits to xml payload lkike the size of elemenbt name, attribute name, prefix name, node depth, NamespaceURI....
 
 JSON Threat Protection
-----------------------
+---------------------------
 • JSON threat protection policy is also used to reduce the json content level attacks by specifying the limits to the json payload like  property length, array counts, container depth, string value length....
 
 Regex
------
+--------
 • Regex policy is used to validate the request and response content against the configured patterns in the policy, In these patterns we can include whatever the keywords and characters that cause threats, so that whenever the request contains these keywords then policy will detect it and throws an error.
 
 Verify api key-file
@@ -222,7 +306,7 @@ Verify api key-file
 • it also contains one tag on how much time the apikey should be stored in cache from 1-180 seconds(L1 OR message processor or in-memory). if you dont include that element then by default will be 180seconnds
 
 Access Control
---------------
+------------------
 • Access control policy gives us the feasabilty to allow or deny for the list of ips and range of ips to access an api proxy.
 • Access control policy should be placed before authentication & rate limiting policies (acesscontrol -> authentication policy -> spike -> quota)
 • Access control policy lo norulematchaction ane attribute untaadi adi entante daani kunda unda matchrule action ki apply kanivani em cheyalo akada (norulematchaction lo mention chestaamu).
@@ -232,7 +316,7 @@ Access Control
 • mask 32 ante as it is 4 numbers. mask 24 ante 4th unit anedi * ante 0 to 255. Ade 16 ante last two units anevi 0 to 255 range lo edasina undachu.
 
 Generate SAML Assertion & Validate SAML Assetion
-------------------------------------------------
+------------------------------------------------------------
 • ee policies guruchi telusukovalante mundu SSO & SAML telisundaaali.
 • In general SAML ante sharing user authentication information in a secured way from identity provider to service provider.
 • SSO ante oka app(okta, which is an identitry provider) lo matrame dani yoka creda ichi authenticate i daani nunchi migilina apps(slack, teams, github.....ante service providers ) ni access cheyadaani SSO antaaru.
@@ -255,7 +339,7 @@ diff b/w verifyapikey & oauth:
 • scope
 
 granttypes
------------
+-------------
 • Authorization code grantype is a secured way to provide access token because here inthis cleint will provide the credentials on resource server site only not on client side. It will used in third party app;ications which are untrusted. In this type first the client will request for auth code and then exchange it for access token there by he could be able to access to respective resouce server.
 
 • Implicit grantype is simplefied of authorization code but auth code is an 3legged oauth and this is 2 legged that means here client will diectly get the token through creds (only clientid) there will be no auth code step. 
@@ -496,4 +580,7 @@ APIGEE Github links
 • Generate Tokens ==> https://github.com/DinoChiesa/get-gcp-access-token?tab=readme-ov-file
 • Deploy API proxies ==> https://github.com/apigee/apigee-deploy-maven-plugin
 • Deploy APIGEE configs ==> https://github.com/apigee/apigee-config-maven-plugin
+
+
+
 • 

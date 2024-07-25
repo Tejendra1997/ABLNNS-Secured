@@ -1,0 +1,46 @@
+Popular AWS Services
+=================
+• IAM
+• VPC
+• EC2
+• EKS
+• ECS
+
+CLI Tools for cloud platforms
+======================
+• AWS CLI 
+• AZURE CLI
+• Google Cloud SDK(gcloud) 
+
+Terminology For GCP
+================
+• Organization
+• Folder
+• Project
+• Principal (member)
+• Allow policy & Deny policy
+• Role Binding
+• Basic Roles
+• Higher bandwidth(large data handling)
+• IP range calculator (https://mxtoolbox.com/subnetcalculator.aspx)
+
+
+
+VPC
+===
+• vpc ki set iye number of ips anni vachi subnets ki anni distibute avavu konni migilipothai. For eg vpc lo 65,536 number of ips anevi configure i unte apudu ah vpc(region) lo 3 subnets(zones) unte apudu okko subnet(zone) 4096 number of ips ni 
+support chestunte apudu 3 subnets(zones) kalipi 4096*3=12,288 ips matrame cover chestundi kani vpc 65,536 number of ips provide chestundi kada anduke chepanu vpc ki provide iye anni ips vachi subnets ki provide avavu ani konni migili potai ani.
+
+
+172.31.0.0/16
+	172.31.32.0/20
+	172.31.16.0/20
+	172.31.0.0/20
+
+172.31.0.0/16
+	172.31.64.0/20
+	172.31.0.0/20
+	172.31.32.0/20
+	172.31.16.0/20
+	172.31.80.0/20
+	172.31.48.0/20

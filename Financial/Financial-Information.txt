@@ -5,34 +5,68 @@ Net Per Month = 72,972 (81,533 - 72,972 => 8,561(EMPLOYEE FUND, PROFESSIONAL TAX
 
 
 
+Finanacial Year vs Assessment Year
+==================================
+• FY ante niku telisinde manam income earn chesuna period Apr1st -mar31st
+• AY ante manam previos year lo earn chesina income ki tax kattaalsina period, idi kuda Apr1st - Mar31st 
+• FY & AY rendu okasari start avtai but FY followed by AY, For Eg: FY(2022-23) ki AssesmentYear anedi (2023-24)
+
+
+
+Principle amount VS Interest amount VS Corpus amount
+==========================================
+• Principle amount ante ASSALU
+• interest amount ante VADDI amount.
+• Corpus amount ante MOTHAM amount ante ASSALU + VADDI
+
+
+
+Health & Educational Cess
+====================
+• Standard deductions(50k), deductions, excemptions teesesi needi entha ithe taxamble income untundo (Ade form16 partB lo sencond page last lo 12th row lo untaadi Total Taxable income ani) ah taxable income ki entha ithe tax padutundo (13th row lo una Tax On Total Income) danilo 4% anedi governement nee dagaranunchi cut chestundi. Ante kadutuna tax amount nuchi(not taxable income) nunchi 4% cut chestaru last lo.
+
+Sur charge
+========
+• Taxable income anedi 50Lakha kanna ekuva unte apudu health & educational cess laaga governement mana dagara nunchi sur charge roopamlo lo amount deduct chestundi. Kani ipudu manaku deenitho pani ledu le manaku antha salary ravadam ledu, may be sreeni ki applicable avtundi.
+
+
+
+
 Form12bb (OR) Tax DECLARATIVE fORM (OR) INVESTMENT DECLARTIVE FORM:
 ===================================================================
-•form12bb ante ah FY(2023-24) ki manam chese karchulu enti ani employer ki telipe form. so that manaki ah FY(2023-24) ki total taxable income antha anedi oka idea vastundi.
-•Edi every year FY(2023-24) start ina tarvata konni months lo deeni manam fill chesi employer ki ivaali, mostlu deeniki due date july 31st
+• form12bb ante ah FY(2024-25) ki manam chese karchulu enti ani employer ki telipe form. so that manaki ah FY(2024-25) ki total taxable income antha anedi oka idea vastundi.
+• Edi every year FY(2024-25) start ina tarvata konni months lo deeni manam fill chesi employer ki ivaali, mostlu deeniki due date july 31st. Adi kuda niku company lo prathi mointh ye day daaka ithe consider chesi salary vestaro (htc lo ithe every month daaka consider chestaru) better ah day lopola dani fill chesi company vaalaki ivu so that niku salary credit iyetapudu nv mention chesinatle padutundi.
+
 
 
 FORM16
 ======
 •form16 ante mana dagara nunchi employer tax roopam lo deduct chesina amount anedi correct ga govt ki tax kataadu ani proof kosam manaku employer e form send chestadu. Ante idi oka acknowledgement or proof or certificate laaga namaata.
 •form16 dwaaara e kindi vishayaalu telustai
-	1. previous FY(2022-23) lo employer mana dagara nunchu tax roopam lo entha deduct chesadu anedi qurterly based & yearly based details telustai (edi part-a lo untundi)
+	1. previous FY(2023-24) lo employer mana dagara nunchu tax roopam lo entha deduct chesadu anedi qurterly based & yearly based details telustai (edi part-a lo untundi)
 	2. alaana ala employer mana dagara nunchi tax roopam lo deduct chesina exact amount anedi govt ki correct ga deposit chestunaada leda ani telusukovachi. idi kuda quarterly based & yearly based chusukovachu. (edi part-a lo untundi)
-	3. Alaane ah FY(2022-23) ki mana total taxable income entha anedi kuda chupistundi (edi partb lo untundi)
-• Edi previous FY(2022-23) complete ina tarvata send cheyagalaru.  
+	3. Alaane ah FY(2023-24) ki mana total taxable income entha anedi kuda chupistundi (edi partb lo untundi)
+• Edi previous FY(2023-24) complete ina tarvata send cheyagalaru.  
 • Idi ITR file cheyadam lo use avudi.
 
+
+
 Investement declaritive proof:
-==============================
-• ante manam FY(2023-24) starting form12bb or Investment declarative form or Tax declarative form anedi fill chestam kada ah form ki idi proof laa anamaata. ante form12bb lo HRA & fixed deposit ani petukuni unte ipudu ee investment decklartive proof lo proofs submit cheyali
-• Edi every FY(2023-24) ending lo ante 2024 feb month lo mail send chestru proofs submit cheyamani. (oka vela ee prrofs anedi submit cheyakapothe manam deeni tarvaata vache itr filing lo ina submit chesi amount cut avakunda chesukovachu)
+=======================
+• ante manam FY(2024-25) starting form12bb or Investment declarative form or Tax declarative form anedi fill chestam kada ah form ki idi PROOF laa anamaata. ante form12bb lo HRA & fixed deposit ani petukuni unte ipudu ee investment decklartive proof lo proofs submit cheyali
+• Edi every FY(2024-25) ending lo ante 2025 feb month lo mail send chestru proofs submit cheyamani. (oka vela ee prrofs anedi submit cheyakapothe manam deeni tarvaata vache itr filing lo ina submit chesi amount cut avakunda chesukovachu)
+
+
 
 ITR Filing (OR) E-Filing:
 ========================
-• ITR filing anedi previos FY(2022-23) end ipoi new FY(2022-23) start inapudu file cheyali. Deeniki max july 30th last date untaadi.
-• ITR filing endukante nv previos FY (2022-23) lo form123bb lo sarigga or else assalu ni yoka tax exemptions ni petanapudu niku ekuva tax deduct iuntaadi dani recover chesukovadaniki govt inkoka chance l;aaaga ee ITR filing istundi.
+• ITR filing anedi previos FY(2023-24) end ipoi new FY(2024-25) start inapudu file cheyali. Deeniki max july 30th last date untaadi.
+• ITR filing endukante nv previos FY (2023-24) lo form12bb lo sarigga or else assalu ni yoka tax exemptions ni petanapudu niku ekuva tax deduct iuntaadi dani recover chesukovadaniki govt inkoka chance l;aaaga ee ITR filing istundi.
 • Alaane nv form 12bb fill chesinapudu koni tax eemptions matarme unai anuko vaatiki alaano "form12bb" lo tax exemptions kinda pedutaav alaane "tax declarations proofs" lo proofs submit chestaav. but okavela madyalo inkonni tax exemptions schems lo nv invest chesunte like home loan, ppf... alaa alantivaatini tax exemption/deduction kinda petukoni mana nunchi cut ina tax anedi tirigi techukodaaniki inko chance laa year ending lo kuda ee rooopam lo manaku istaaru.
 • E scenario lo kuda ITR filing anedi use avudu for suppose nv form12bb or tax declarative form or investment declarative form lo HRA petukunaav but daniki tax declarative proofs lo submit cheyaledu alaantapudu ee ITR filing ah proofs peti submit cheyachu.
-• ITR file cheyadam valla compulsary money return vastai ani emi ledu oka vela ne nunchi cut ina tax anedi corrct gane cut chestunte apudu apudu niku etuvanti money raadu. So ITR file chesta moneyt vastaadi ani emi ledu but ITR filing anedi compulsary endukante nv previous FY(2022-23) lo entha  sampaadinchichaav danilo govt ki entha entha tax pay chesaav ani govtt ki telepadaaaniki or proof kinda form16 upload chesi ITR filing anedi cheyali. (Nv anukovacho 0 ITR filing vaalu cheyabaledu ani kani nv 0 ITR filing category loki vastunaav ani govt ki ela telustundi ala teliyaalana form16 upload chesi ee ITR filing anedi cheyali)
+• ITR file cheyadam valla compulsary money return vastai ani emi ledu oka vela ne nunchi cut ina tax anedi corrct gane cut chestunte apudu apudu niku etuvanti money raadu. So ITR file chesta moneyt vastaadi ani emi ledu but ITR filing anedi compulsary endukante nv previous FY(2023-24) lo entha  sampaadinchichaav danilo govt ki entha entha tax pay chesaav ani govtt ki telepadaaaniki or proof kinda form16 upload chesi ITR filing anedi cheyali. (Nv anukovacho 0 ITR filing vaalu cheyabaledu ani kani nv 0 ITR filing category loki vastunaav ani govt ki ela telustundi ala teliyaalana form16 upload chesi ee ITR filing anedi cheyali)
+
+
 
 	Types:
 	------
@@ -45,6 +79,17 @@ ITR Filing (OR) E-Filing:
 	ITR-7
 	• ITR5,6 & 7 Anedi business chestuna vaalaaki like venkat, mythri movie makers, dil raju, allu aravind. ilaanti vaalaki. manaku kaadu.
 	
+	
+	Tax Exemptions & Deductions
+	=======================
+	HRA EXEMPTION(House Rent Allowance) ==> Section10(13A)
+	------------------------------------------------------------------------
+	• idhi section80c kindaki raadu.
+	• HRA EXEMPTION anedi evarikithe vaala salary structure lo HRA component untundo vaalu maatrame eligible avtaaru and alaage vaalu katchitamga rented house lo unapudu matrame malli idi applicable avtundi lekapothe apudu ne salary lo HRA component ga vache income anedi fully taxable income lo padutundi. Alaage okavela employee anevadu self-employee gani or vaala employer tana salary structure lo HRA ni include cheyakapothe apudu vaalu ee HRA EXEMPTION ki applicable kadu andukosam vaalu SECTION80GG lo chesukovalsi untundi.(nv scb lo join iyunte apudu ide chesi undalsindi)
+	• salary lo specify chese HRA amount mothani claim exemption ga chupinchu kolemu. Ee HRA ni calculate cheyadaniki 3 ways unai vaatilo ye way lo ithe takuva amount exemption kindaki vastundo ah amount ni matrame manam taxable income nunchi exemption ga teesi veyachu.
+	• 
+	
+	
 
 EPF
 ===
@@ -56,10 +101,14 @@ EPF
 • EE epf ki iche number name UAN(Universal Acoount number), Idi enni companies maarina okkaraki okate untundi.
 • Private employess ante mana lanti vaalaki mana basic salary lonchi 12% employee PF laaga alaana inko 12% employer PF laaga mana EPF account lo padutundi. Employer fund anedi motham mana PF lo padadhu only 3.*% matraame employer share lo padutundi migilinidi (8.*) pension share lo padutundi. Alaane pension share ki interst raadu & daani pre withdrawl cheyalemu only after 58 years tarvaata ne cheyagalam.
 • EPF amount ki interset anedi every FY ending lo ante march31 st tarvata vetana padutundi, ante april 1st.
-• EPF amount ki compound interst vastundi ante chakra vaddi ante asalu meeda vaddi ye kakaunda vaddi meeda  vaddi kuda vastundi. FOR eg oka FY lo credit ina PF amount 21200 & daaniki intest 801 ithe nxt year pade 21200 PF amount ki alanoo interest padtundi alaanae previous FY lo ni 21200 amount ke kakunda & ah previous FY loni interest ante 801 ki kuda ee current FY lo interst padutundi deene compound ante previos FY lo ni total amount ina (21200+802) ki intest vastundi. Ade simple interst anuko  previous year lo ni only PF amount (21200) ki matrame nxt year lo interest add avtundi.
-• General ga EPF anedi EEE anamaata ante ExemptExemptExempt section lo vastadi anta antaithe nv prati year PF contribute chese priniciple amount meeda etuvanti tax padadhu, alaana ah vache inteest meeda kuda etuvanti interest padadhu, alaama last lo vache motham corpus amount meedas kuda etuvanti tax padadhu. anduke moodu sarlu exempt ani undi.
+• EPF amount ki compound interst vastundi ante chakra vaddi ante asalu meeda vaddi ye kakaunda vaddi meeda  vaddi kuda vastundi. FOR eg oka FY lo credit ina PF amount 21200 & daaniki intest 801 ithe nxt year pade 21200 PF amount ki alanoo interest padtundi alaanae previous FY lo ni 21200 amount ke kakunda & ah previous FY loni interest ante 801 ki kuda ee current FY lo interst padutundi deene compound ante previos FY lo ni total amount ina (21200+802) ki intest vastundi. Ade gani simple interst anuko  previous year lo ni only PF amount (21200) ki matrame nxt year lo interest add avtundi.
+• General ga EPF anedi EEE anamaata ante ExemptExemptExempt section lo vastadi anta antaithe nv prati year PF contribute chese PRINCIPLE AMOUNT meeda etuvanti tax padadhu, alaana ah vache INTEREST meeda kuda etuvanti interest padadhu, alaama last lo vache motham CORPUS AMOUNT meedas kuda etuvanti tax padadhu. anduke moodu sarlu exempt ani undi.
 • EPF amount EPF amount ni 7 years tarvaata 50% kaavalante withdraw chesukovachu adi kuda 3 installment wise lo.Ade 5 years lopu withdraw chesukunte niku EEE tax benifit undadhu ante inthakamundu calim chesukuna pf priciple amount ki tax kataali, interest meeda tax kataali alaana corpus amount meeda kuda tax kataali., so 5 years lopu epudu EPf amount ni teeyamaaku. Manam advance ga EPF amount ni teesukogaligedi only employee & empoyer shjare matrame pension share anedi matram advance ga asalu teeyalemu adi teeyalanyte resign cheyali ante niku 58 years ravaali and that too ah teeyagaligedhi only 24 months amount ye anta house costruction purpose meeda (So deeni meeda pedha hopes petukomaaku). so advance ga only emplyee & empyer share share matrame teeyagalam. Naku telisi 5 years tarvaata nv house construction ki ee amount teeyalamnuknte max 1lakh vastaadi actaully na calculation lo antha kuda ledu around 90k vachindi. so nv ee 1 lakh kosam 2026 daaka wait cheyadam anavassaram.
 • Employer fund anedi konni companies lo vaale vestaru inka konni companies lo ah emplyer fund kuda mana salary loncchi cut chestaru.
+
+
+
+
 
 CIBIL SCORE (OR) CREDIT SCORE
 =============================
@@ -71,7 +120,7 @@ CIBIL SCORE (OR) CREDIT SCORE
 • So niku epudaina loan kaavalante with in 14 days lo anni banks tirigeyi so that niku cibil score anedi okka sari matrame taggutundi konchem ga. Ade gap ichi gap ichi velaavanuko ekuva sarlu nee cbil score taggipotundi.
 
 
-EMI
+
 
 
 
@@ -126,20 +175,8 @@ Interest income on savings account = UpTo 10000
 
 
 
-
-
-
-	
-Finanacial Year vs Assessment Year
-==================================
-• FY ante niku telisinde manam income earn chesuna period Apr1st -mar31st
-• AY ante manam previos year lo earn chesina income ki tax kattaalsina period, idi kuda Apr1st - Mar31st 
-• FY & AY rendu okasari start avtai but FY followed by AY, For Eg: FY(2022-23) ki AssesmentYear anedi (2023-24)
-
-
-
 Interst Types in real world:
-============================
+=====================
 • Maamulga bayata una vaddi vaalu rupai vaddi, rendu rupailu vaddi antuntaaru, Ade bank vaalu ithe 6%, 8%... ila antuntaaru. Nv edaina mundu percentages lo ke techuko endukante manaku percentage formulas ye telusu kaabatti.
 • Munduga percentages ni rupai loki ela marchaalo chudaaam. First bank chepe percentages anevi edaina sare annual ga untaadi, year ki 12 months kaabatti ah percentage ni rupailoki marchaalante ila cheyali.
 	For Eg: 8% anuko
@@ -167,9 +204,10 @@ General Interest Types
 ======================
 • Simple interest (Ante only asalu meeda matrame interest padutundi)
 • Compound Interest (Ante asalu + vaddi meeda kuda vaddi padutundi, Ee compound interest anedi 1year daatina tarvaata nunchi padutundi ante ist year lo only asalu meeda interest vastundi and 2nd year lo asalu + 1st year lo vachina interest meeda kalipi interest vastundi, ala so on.... veltu untundi.
+
 Simple Interest Calculation
 ---------------------------
-Eg1: Amount = 9,70,0000 
+Eg1: Amount = 10,00000
 	 Tenure = 1 year
 	 Interest Rate = 6%
 	 Sol) Alaano interest rate anedi percentage lo undi kaabati malli percentage formula use cheyalsina avasaram ledu ikaada.
@@ -213,6 +251,117 @@ FY2021-22 ki tax deduction proof submit cheyamani 2022 lo feb starting lo mail v
 
 SIP 
 lumpsum
+
+
+
+
+2023-24FY of In-hand salary & tax deducted amount details
+=============================================
+apr
+---
+79,533-
+
+may
+-----
+76,934-
+2,599
+
+jun
+---
+76,934-
+2,599
+
+jul
+---
+73,967-
+5,556
+
+aug
+----
+73,967-
+5,556
+
+sep
+-----
+73,967-
+5,556
+
+oct
+----
+73,967-
+5,556
+
+nov
+-----
+73,967-
+5,556
+
+dec
+----
+73,967-
+5,556
+
+jan
+---
+80,321-
+4,212
+
+feb
+----
+75,321-
+4,212
+
+mar
+----
+75,321-
+4,212
+
+Total In-hand salary for  2023-24FY that I’ve received as per payslips= 9,11,166
+Total In-hand salary for  2023-24FY that I’ve received as FORM16= 9,78,398
+
+Total Tax deducted for 2023-24FY as per payslips= 51,170
+Total tax deducted for 2023-24HY as per FORM16= 51,230
+
+
+
+
+9,28,398
+ 0-3lakhs ==> Nill ==> (6,28,398)
+ 3lak - 6lak = 15,000(5%) ==> (3,28,398)
+ 6lak-9lak =30,000(10%) ==> (28,398)
+ 9lak-12lak ==> 4,259(15%) ==>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
