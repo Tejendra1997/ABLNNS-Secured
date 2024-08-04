@@ -330,6 +330,131 @@ Total tax deducted for 2023-24HY as per FORM16= 51,230
  3lak - 6lak = 15,000(5%) ==> (3,28,398)
  6lak-9lak =30,000(10%) ==> (28,398)
  9lak-12lak ==> 4,259(15%) ==>
+
+
+9,78,398
+80,676
+12,010
+========
+1071084 - STANDARD DEDUCTION(50,000) ==> 1,021,084
+
+uPTO 3LAKH NILL ==> 1,021,084 -3,00,000 ==> 0(Tax) == 7,21,084(Remaining Amount)
+3 - 6lakkh(5%) ==> For 3lakshs 5% of Tax ==> 15,000(Tax) ==> 4,21,084(Remaining Amount)
+6 - 9 lakh(10%) ==> For 3lakshs 10% of Tax ==> 30,000(Tax) ==> 1,21,084(Remaining Amount)
+9 - 12 lakhs(15%) ==> For 1,21,084 amount 15% of Tax ==> 18,162(Tax) ==> 0(Remaining Amount)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tax calculation for FY2024-25 as per New Regime
+===============================================
+Total Annual income interns of salary: 17,46,000
+Total taxable income after minusing standard deduction amount: 16,71,000 (17,46,000 - 75,000)
+
+
+
+
+1 to 300000			0%		0		Remaining amount:13,71,000 (16,71,000 - 3,00,000)
+
+300001 to 700000		5%		20,000		Remaining amount:9,71,000 (13,71,000 - 4,00,000)	
+
+700001 to 1000000		10%		30,000		Remaining amount:6,71,000 (9,71,000 - 3,00,000)
+
+1000001 to 1200000		15%		30,000		Remaining amount:4,71,000 (6,71,000 - 2,00,000)
+
+1200001 to 1500000		20%		60,000		Remaining amount:1,71,000 (4,71,000 - 3,00,000)
+
+Above 1500000			30%		51,300		Remaining amount:0
+
+
+
+
+Tax: 				1,91,300
+Health & Education Cess(4%): 	7,652
+Total Tax Need To Pay: 		1,98,952
+Monthly Tax:			16,579
+
+
+Total Tax need To Pay As Per Old Regime: 3,34,152
+Note: For old tax regime didn't used any era, pf, .... Anything
+
+
+
+Referred Tax calcalutor websites: https://cleartax.in/paytax/TaxCalculator
+				  https://www.moneycontrol.com/personal-finance/tools/income-tax-calculator
+				  https://www.businesstoday.in/tools-and-calculators/income-tax-calculator
+
+
+
+
+
+
+Amount after by misusing tax amount:	15,47,048 (17,46,000 - 1,98,952)
+Employee PF:				96,000
+In Hand Amount Will Get Credited: 	14,51,048 (15,47,048 - 96,000)
+Monthly Salary: 			1,20,920
+My Expenses:				2,40,000 (20,000 * 12)
+Remaining Amount:			12,11,048 (14,51,048 - 2,40,000)
+
+Scooty:					1,20,000
+Iphone:					80,000
+
+
+
+
+By october you will be having 4,50,000 where 1 lakh should be added to FD amount to make it to 25lakhs, so by October will be having 3,50,000 where scooty costs 1.20lakhs. Remaining amount 2,30,000
+Right now Im having: 	2,50,000
+
+Right now Im having(S): 1,30,000
+Sep:			1,00,000
+Oct:			1,00,000
+Nov:			1,00,000
+Dec:			1,00,000
+Jan:			1,00,000
+Feb:			1,00,000
+
+Total:			7,30,000
+
+
+
+
+
+Expenses
+========
+Rent:		8,000
+Petrol:		2,000
+current&dish:	2,000
+carrots&guava:  1,000
+Seeds:		2,000
+	Sunflower seeds: 300
+	Watermelon seeds: 600
+	Pumpkin seeds: 	  350
+	Almond seeds: 	500
+
+
+
+
+
+
+
+
+
+
  
 
 

@@ -1,0 +1,28 @@
+GCP Associate Cloud Engineer
+=======================
+• GCP Starting level Document: https://cloud.google.com/docs/overview
+• Cloud APIs ante apigee.googleapis.com, compute.googleapis.com, serviceusage.googleapis.com, resourcemanager.googleapis.com, iam.googleapis.com, vpcaccess.googleapis.com, container.googleapis.com,... veetini cloud APIs antaru.
+• APIs / Services / Resources
+• Each project in google cloud will have seperate billing account.
+• We usually cant access resource in another project from being in a different project, To achieve this we need VPC Sharing or VPC Peering.
+• Load Balancing usage
+• Billing Account vs Cloud Account
+
+Imp Docs
+------------
+• Resource Manager
+• APIs
+• Service Usage
+• sdk/ Google Cloud CLI
+• Shell
+• Load-balancing
+• Compute Engine
+• Support
+• Google Cloud Architecture Framework
+• Google Cloud Setup in entreprise documentation
+
+Imp Navigations In console.cloud.google.com
+-----------------------------------------------------
+• IAM --> Manage Resources
+• APIs & Services --> Enabled Services
+•
