@@ -369,7 +369,7 @@ Total taxable income after minusing standard deduction amount: 16,71,000 (17,46,
 
 
 
-1 to 300000			0%		0		Remaining amount:13,71,000 (16,71,000 - 3,00,000)
+0 to 300000			0%		0		Remaining amount:13,71,000 (16,71,000 - 3,00,000)
 
 300001 to 700000		5%		20,000		Remaining amount:9,71,000 (13,71,000 - 4,00,000)	
 
@@ -395,7 +395,7 @@ Note: For old tax regime didn't used any era, pf, .... Anything
 
 
 
-Referred Tax calcalutor websites: https://cleartax.in/paytax/TaxCalculator
+Referred Tax calcalutor websites: b
 				  https://www.moneycontrol.com/personal-finance/tools/income-tax-calculator
 				  https://www.businesstoday.in/tools-and-calculators/income-tax-calculator
 
@@ -418,9 +418,39 @@ Iphone:					80,000
 
 
 By october you will be having 4,50,000 where 1 lakh should be added to FD amount to make it to 25lakhs, so by October will be having 3,50,000 where scooty costs 1.20lakhs. Remaining amount 2,30,000
-Right now Im having: 	2,50,000
 
-Right now Im having(S): 1,30,000
+Right now Im having: 	2,50,000
+Sep:			1,00,000
+Oct:			1,00,000
+
+Total:			4,50,000
+
+OCT ==>limit 4,50,000
+===
+Deduction to make 25L:	1,00,000	
+Registration Fee:	2,20,000
+Fridge:			50,000
+Washing Machine:	50,000	
+
+
+Dec ==> limit 80,000
+===
+SofaSet:		50,000
+
+Jan ==> 60,000
+===
+AC:			50,000
+
+Mar ==> 
+===
+
+
+					
+
+
+
+============================================
+
 Sep:			1,00,000
 Oct:			1,00,000
 Nov:			1,00,000
@@ -451,6 +481,23 @@ Seeds:		2,000
 
 
 
+
+
+
+======================================================================================================================================================================================
+
+1Year: standard deduction(50,000) + priciple amount(1,50,000) + Interest (1,50,943) + HRA(96,000) + Insurance(19,530)
+Taxable income: 12,98,100 (17,46,000 - 50,000 - 1,50,000 - 1,50,943 - 96,000 - 19,530)
+
+
+
+0 to 250000			0%		0		Remaining amount:10,48,100 (12,98,100 - 2,50,000)
+
+250001 to 500000		5%		12,500		Remaining amount:7,98,100 (10,48,100 - 2,50,000)	
+
+500001 to 1000000		20%		1,00,000	Remaining amount:2,98,100 (7,98,100 - 5,00,000)
+
+Above 1500000			30%		89,430		Remaining amount:0
 
 
 

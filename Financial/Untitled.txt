@@ -1,0 +1,14 @@
+APIGEE
+======
+• APIGEE ni setup chesukodaniki 3 ways unai
+	1. subscription
+	2. pay-as-you-go
+	3. eval
+• Subscription, Pay-as-you-go & eval lo ekuva cost vachi subscription endukante deeniki already intha ani pay chesestaam subscription roopam lo even though ah anni resources ni utilize chesukuna chesukokapoina anduke subscription anedi ekuva. whereas pay-as-you-go anedi entha vaadutamo anthe kabatti deeniki katchitamga intha ani chepalem so pay-as-you-go & subscription rendintilo compare cheste subscription anedi ekuva, kavaalante common sense tho alochinchu.	
+
+Eval APIGEE 
+==========
+• Idi 60days limit
+• By default ga only internal ga matrame develop chesina API proxies ni access cheyagalam okavele external ga access cheyali ante LOAD BALANCER ni configure chyali.
+• At a time only 2 env’s matrame create cheyagalam.
+• Run time instance 1
